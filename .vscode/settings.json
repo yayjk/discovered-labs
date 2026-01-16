@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python3 - << 'PY'\nimport importlib\\.util\np='/home/jaskaran/discovered-labs/backend/engines/communityFinder\\.py'\ntry:\n    spec = importlib\\.util\\.spec_from_file_location\\('communityFinder', p\\)\n    m = importlib\\.util\\.module_from_spec\\(spec\\)\n    spec\\.loader\\.exec_module\\(m\\)\n    print\\('IMPORT_OK:', hasattr\\(m, 'get_llm_aliases'\\)\\)\n    import inspect\n    print\\('SIG:', inspect\\.signature\\(m\\.get_llm_aliases\\)\\)\nexcept Exception as e:\n    print\\('IMPORT_ERROR:', type\\(e\\)\\.__name__, e\\)\n    raise\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
