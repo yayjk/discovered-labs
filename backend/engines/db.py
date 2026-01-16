@@ -13,28 +13,27 @@ async def create_subreddits_table(db):
             engagement_score REAL,
             freshness_score REAL,
             frequency_score REAL,
-            subscribers_count INTEGER,
             relevance_score REAL
         )
     """)
     await db.commit()
 
-async def insert_subreddit(db, subreddit_name, json_response, engagement_score, freshness_score, frequency_score, subscribers_count):
+async def insert_subreddit(db, subreddit_name, json_response, engagement_score, freshness_score, frequency_score):
     """Insert a subreddit into the database."""
     await db.execute("""
-        INSERT INTO subreddits (subreddit_name, json_response, engagement_score, freshness_score, frequency_score, subscribers_count)
-        VALUES (?, ?, ?, ?, ?, ?)
-    """, (subreddit_name, json_response, engagement_score, freshness_score, frequency_score, subscribers_count))
+        INSERT INTO subreddits (subreddit_name, json_response, engagement_score, freshness_score, frequency_score)
+        VALUES (?, ?, ?, ?, ?)
+    """, (subreddit_name, json_response, engagement_score, freshness_score, frequency_score))
     await db.commit()
 
 async def select_subreddits_by_frequency(db, min_frequency):
     """Select subreddits where frequency_score >= min_frequency."""
-    cursor = await db.execute("SELECT subreddit_name, engagement_score, freshness_score, frequency_score, subscribers_count FROM subreddits WHERE frequency_score >= ?", (min_frequency,))
+    cursor = await db.execute("SELECT subreddit_name, engagement_score, freshness_score, frequency_score FROM subreddits WHERE frequency_score >= ?", (min_frequency,))
     return await cursor.fetchall()
 
 async def select_all_subreddits_ordered(db):
     """Select all subreddits ordered by relevance_score descending."""
-    cursor = await db.execute("SELECT subreddit_name, json_response, engagement_score, freshness_score, frequency_score, subscribers_count, relevance_score FROM subreddits ORDER BY relevance_score DESC")
+    cursor = await db.execute("SELECT subreddit_name, json_response, engagement_score, freshness_score, frequency_score, relevance_score FROM subreddits ORDER BY relevance_score DESC")
     return await cursor.fetchall()
 
 async def update_relevance_score(db, subreddit_name, relevance_score):
@@ -74,7 +73,6 @@ async def create_posts_table(db):
             title TEXT,
             selftext TEXT,
             ups INTEGER,
-            downs INTEGER,
             num_comments INTEGER,
             created_utc REAL,
             url TEXT,
@@ -102,9 +100,9 @@ async def drop_json_response_column(db):
     await db.execute("ALTER TABLE subreddits DROP COLUMN json_response")
     await db.commit()
 
-async def insert_post(db, subreddit_name, title, selftext, ups, downs, num_comments, created_utc, url, pid):
+async def insert_post(db, subreddit_name, title, selftext, ups, num_comments, created_utc, url, pid):
     """Insert a post entry into the posts table."""
-    await db.execute("INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (subreddit_name, title, selftext, ups, downs, num_comments, created_utc, url, pid))
+    await db.execute("INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (subreddit_name, title, selftext, ups, num_comments, created_utc, url, pid))
     await db.commit()
 
 DB_NAME = "subreddits.db"

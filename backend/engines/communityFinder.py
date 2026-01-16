@@ -24,6 +24,8 @@ from .db import (
     update_json_response_null,
     close_db,
 )
+from .subredditDiscovery import scrape_reddit_search
+from .subredditRanking import scrape_subreddit_search
 
 load_dotenv()
 
@@ -116,64 +118,17 @@ def find_subreddits_via_google(query: str, target_count: int = 20):
     return list(discovered_subs)
 
 
-def find_subreddits_via_reddit_posts_search(query: str, min_comments: int = 10) -> dict:
-    """Fetch posts from `search query` and return a dict mapping `subreddit_name_prefixed` -> `subreddit_subscribers`.
-
-    Rules:
-    - Skip posts where `num_comments` is less than `min_comments`.
-    - If a subreddit is already added, skip subsequent posts from the same subreddit.
-    """
-    headers = {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    }
-    url="https://www.reddit.com/search.json?q={query}&sort=relevance&t=month&limit=25"
-
-    try:
-        resp = curl_requests.get(url, headers=headers, timeout=10)
-        resp.raise_for_status()
-        payload = resp.json()
-    except Exception as exc:
-        raise RuntimeError(f"Failed to fetch posts from Reddit: {exc}") from exc
-
-    results: list = []
-
-    for i, child in enumerate(payload.get("data", {}).get("children", [])):
-        if not isinstance(child, dict):
-            continue
-        data = child.get("data", {})
-
-        # Get subreddit identifier
-        subreddit_prefixed = data.get("subreddit_name_prefixed")
-
-        # Skip low-engagement posts
-        try:
-            num_comments = int(data.get("num_comments", 0))
-        except (TypeError, ValueError):
-            continue
-        if num_comments < min_comments:
-            continue
-
-        if subreddit_prefixed and subreddit_prefixed not in results:
-            results.append(subreddit_prefixed)
-
-    return results
-
-
 def aggregate_and_filter_subreddits(
     query: str,
-    min_subscribers: int = 5000,
     timeout: int = 10,
     reddit_min_comments: int = 5,
     google_target_count: int = 20,
-) -> dict:
+) -> list:
     """Discover subreddits from Reddit posts, Gemini, and Google for `query`,
-    deduplicate, then validate via each subreddit's `/about.json`.
+    and deduplicate.
 
     - `query` is used for all discovery methods.
-    - Returns dict mapping normalized `r/Name` -> subscriber count (from about.json) for
-      subreddits whose subscriber count is >= `min_subscribers` and whose `/about.json`
-      is accessible.
+    - Returns list of normalized subreddit names
     """
 
     def normalize_name(x: str) -> str | None:
@@ -189,7 +144,7 @@ def aggregate_and_filter_subreddits(
 
     # Discover via reddit posts
     try:
-        reddit_found = find_subreddits_via_reddit_posts_search(query, min_comments=reddit_min_comments)
+        reddit_found = scrape_reddit_search(query)
         for item in reddit_found:
             n = normalize_name(item)
             if n:
@@ -221,7 +176,7 @@ def aggregate_and_filter_subreddits(
     except Exception as exc:
         print(f"google discovery failed: {exc}")
 
-    return combined
+    return list(combined)
 
 
 async def init_subreddits_db():
@@ -239,55 +194,57 @@ async def calculate_and_insert_subreddit_score(db_conn, subreddit: str, subs: in
         total_comments = 0
         vote_counted_posts = 0
         freshness = 0
-        headers = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1"}
+        
+        # Extract subreddit name (remove r/ if present)
+        sub_name = subreddit.replace('r/', '').replace('/', '')
+        
+        # Use scrape_subreddit_search to get posts
+        posts = scrape_subreddit_search(subreddit=sub_name, query=query, max_pages=1)
+        
+        if posts:
+            json_response = str(posts)  # Store as string representation
+            q_lower = (query or "").lower()
+            pattern = re.compile(re.escape(q_lower))
+            cutoff = now - (48 * 3600)
+            
+            for post in posts:
+                title_lower = (post.get("post_title") or "").lower()
+                selftext_lower = (post.get("self_text") or "").lower()
+                text = title_lower + " " + selftext_lower
 
-        # Use a single search call per subreddit to compute frequency, freshness, and engagement
-        search_url = f"https://www.reddit.com/{subreddit}/search.json"
-        params = {"q": query, "sort": "new", "restrict_sr": "1", "limit": 100}
-        async with AsyncSession() as client:
-            resp_search = await client.get(search_url, headers=headers, params=params, timeout=timeout)
-            if resp_search.status_code == 200:
-                json_response = resp_search.text  # Store the raw JSON response
-                posts = resp_search.json().get("data", {}).get("children", [])
-                q_lower = (query or "").lower()
-                pattern = re.compile(re.escape(q_lower))
-                cutoff = now - (48 * 3600)
-                for p in posts:
-                    data = p.get("data", {})
-                    title_lower = (data.get("title") or "").lower()
-                    selftext_lower = (data.get("selftext") or "").lower()
-                    text = title_lower + " " + selftext_lower
+                # Frequency: count occurrences of query in title+selftext
+                frequency += len(pattern.findall(text))
 
-                    # Frequency: count occurrences of query in title+selftext
-                    frequency += len(pattern.findall(text))
+                # Votes for engagement
+                try:
+                    ups = int(post.get("ups", 0) or 0)
+                    num_comments = int(post.get("num_comments", 0) or 0)
+                    total_votes += ups
+                    total_comments += num_comments
+                    vote_counted_posts += 1
+                except Exception:
+                    pass
 
-                    # Votes for engagement
-                    ups = data.get("ups") or 0
-                    downs = data.get("downs") or 0
-                    num_comments = data.get("num_comments") or 0
-                    try:
-                        total_votes += int(ups) + abs(int(downs))
-                        total_comments += int(num_comments)
-                        vote_counted_posts += 1
-                    except Exception:
-                        pass
-
-                    # Freshness: posts in last 48 hours
-                    created = data.get("created_utc")
-                    try:
-                        if created and float(created) >= cutoff:
+                # Freshness: posts in last 48 hours
+                created_datetime = post.get("created_datetime")
+                try:
+                    if created_datetime:
+                        # Parse ISO format datetime
+                        from datetime import datetime
+                        created_time = datetime.fromisoformat(created_datetime.replace('Z', '+00:00')).timestamp()
+                        if created_time >= cutoff:
                             freshness += 1
-                    except Exception:
-                        pass
-            else:
-                print(f"Failed to fetch posts for {subreddit}, status code: {resp_search.status_code}")
-                json_response = None
+                except Exception:
+                    pass
+        else:
+            json_response = None
 
-        engagement_raw = ((total_votes + total_comments) / subs) * 1000 if subs and subs > 0 else 0
+        # Engagement is total votes + comments
+        engagement_raw = total_votes + total_comments
 
-        print(f"Subreddit: {subreddit}, Subs: {subs}, Freq: {frequency}, Fresh: {freshness}, Eng: {engagement_raw:.2f}")
+        print(f"Subreddit: {subreddit}, Freq: {frequency}, Fresh: {freshness}, Eng: {engagement_raw}")
         # Insert into DB
-        await insert_subreddit(db_conn, subreddit, json_response, engagement_raw, freshness, frequency, subs)
+        await insert_subreddit(db_conn, subreddit, json_response, engagement_raw, freshness, frequency)
 
     except Exception as e:
         print(f"Error processing {subreddit}: {e}")
@@ -296,7 +253,6 @@ async def calculate_and_insert_subreddit_score(db_conn, subreddit: str, subs: in
 async def score_and_rank_subreddits_async(
     query: str,
     min_frequency: int = 3,
-    min_subscribers: int = 5000,
     timeout: int = 10,
     reddit_min_comments: int = 5,
     google_target_count: int = 10,
@@ -304,12 +260,11 @@ async def score_and_rank_subreddits_async(
     """Discover subreddits for `query`, score and rank them asynchronously.
 
     Returns a list of dicts sorted by composite score (descending). Each dict contains:
-    - subreddit, subscribers, frequency, freshness, engagement, relevance_score
+    - subreddit, frequency, freshness, engagement, relevance_score
     """
     # Discover subreddits internally
     subreddits = aggregate_and_filter_subreddits(
         query,
-        min_subscribers=min_subscribers,
         timeout=timeout,
         reddit_min_comments=reddit_min_comments,
         google_target_count=google_target_count,
@@ -326,8 +281,8 @@ async def score_and_rank_subreddits_async(
 
     # Create tasks for all subreddits
     tasks = []
-    for subreddit, subs in subreddits.items():
-        task = calculate_and_insert_subreddit_score(db_conn, subreddit, subs, query, timeout, now)
+    for subreddit in subreddits:
+        task = calculate_and_insert_subreddit_score(db_conn, subreddit, 0, query, timeout, now)
         tasks.append(task)
 
     # Run all tasks concurrently
@@ -344,7 +299,6 @@ async def score_and_rank_subreddits_async(
     freq_map = {row[0]: row[3] for row in rows}
     fresh_map = {row[0]: row[2] for row in rows}
     eng_map = {row[0]: row[1] for row in rows}
-    subs_map = {row[0]: row[4] for row in rows}
 
     # Normalize using max-scaling
     def normalize_map(m: dict) -> dict:
@@ -356,7 +310,6 @@ async def score_and_rank_subreddits_async(
         return {k: float(v) / float(max_val) for k, v in m.items()}
 
     norm_freq = normalize_map(freq_map)
-    norm_subs = normalize_map(subs_map)
     norm_fresh = normalize_map(fresh_map)
     norm_eng = normalize_map(eng_map)
 
@@ -364,9 +317,8 @@ async def score_and_rank_subreddits_async(
     for sub in freq_map.keys():
         score = (
             0.4 * norm_freq.get(sub, 0.0)
-            + 0.1 * norm_subs.get(sub, 0.0)
             + 0.3 * norm_fresh.get(sub, 0.0)
-            + 0.2 * norm_eng.get(sub, 0.0)
+            + 0.3 * norm_eng.get(sub, 0.0)
         )
         relevance_score = score * 100
         await update_relevance_score(db_conn, sub, relevance_score)
@@ -378,7 +330,7 @@ async def score_and_rank_subreddits_async(
 
     print("Top 5 subreddits by relevance:")
     for row in all_rows[:5]:
-        print(f"  {row[0]}: {row[6]:.2f}")
+        print(f"  {row[0]}: {row[5]:.2f}")
 
     # Keep top 20
     top_20 = all_rows[:20]
@@ -403,7 +355,6 @@ async def score_and_rank_subreddits_async(
 def score_and_rank_subreddits(
     query: str,
     min_frequency: int = 3,
-    min_subscribers: int = 5000,
     timeout: int = 10,
     reddit_min_comments: int = 5,
     google_target_count: int = 10,
@@ -415,7 +366,7 @@ def score_and_rank_subreddits(
     Returns the db connection.
     """
     return asyncio.run(score_and_rank_subreddits_async(
-        query, min_frequency, min_subscribers, timeout, reddit_min_comments, google_target_count
+        query, min_frequency, timeout, reddit_min_comments, google_target_count
     ))
 
 

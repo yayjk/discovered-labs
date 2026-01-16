@@ -5,7 +5,7 @@ from engines.db import select_json_responses, create_posts_table, insert_post, d
 from engines.moreData import fetch_and_insert_more_posts
 from engines.relationshipInference import run_parallel_extraction
 import time
-
+import ast
 
 async def process_json_responses(db, query):
     print("Starting process_json_responses")
@@ -16,17 +16,46 @@ async def process_json_responses(db, query):
 
     subreddit_after_list = []
     for subreddit, json_resp in json_responses:
-        response = json.loads(json_resp)
+        if not json_resp:
+            continue
+            
+        try:
+            # Parse the string representation of posts list
+            posts = ast.literal_eval(json_resp)
+        except Exception as e:
+            print(f"Error parsing json_resp for {subreddit}: {e}")
+            continue
+        
         post_count = 0
-        for child in response['data']['children']:
-            post = child['data']
-            await insert_post(db, subreddit, post['title'], post.get('selftext', ''), post['ups'], post['downs'], post['num_comments'], post['created_utc'], post['url'], post['id'])
-            post_count += 1
+        for post in posts:
+            try:
+                # Extract fields from the new post format
+                title = post.get('post_title', '')
+                selftext = post.get('self_text', '')
+                ups = int(post.get('ups', 0) or 0)
+                num_comments = int(post.get('num_comments', 0) or 0)
+                
+                # Convert created_datetime (ISO format) to Unix timestamp
+                created_utc = 0
+                created_datetime = post.get('created_datetime', '')
+                if created_datetime:
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(created_datetime.replace('Z', '+00:00'))
+                        created_utc = int(dt.timestamp())
+                    except Exception:
+                        pass
+                
+                url = post.get('post_url', '')
+                post_id = post.get('post_id', '').replace('t3_', '')  # Remove t3_ prefix if present
+                
+                await insert_post(db, subreddit, title, selftext, ups, num_comments, created_utc, url, post_id)
+                post_count += 1
+            except Exception as e:
+                print(f"Error inserting post for {subreddit}: {e}")
+                continue
+        
         print(f"Inserted {post_count} initial posts for {subreddit}")
-        after = response['data'].get('after')
-        if after:
-            subreddit_after_list.append((subreddit, after))
-            print(f"Added {subreddit} with after: {after}")
 
     print(f"Collected {len(subreddit_after_list)} subreddits for more posts")
     await drop_json_response_column(db)
@@ -42,7 +71,6 @@ def main():
     query = "tesla"
     db = score_and_rank_subreddits(query=query, min_frequency=3)
     asyncio.run(process_json_responses(db, query))
-    sleep(2)  # Small delay to ensure DB is closed before extraction
     time.sleep(2)  # Small delay to ensure DB is closed before extraction
     asyncio.run(run_parallel_extraction())
 

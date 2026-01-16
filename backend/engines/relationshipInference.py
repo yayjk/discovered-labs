@@ -6,6 +6,7 @@ import asyncio
 import httpx
 import time
 import json
+import re
 from .db import fetch_all_posts
 
 # Level 1 Required Enum + Necessary Extensions
