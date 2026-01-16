@@ -2,6 +2,7 @@ import json
 import os
 import re
 from typing import List
+import random
 
 from dotenv import load_dotenv
 import instructor
@@ -28,6 +29,28 @@ from .subredditDiscovery import scrape_reddit_search
 from .subredditRanking import scrape_subreddit_search
 
 load_dotenv()
+
+# Browser user agents for rotation
+USER_AGENTS = {
+    "chrome_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "chrome_130": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "firefox_latest": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    "safari_macos": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+    "edge_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+    "chrome_mobile": "Mozilla/5.0 (Linux; Android 14; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+}
+
+async def add_jitter(min_delay: float = 0.5, max_delay: float = 2.5):
+    """
+    Add random jitter (delay) between requests to avoid detection.
+    
+    Args:
+        min_delay: Minimum delay in seconds
+        max_delay: Maximum delay in seconds
+    """
+    jitter = random.uniform(min_delay, max_delay)
+    await asyncio.sleep(jitter)
+
 
 class SubredditDiscovery(BaseModel):
     subreddits: List[str] = []
@@ -258,6 +281,9 @@ async def score_and_rank_subreddits_async(
     google_target_count: int = 10,
 ) -> list:
     """Discover subreddits for `query`, score and rank them asynchronously.
+    
+    Uses batched concurrent calls (2-4 random simultaneous calls) with jitter between batches
+    to avoid detection and rate limiting.
 
     Returns a list of dicts sorted by composite score (descending). Each dict contains:
     - subreddit, frequency, freshness, engagement, relevance_score
@@ -279,14 +305,35 @@ async def score_and_rank_subreddits_async(
     now = time.time()
     print(f"Discovered {len(subreddits)} subreddits for query '{query}'")
 
-    # Create tasks for all subreddits
-    tasks = []
-    for subreddit in subreddits:
-        task = calculate_and_insert_subreddit_score(db_conn, subreddit, 0, query, timeout, now)
-        tasks.append(task)
-
-    # Run all tasks concurrently
-    await asyncio.gather(*tasks)
+    # Process subreddits in batches with random concurrency (2-4 per batch)
+    i = 0
+    batch_num = 1
+    while i < len(subreddits):
+        # Random batch size for each iteration
+        batch_size = random.randint(2, 4)
+        batch = subreddits[i:i + batch_size]
+        
+        if not batch:
+            break
+        
+        print(f"\nProcessing batch {batch_num}: {len(batch)} subreddits (batch_size={batch_size})")
+        
+        # Create tasks for this batch
+        batch_tasks = [
+            calculate_and_insert_subreddit_score(db_conn, subreddit, 0, query, timeout, now)
+            for subreddit in batch
+        ]
+        
+        # Run batch concurrently
+        await asyncio.gather(*batch_tasks)
+        
+        i += len(batch)
+        batch_num += 1
+        
+        # Add jitter between batches (if not the last batch)
+        if i < len(subreddits):
+            await add_jitter(min_delay=1.5, max_delay=3.5)
+            print("Added jitter between batches")
 
     # Fetch all scores from DB
     rows = await select_subreddits_by_frequency(db_conn, min_frequency)

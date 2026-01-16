@@ -1,19 +1,28 @@
-import requests
 from bs4 import BeautifulSoup
 from typing import List, Dict
 import time
+import random
+from curl_cffi import requests
 
 # Reddit search URL template
 REDDIT_SEARCH_TEMPLATE = "https://old.reddit.com/search/?q={query}&sort=relevance&t=week"
 
-# Headers to mimic a browser request
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+# Browser user agents for rotation
+USER_AGENTS = {
+    "chrome_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "chrome_130": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "firefox_latest": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    "safari_macos": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+    "edge_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+    "chrome_mobile": "Mozilla/5.0 (Linux; Android 14; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
 }
+
+# Impersonate targets for curl_cffi (supported targets)
+IMPERSONATE_TARGETS = ["chrome131", "chrome120", "firefox120", "safari17_0"]
 
 def scrape_reddit_search(query: str) -> List[str]:
     """
-    Scrape Reddit search results using Beautiful Soup.
+    Scrape Reddit search results using Beautiful Soup with curl_cffi browser impersonation.
     
     Args:
         query: The search query (e.g., 'openai')
@@ -25,8 +34,11 @@ def scrape_reddit_search(query: str) -> List[str]:
     url = REDDIT_SEARCH_TEMPLATE.format(query=query)
     
     try:
-        # Fetch the page
-        response = requests.get(url, headers=HEADERS, timeout=10)
+        # Select random impersonate target for browser mimicking
+        impersonate_target = random.choice(IMPERSONATE_TARGETS)
+        
+        # Fetch the page with curl_cffi for browser impersonation
+        response = requests.get(url, impersonate=impersonate_target, timeout=10)
         response.raise_for_status()
         
         

@@ -1,18 +1,41 @@
-import requests
 from bs4 import BeautifulSoup
 from typing import List, Dict
+import time
+import random
+import asyncio
+from curl_cffi import requests
 
 # Template URL for subreddit search
 SUBREDDIT_SEARCH_TEMPLATE = "https://old.reddit.com/r/{subreddit}/search/?q={query}&include_over_18=on&restrict_sr=on&t=month&sort=relevance"
 
-# Headers to mimic a browser request
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+# Browser user agents for rotation
+USER_AGENTS = {
+    "chrome_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "chrome_130": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "firefox_latest": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    "safari_macos": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+    "edge_131": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+    "chrome_mobile": "Mozilla/5.0 (Linux; Android 14; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
 }
+
+# Impersonate targets for curl_cffi (supported targets)
+IMPERSONATE_TARGETS = ["chrome131", "chrome120", "firefox120", "safari17_0"]
+
+
+async def add_jitter(min_delay: float = 0.5, max_delay: float = 2.5):
+    """
+    Add random jitter (delay) between requests to avoid detection.
+    
+    Args:
+        min_delay: Minimum delay in seconds
+        max_delay: Maximum delay in seconds
+    """
+    jitter = random.uniform(min_delay, max_delay)
+    await asyncio.sleep(jitter)
 
 def scrape_subreddit_search_page(url: str) -> tuple[List[Dict], str | None]:
     """
-    Scrape a single page of subreddit search results.
+    Scrape a single page of subreddit search results with browser impersonation.
     
     Args:
         url: The subreddit search URL to scrape
@@ -21,8 +44,11 @@ def scrape_subreddit_search_page(url: str) -> tuple[List[Dict], str | None]:
         Tuple containing list of results and next page URL (or None if no more pages)
     """
     try:
-        # Fetch the page
-        response = requests.get(url, headers=HEADERS, timeout=10)
+        # Select random impersonate target for browser mimicking
+        impersonate_target = random.choice(IMPERSONATE_TARGETS)
+        
+        # Fetch the page with curl_cffi for browser impersonation
+        response = requests.get(url, impersonate=impersonate_target, timeout=10)
         response.raise_for_status()
         
         print(f"Response Code: {response.status_code}")
@@ -185,7 +211,7 @@ def scrape_subreddit_search_page(url: str) -> tuple[List[Dict], str | None]:
 
 def scrape_subreddit_search(subreddit: str, query: str, max_pages: int = None) -> List[Dict]:
     """
-    Scrape subreddit search results with pagination support.
+    Scrape subreddit search results with pagination support, browser impersonation, and jitter.
     
     Args:
         subreddit: The subreddit name to search in (e.g., 'OpenAI')
@@ -210,6 +236,12 @@ def scrape_subreddit_search(subreddit: str, query: str, max_pages: int = None) -
         page_results, next_url = scrape_subreddit_search_page(current_url)
         all_results.extend(page_results)
         current_url = next_url
+        
+        # Add jitter before next page request (if there is one)
+        if current_url:
+            jitter_delay = random.uniform(1.0, 3.0)
+            print(f"Adding jitter delay: {jitter_delay:.2f}s before next page...")
+            time.sleep(jitter_delay)
     
     print(f"\n\n=== Scraping Complete ===")
     print(f"Total pages scraped: {page_count}")
