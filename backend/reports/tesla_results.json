@@ -1,0 +1,1164 @@
+[
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's diner and its performance, indicating business-related information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Teslas Diner",
+          "canonical_name": "Tesla Diner"
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Teslas",
+          "canonical_name": "Tesla, Inc."
+        },
+        "evidence": "Teslas Diner Went From Viral Sensation to Empty Pit Stop in Six Months",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q4yoda",
+    "post_url": "https://old.reddit.com/r/LosAngeles/comments/1q4yoda/teslas_diner_went_from_viral_sensation_to_empty/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is about a road rage incident, which is not business-related information.",
+    "triplets": [],
+    "post_id": "1qdspdd",
+    "post_url": "https://old.reddit.com/r/LosAngeles/comments/1qdspdd/update_on_the_crazy_tesla_road_rage_guy_in_hi/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post discusses personal driving habits and is not related to business information.",
+    "triplets": [],
+    "post_id": "1q522la",
+    "post_url": "https://old.reddit.com/r/LosAngeles/comments/1q522la/whats_with_all_of_you_who_tailgate_cars_all_the/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is about driver behavior and not relevant to business information.",
+    "triplets": [],
+    "post_id": "1pqbb5z",
+    "post_url": "https://old.reddit.com/r/LosAngeles/comments/1pqbb5z/angelenos_dont_know_how_to_use_high_beams_and/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is just a title about upcoming events and doesn't contain business-related information.",
+    "triplets": [],
+    "post_id": "1qalpel",
+    "post_url": "https://old.reddit.com/r/LosAngeles/comments/1qalpel/upcoming_events_of_resistance"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses a decision made by Elon Musk regarding Tesla's product offerings, indicating a business leadership relationship.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Elon Musk",
+          "canonical_name": "Elon Musk"
+        },
+        "relationship": "ceo",
+        "object": {
+          "raw_name": "tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "evidence": "BREAKING: Elon Musk announces tesla will STOP selling FSD after Feb 14.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1qcg8ws",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1qcg8ws/breaking_elon_musk_announces_tesla_will_stop/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post is about a Tesla vehicle, indicating relevant business information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Prius-like car",
+          "canonical_name": "Tesla Prius-like Car"
+        },
+        "evidence": "Spotted this Tesla Prius-like car today..",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1psjk4d",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1psjk4d/spotted_this_tesla_priuslike_car_today/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses the downsides of owning a Tesla, indicating relevant business information.",
+    "triplets": [],
+    "post_id": "1q8k9z8",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q8k9z8/whats_the_least_talked_about_downside_of_owning_a/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's Model Y sales performance, indicating relevant business information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Model Y",
+          "canonical_name": "Tesla Model Y"
+        },
+        "evidence": "Tesla has revealed that the Model Y was #1 best-selling car overall in the world in 2025 for a third year in a row",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pzwkq5",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pzwkq5/tesla_has_revealed_that_the_model_y_was_1/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's warranty and inspection process, indicating relevant business information.",
+    "triplets": [],
+    "post_id": "1puvcox",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1puvcox/tesla_basic_vehicle_limited_warranty_about_to/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses a Tesla product demo, suggesting it is directly related to Tesla's business activities.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Roadster",
+          "canonical_name": "Tesla Roadster"
+        },
+        "evidence": "Tesla Roadster Demo",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pzoobr",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pzoobr/tesla_roadster_demo/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses specific issues with Tesla windshield wipers, indicative of product-related information.",
+    "triplets": [],
+    "post_id": "1q1lskj",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q1lskj/are_tesla_windshield_wipers_known_to_be_this_bad/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "This post is about storage used by the Tesla app, related to the product.",
+    "triplets": [],
+    "post_id": "1q5h7il",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q5h7il/guys_is_your_tesla_app_using_a_lot_of_storage_too/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses a legal ruling impacting Tesla's product, indicating relevant business information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Autopilot",
+          "canonical_name": "Tesla Autopilot"
+        },
+        "evidence": "California judge rules that Tesla has to rename Autopilot because it's misleading",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pp35vg",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pp35vg/sherwood_news_california_judge_rules_that_tesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses perceptions of Tesla's Full Self Drive (FSD) feature, indicating product-related information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "FSD",
+          "canonical_name": "Tesla Full Self-Driving"
+        },
+        "evidence": "Non Tesla owners view of FSD",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pppgs9",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pppgs9/non_tesla_owners_view_of_fsd/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses service issues with Tesla, indicating relevant business information.",
+    "triplets": [],
+    "post_id": "1q0g4iw",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q0g4iw/service_is_the_worst_part_of_owning_a_tesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses concerns about road trips with a Tesla, indicating relevant business information.",
+    "triplets": [],
+    "post_id": "1q4y9pm",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q4y9pm/anyone_else_not_like_stopping_on_road_trips/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses negative experiences with non-Tesla charging, indirectly relating to Tesla's product advantage.",
+    "triplets": [],
+    "post_id": "1pxfma6",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pxfma6/its_unbelievable_how_f_cking_bad_nontesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post inquires about additional expenses related to owning a Tesla Model 3, indicating business-related information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla Model 3",
+          "canonical_name": "Tesla Model 3"
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "evidence": "What additional expenses come with getting a Tesla Model 3?",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pvrljj",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pvrljj/what_additional_expenses_come_with_getting_a/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post talks about a change in Tesla's Model Y features, indicating business-related information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Model Y",
+          "canonical_name": "Tesla Model Y"
+        },
+        "evidence": "Tesla MY Black Headliner From Factory",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q8o4yf",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q8o4yf/tesla_my_black_headliner_from_factory/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post talks about Tesla drivers, indicating business-related information.",
+    "triplets": [],
+    "post_id": "1q7sy2v",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q7sy2v/how_often_do_other_tesla_drivers_say_hi_to_your/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post describes usage of a Tesla Model Y and charging issues, indicating product-related technical information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Model Y",
+          "canonical_name": "Tesla Model Y"
+        },
+        "evidence": "Tesla Model Y Charging",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pzjd6j",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pzjd6j/tesla_model_y_charging/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post promotes a 'free Tesla wrap gallery', directly pertaining to Tesla products.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Paint Shop",
+          "canonical_name": "Paint Shop"
+        },
+        "relationship": "affiliation",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "evidence": "Built a site where you can preview Paint Shop wraps in 3D before downloading.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pr2fbl",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1pr2fbl/i_made_a_free_tesla_wrap_gallery_with_3d_preview/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla Superchargers and their potential placement near stores like Trader Joe's, indicating suggestions for Tesla's business strategy.",
+    "triplets": [],
+    "post_id": "1q4md0y",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q4md0y/tesla_super_chargers_should_be_near_trader_joes/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses new features being launched by Tesla, indicating business-related information.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "7 seat MY",
+          "canonical_name": "Tesla Model Y 7-Seater"
+        },
+        "evidence": "Tesla launches 7 seat MY and black headliner/new screen",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1qbf00i",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1qbf00i/breaking_tesla_launches_7_seat_my_and_black/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is a personal anecdote about a fun fact regarding the Tesla app.",
+    "triplets": [],
+    "post_id": "1qc9kkp",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1qc9kkp/til_the_location_arrow_in_the_app_home_screen_is/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses the tonal shift around Tesla online.",
+    "triplets": [],
+    "post_id": "1qdisjs",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1qdisjs/a_really_interesting_article_in_x_about_thee/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is a personal opinion about Tesla KeyFob.",
+    "triplets": [],
+    "post_id": "1q4cqkb",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q4cqkb/tesla_keyfob/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to the lease price hike of Tesla Model Y.",
+    "triplets": [],
+    "post_id": "1q42uqu",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1q42uqu/2026_tesla_model_y_lease_hiked_by_40/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses how to make Tesla go further and conserve battery.",
+    "triplets": [],
+    "post_id": "1qasqm5",
+    "post_url": "https://old.reddit.com/r/TeslaLounge/comments/1qasqm5/how_do_you_make_your_tesla_go_further/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post talks about banning Tesla.",
+    "triplets": [],
+    "post_id": "1q9y9f8",
+    "post_url": "https://old.reddit.com/r/ProgressiveHQ/comments/1q9y9f8/great_lets_work_on_getting_tesla_banned_across/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to Tesla protests.",
+    "triplets": [],
+    "post_id": "1q236t9",
+    "post_url": "https://old.reddit.com/r/ProgressiveHQ/comments/1q236t9/time_to_start_up_the_tesla_protests_again/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to Tesla slashing prices as Chinese competitors overtake US markets.",
+    "triplets": [],
+    "post_id": "1q28qlv",
+    "post_url": "https://old.reddit.com/r/ProgressiveHQ/comments/1q28qlv/tesla_slashes_prices_in_panic_mode_as_chinese/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to Tesla needing Silver.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "TESLA",
+          "canonical_name": "Tesla"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants TESLA...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants TESLA...",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "MICROSOFT",
+          "canonical_name": "Microsoft"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., MICROSOFT,...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., MICROSOFT,",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "GOOGLE",
+          "canonical_name": "Google"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., GOOGLE,...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., GOOGLE,",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "AMAZON",
+          "canonical_name": "Amazon"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., AMAZON,...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., AMAZON,",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "FACEBOOK",
+          "canonical_name": "Facebook"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., FACEBOOK,...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., FACEBOOK,",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "PALANTIR",
+          "canonical_name": "Palantir Technologies"
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., PALANTIR,...",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., PALANTIR,",
+        "suggested_relationship": "uses"
+      },
+      {
+        "subject": {
+          "raw_name": "APPLE",
+          "canonical_name": "Apple Inc."
+        },
+        "relationship": "other",
+        "object": {
+          "raw_name": "SILVER",
+          "canonical_name": "Silver"
+        },
+        "evidence": "Silver is NEEDED by all the tech giants ..., APPLE.",
+        "suggested_relationship_evidence": "Silver is NEEDED by all the tech giants ..., APPLE.",
+        "suggested_relationship": "uses"
+      }
+    ],
+    "post_id": "1q1prvv",
+    "post_url": "https://old.reddit.com/r/ProgressiveHQ/comments/1q1prvv/where_are_the_occupy_wallstreet_bros/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post inquiries about next vehicle purchase between Tesla and other brands.",
+    "triplets": [],
+    "post_id": "1q45c84",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q45c84/will_your_next_vehicle_purchase_be_another_tesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post compares Tesla cars to BMW i4 and Hyundai IONIQ 5.",
+    "triplets": [],
+    "post_id": "1pz51ul",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pz51ul/once_you_get_a_tesla_its_hard_to_go_back/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post asks about washer fluid for Tesla model-y.",
+    "triplets": [],
+    "post_id": "1qaet5l",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1qaet5l/which_washer_fluid_for_tesla_modely_any_or_none/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla releasing the 7-seat option for the Model Y.",
+    "triplets": [],
+    "post_id": "1qbff6b",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1qbff6b/breaking_tesla_has_released_the_7seat_option_for/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post compares Tesla nav with CarPlay.",
+    "triplets": [],
+    "post_id": "1q55uyj",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q55uyj/tesla_nav_is_so_much_better_than_carplay/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to the purchase of Tesla Model Y Performance.",
+    "triplets": [],
+    "post_id": "1pxsv4x",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pxsv4x/first_tesla_surprise/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post presents a review of Tesla Model Y Performance.",
+    "triplets": [],
+    "post_id": "1qdvvj9",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1qdvvj9/tesla_model_y_performance_review_reveals_what/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post is about installing Tesla Wall Charger.",
+    "triplets": [],
+    "post_id": "1q9ag9r",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q9ag9r/diy_tesla_wall_charger/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post asks whether it is a good idea to buy a Tesla in midwest cold winters.",
+    "triplets": [],
+    "post_id": "1pnp597",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pnp597/i_want_to_buy_a_tesla_however_i_live_in_the/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to taking delivery of Tesla.",
+    "triplets": [],
+    "post_id": "1prm7w8",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1prm7w8/first_ev_first_tesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post mentions Tesla automatic wipers being horrible.",
+    "triplets": [],
+    "post_id": "1pwlmee",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pwlmee/tesla_automatic_wipers_are_horrible_any/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post asks about upgrade HW3 to HW4 for a fee.",
+    "triplets": [],
+    "post_id": "1pwci7z",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pwci7z/is_tesla_ever_going_to_upgrade_hw3_to_hw4_for_a/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post is about cleaning the windshield at Tesla dealership.",
+    "triplets": [],
+    "post_id": "1pwgdvv",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pwgdvv/i_keep_this_getting_this_even_after_cleaning_the/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to taking delivery of Tesla Model Y Performance.",
+    "triplets": [],
+    "post_id": "1pu9yo0",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pu9yo0/2026_tesla_model_y_performance/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla used inventory prices.",
+    "triplets": [],
+    "post_id": "1qd8p9k",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1qd8p9k/tesla_used_inventory_prices_are_ridiculous_2024/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post talks about the arrival of the first Tesla.",
+    "triplets": [],
+    "post_id": "1q60l8k",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q60l8k/first_teslacant_wait/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses buying a Tesla Model Y and mentions Tesla and Honda dealerships.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Honda",
+          "canonical_name": "Honda"
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Option 1 Trade in hrv at Honda and buy pre owned Tesla at this Honda dealer.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pwp50s",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pwp50s/tesla_y_model_buy_2025_pre_owned_at_honda_dealer/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses the performance of Tesla vehicles in winter conditions.",
+    "triplets": [],
+    "post_id": "1q4lxwa",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q4lxwa/tesla_in_winter_is_not_that_great/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses car washes that advertise Tesla-specific washing, indicating a service related to Tesla vehicles.",
+    "triplets": [],
+    "post_id": "1qaqflo",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1qaqflo/swirl_marks_and_micro_scratches_after/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post compares Waymo and Tesla's FSD (Full Self-Driving) capabilities.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Waymo",
+          "canonical_name": "Waymo"
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "Teslas FSD",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Is Waymo actually better than Teslas FSD?",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pyxejf",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pyxejf/is_waymo_actually_better_than_teslas_fsd/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses buying a Tesla Model Y and considers its financial implications.",
+    "triplets": [],
+    "post_id": "1pqhxsw",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pqhxsw/thinking_about_a_tesla_model_y_49k_worth_it/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post discusses tinting and PPF for a Tesla Model Y, which is a personal preference and not a business relationship.",
+    "triplets": [],
+    "post_id": "1q99oem",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q99oem/2026_tesla_model_y/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is about a personal experience of a wife not getting used to driving a Tesla.",
+    "triplets": [],
+    "post_id": "1pzjzpq",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1pzjzpq/wife_cant_get_used_to_driving_a_tesla_after/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses coming back to Tesla after selling when Elon got really involved.",
+    "triplets": [],
+    "post_id": "1q1dirs",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q1dirs/anyone_else_come_back_to_tesla_after_selling_when/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla Insurance and a price hike, indicating a business transaction.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla Insurance",
+          "canonical_name": "Tesla Insurance"
+        },
+        "relationship": "subsidiary",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Tesla Insurance Letter of Non-Renewal then price hike 100%?",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q4x2v1",
+    "post_url": "https://old.reddit.com/r/TeslaModelY/comments/1q4x2v1/tesla_insurance_letter_of_nonrenewal_then_price/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's FSD (Full Self-Driving) capabilities and its limitations.",
+    "triplets": [],
+    "post_id": "1q9q9l5",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q9q9l5/unpopular_opinion_no_tesla_on_the_road_today_is/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's FSD and its potential safety benefits compared to regular vehicles.",
+    "triplets": [],
+    "post_id": "1pvclvz",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pvclvz/fsd_and_safety_buy_everyone_teslas_right_now/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's FSD and its levels of autonomy (L2, L3, L4).",
+    "triplets": [],
+    "post_id": "1q1j8wj",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q1j8wj/when_will_tesla_achieve_l3/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post mentions Nvidia competing with Tesla's FSD, and includes comments from Musk and Elluswamy.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "NVIDIA",
+          "canonical_name": "Nvidia"
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "Tesla's FSD",
+          "canonical_name": "Tesla FSD"
+        },
+        "evidence": "NVIDIA Unveils Autonomous Vehicle Platform to Compete with Tesla's FSD",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      },
+      {
+        "subject": {
+          "raw_name": "Musk",
+          "canonical_name": "Elon Musk"
+        },
+        "relationship": "ceo",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Musk & Elluswamy Weigh In",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      },
+      {
+        "subject": {
+          "raw_name": "VP Ashok Elluswamy",
+          "canonical_name": "Ashok Elluswamy"
+        },
+        "relationship": "employee",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Tesla FSD v14 Already Has Reasoning Features, More and more reasoning will ship in Q1, Says VP Ashok Elluswamy",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q7hvo9",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q7hvo9/nvidia_unveils_autonomous_vehicle_platform_to/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses early thoughts on Tesla FSD 14.2.2.",
+    "triplets": [],
+    "post_id": "1pu3r0k",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pu3r0k/early_thoughts_on_tesla_fsd_1422_people_are/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post mentions Nvidia CEO Jensen Huang's comment on Tesla having the most advanced autonomous vehicle stack.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Nvidia CEO Jensen Huang",
+          "canonical_name": "Jensen Huang"
+        },
+        "relationship": "ceo",
+        "object": {
+          "raw_name": "Nvidia",
+          "canonical_name": "Nvidia"
+        },
+        "evidence": "Nvidia CEO Jensen Huang says Elon Musks Tesla has the most advanced autonomous vehicle stack in the world.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      },
+      {
+        "subject": {
+          "raw_name": "Elon Musks Tesla",
+          "canonical_name": "Tesla"
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Elon Musks",
+          "canonical_name": "Elon Musk"
+        },
+        "evidence": "Nvidia CEO Jensen Huang says Elon Musks Tesla has the most advanced autonomous vehicle stack in the world.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q5ue1g",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q5ue1g/scf_news_alert_nvidia_ceo_jensen_huang_says_elon/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post compares Waymo and Tesla FSD during a San Francisco Blackout.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Waymo",
+          "canonical_name": "Waymo"
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Waymo vs Tesla FSD during San Francisco Blackout",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pspv8g",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pspv8g/waymo_vs_tesla_fsd_during_san_francisco_blackout/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla patenting micro-cone camera shields.",
+    "triplets": [],
+    "post_id": "1pr2qik",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pr2qik/tesla_patents_microcone_camera_shields_to_solve/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses a first look at Tesla's FSD v14.2.2.3.",
+    "triplets": [],
+    "post_id": "1qcpejc",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qcpejc/first_look_at_teslas_fsd_v14223/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses the user's perception of Tesla's FSD readiness for unsupervised use.",
+    "triplets": [],
+    "post_id": "1q9j378",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q9j378/the_more_i_see_clips_from_fsd_the_more_i_think/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses whether Tesla will charge more for unsupervised FSD after paying for 8k FSD.",
+    "triplets": [],
+    "post_id": "1qddcgp",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qddcgp/anybody_think_that_after_paying_8k_fsd_tesla/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post contains positive news about Tesla FSD saving a driver's life.",
+    "triplets": [],
+    "post_id": "1q60cld",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q60cld/finally_some_positive_news_about_tesla_fsd/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla FSD driving 9,000 miles without intervention.",
+    "triplets": [],
+    "post_id": "1pzb2iq",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pzb2iq/tesla_fsd_drives_9000_miles_without_intervention/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post mentions a comment about Mercedes being better than Tesla, but does not provide a structured business relationship.",
+    "triplets": [],
+    "post_id": "1qd9v3m",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qd9v3m/saw_these_comments_on_a_subreddit_talking_about/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla FSD v14 and mentions VP Ashok Elluswamy.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "VP Ashok Elluswamy",
+          "canonical_name": "Ashok Elluswamy"
+        },
+        "relationship": "employee",
+        "object": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla"
+        },
+        "evidence": "Tesla FSD v14 Already Has Reasoning Features, More and more reasoning will ship in Q1, Says VP Ashok Elluswamy",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q8a2lb",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q8a2lb/tesla_fsd_v14_already_has_reasoning_features_more/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses no more paid FSD and mentions it was announced on X (Twitter).",
+    "triplets": [],
+    "post_id": "1qcgefu",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qcgefu/no_more_paid_fsd/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla's self-driving capabilities and its failure to react to an obstacle, which is relevant to the technology and company performance.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "self driving Tesla",
+          "canonical_name": "self-driving"
+        },
+        "evidence": "Tesla never noticed it never responded never reacted just kept on going.",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pojryu",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pojryu/tesla_1_bunny_rabbit_0_yep_a_confirmed_road_kill/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post mentions Tesla Grok Navigation Commands and natural voice control, indicating a product feature and company involvement.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Grok Navigation Commands",
+          "canonical_name": "Grok Navigation Commands"
+        },
+        "evidence": "Tesla Grok Navigation Commands",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1pol1b1",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pol1b1/tesla_grok_navigation_commands_natural_voice/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses charging for Tesla FSD and its moral implications, as well as opinions on regulatory oversight by the European Commission.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Tesla FSD",
+          "canonical_name": "Tesla FSD"
+        },
+        "evidence": "Morally wrong to charge for Tesla FSD",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1puib3w",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1puib3w/morally_wrong_to_charge_for_tesla_fsd/"
+  },
+  {
+    "has_business_info": false,
+    "justification": "The post is just an observation about a bumper sticker related to Tesla's full self-driving feature, it does not contain business relevant information.",
+    "triplets": [],
+    "post_id": "1pptq5a",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1pptq5a/every_tesla_should_come_with_this_on_the_rear/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post compares Tesla's technology to Nvidia/Mercedes solutions, discussing competitive advantages and technological capabilities.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "nVidia",
+          "canonical_name": "Nvidia Corporation"
+        },
+        "evidence": "Tesla comparison to new nVidia/Mercedes solution",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      },
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "competitor",
+        "object": {
+          "raw_name": "Mercedes",
+          "canonical_name": "Mercedes-Benz Group AG"
+        },
+        "evidence": "Tesla comparison to new nVidia/Mercedes solution",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      },
+      {
+        "subject": {
+          "raw_name": "Nvidia",
+          "canonical_name": "Nvidia Corporation"
+        },
+        "relationship": "partner",
+        "object": {
+          "raw_name": "Mercedes",
+          "canonical_name": "Mercedes-Benz Group AG"
+        },
+        "evidence": "nVidia/Mercedes solution",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1qb341n",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qb341n/tesla_comparison_to_new_nvidiamercedes_solution/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post is a review of Tesla FSD after a road trip, discussing its performance and usability, providing feedback on the product's effectiveness.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "FSD",
+          "canonical_name": "FSD"
+        },
+        "evidence": "Tesla FSD Holiday Road Trip Review",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1qdqss3",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1qdqss3/tesla_fsd_holiday_road_trip_review_1800_miles/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post refers to unsupervised robotaxi testing from a Tesla employee, which is related to Tesla's product development and testing.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "employee",
+        "object": {
+          "raw_name": "Tesla employee",
+          "canonical_name": "Tesla employee"
+        },
+        "evidence": "from Tesla employee",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1psjsca",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1psjsca/interior_view_of_unsupervised_robotaxi_testing/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses Tesla FSD's ability to follow police officer hand gestures, which is directly related to its performance and functionality.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "Tesla FSD",
+          "canonical_name": "Tesla FSD"
+        },
+        "evidence": "Tesla FSD 14.2.2.2 follows police officers hand gestures",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q8l9qj",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q8l9qj/tesla_fsd_14222_follows_police_officers_hand/"
+  },
+  {
+    "has_business_info": true,
+    "justification": "The post discusses buying a Tesla for its FSD or autopilot features to ease commute fatigue, directly relating to a purchase decision based on product features.",
+    "triplets": [
+      {
+        "subject": {
+          "raw_name": "Tesla",
+          "canonical_name": "Tesla, Inc."
+        },
+        "relationship": "productOf",
+        "object": {
+          "raw_name": "FSD",
+          "canonical_name": "FSD"
+        },
+        "evidence": "buying a Tesla for the FSD",
+        "suggested_relationship_evidence": null,
+        "suggested_relationship": null
+      }
+    ],
+    "post_id": "1q22nwm",
+    "post_url": "https://old.reddit.com/r/TeslaFSD/comments/1q22nwm/buy_tesla_for_fsd_nj_gsp/"
+  }
+]

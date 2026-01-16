@@ -1,9 +1,9 @@
 import asyncio
 import json
 from engines.communityFinder import score_and_rank_subreddits
-from engines.db import select_json_responses, create_posts_table, insert_post, drop_json_response_column, migrate_to_disk, get_db_connection
+from engines.db import select_json_responses, create_posts_table, insert_post, drop_json_response_column, migrate_to_disk
 from engines.moreData import fetch_and_insert_more_posts
-from engines.relationshipInference import run_parallel_extraction
+from engines.inference import run_parallel_extraction
 import time
 import ast
 

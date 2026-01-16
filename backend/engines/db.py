@@ -104,21 +104,3 @@ async def insert_post(db, subreddit_name, title, selftext, ups, num_comments, cr
     """Insert a post entry into the posts table."""
     await db.execute("INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?)", (subreddit_name, title, selftext, ups, num_comments, created_utc, url, pid))
     await db.commit()
-
-DB_NAME = "subreddits.db"
-
-async def get_db_connection():
-    """Returns an active connection to the subreddits database."""
-    return aiosqlite.connect(DB_NAME)
-
-async def fetch_all_posts():
-    """Retrieves all posts from the DB and returns them as a list of dicts."""
-    async with await get_db_connection() as db:
-        db.row_factory = aiosqlite.Row # Allows access by column name
-        async with db.execute("SELECT pid as id, title, selftext, url FROM posts") as cursor:
-            rows = await cursor.fetchall()
-            # Combine title and text for better LLM context
-            return [
-                {"id": row["id"], "text": f"{row['title']}\n{row['selftext']}", "url": row["url"]} 
-                for row in rows
-            ]
