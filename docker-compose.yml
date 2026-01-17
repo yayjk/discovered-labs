@@ -5,10 +5,11 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/app
+      - /app/__pycache__
     env_file:
       - .env
     environment:
-      - DATABASE_URL=sqlite:///./social_intel.db
+      - PYTHONUNBUFFERED=1
 
   frontend:
     build: ./frontend
@@ -19,3 +20,5 @@ services:
       - /app/node_modules
     environment:
       - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
