@@ -30,8 +30,6 @@ def get_llm_triplets(posts: List[dict]) -> BatchExtraction:
         mode = instructor.Mode.OPENROUTER_STRUCTURED_OUTPUTS
         client = instructor.from_provider(model, api_key=api_key, mode=mode)
         
-        start_llm = time.time()
-        print(f"Sending batch of {len(posts)} posts to LLM for triplet extraction...")
         batch_results = client.create(
             response_model=BatchExtraction,
             messages=[
@@ -41,13 +39,9 @@ def get_llm_triplets(posts: List[dict]) -> BatchExtraction:
             max_retries=2,
             max_tokens=16000
         )
-        end_llm = time.time()
-        print(f"Time for LLM extraction of batch with {len(posts)} posts: {end_llm - start_llm:.2f} seconds")
         return batch_results
 
     except Exception as exc:
-        end_llm = time.time()
-        print(f"Time until LLM extraction failure: {end_llm - start_llm:.2f} seconds")
         print(f"Failed to extract triplets: {exc}")
         return BatchExtraction(results=[PostAnalysis(post_id=p['id'], has_business_info=False, justification="Error") for p in posts])
 
@@ -80,9 +74,6 @@ def resolve_entity_names(canonical_names: List[str]) -> dict[str, str]:
         mode = instructor.Mode.OPENROUTER_STRUCTURED_OUTPUTS
         client = instructor.from_provider(model, api_key=api_key, mode=mode)
         
-        start_llm = time.time()
-        print(f"Sending {len(canonical_names)} entity names to LLM for resolution...")
-        
         resolution_result = client.create(
             response_model=EntityResolutionResult,
             messages=[
@@ -92,9 +83,6 @@ def resolve_entity_names(canonical_names: List[str]) -> dict[str, str]:
             max_retries=2,
             max_tokens=8000
         )
-        
-        end_llm = time.time()
-        print(f"Time for entity resolution: {end_llm - start_llm:.2f} seconds")
         
         # Build mapping from variant to master name
         name_mapping: dict[str, str] = {}
@@ -108,7 +96,6 @@ def resolve_entity_names(canonical_names: List[str]) -> dict[str, str]:
             if name not in name_mapping:
                 name_mapping[name] = name
         
-        print(f"Resolved {len(canonical_names)} names into {len(resolution_result.groups)} groups")
         return name_mapping
 
     except Exception as exc:

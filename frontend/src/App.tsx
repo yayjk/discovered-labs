@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Network, ScanSearch, Search, Users } from "lucide-react"
+import { ChevronDown, ChevronRight, FileText, Network, ScanSearch, Search, Users } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -10,6 +10,9 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
   useSidebar,
 } from "@/components/ui/sidebar"
 import { Separator } from "@/components/ui/separator"
@@ -17,8 +20,7 @@ import { InputView } from "@/components/InputView"
 import { CommunitiesView } from "@/components/CommunitiesView"
 import { EntityExplorerView } from "@/components/EntityExplorerView"
 import { RelationshipGraphViewerView } from "@/components/RelationshipGraphViewerView"
-
-type ScreenState = "input" | "communities" | "entity_explorer" | "relationship_graph_viewer"
+import { useAppStore, type ReportType } from "@/store/useAppStore"
 
 function SidebarHeaderContent() {
   const { state } = useSidebar()
@@ -35,7 +37,20 @@ function SidebarHeaderContent() {
 }
 
 function App() {
-  const [screenState, setScreenState] = useState<ScreenState>("input")
+  const screenState = useAppStore((state) => state.screenState)
+  const setScreenState = useAppStore((state) => state.setScreenState)
+  const selectedReport = useAppStore((state) => state.selectedReport)
+  const setSelectedReport = useAppStore((state) => state.setSelectedReport)
+  const analysisScreenState = useAppStore((state) => state.analysisScreenState)
+  
+  const [reportsExpanded, setReportsExpanded] = useState(false)
+  const [openAIExpanded, setOpenAIExpanded] = useState(false)
+  const [teslaExpanded, setTeslaExpanded] = useState(false)
+
+  const handleReportSubItemClick = (report: ReportType, screen: typeof screenState) => {
+    setSelectedReport(report)
+    setScreenState(screen)
+  }
 
   return (
     <div className="dark">
@@ -44,41 +59,119 @@ function App() {
           <SidebarHeaderContent />
           <SidebarContent className="px-0">
             <SidebarMenu className="gap-3">
+              {/* Search */}
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  onClick={() => setScreenState("input")}
+                  onClick={() => {
+                    setScreenState("input")
+                    setSelectedReport(null)
+                  }}
                   isActive={screenState === "input"}
                 >
                   <Search />
                   <span>Search</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
+
+              {/* Reports */}
               <SidebarMenuItem>
                 <SidebarMenuButton
-                  onClick={() => setScreenState("communities")}
-                  isActive={screenState === "communities"}
+                  onClick={() => setReportsExpanded(!reportsExpanded)}
                 >
-                  <Users />
-                  <span>Communities</span>
+                  <FileText />
+                  <span>Reports</span>
+                  {reportsExpanded ? <ChevronDown className="ml-auto" /> : <ChevronRight className="ml-auto" />}
                 </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  onClick={() => setScreenState("entity_explorer")}
-                  isActive={screenState === "entity_explorer"}
-                >
-                  <ScanSearch />
-                  <span>Entity Explorer</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  onClick={() => setScreenState("relationship_graph_viewer")}
-                  isActive={screenState === "relationship_graph_viewer"}
-                >
-                  <Network />
-                  <span>Relationship Viewer</span>
-                </SidebarMenuButton>
+                
+                {reportsExpanded && (
+                  <SidebarMenuSub>
+                    {/* OpenAI Report - only show if analysis is finished */}
+                    {analysisScreenState === "finish" && (
+                      <SidebarMenuSubItem>
+                        <SidebarMenuSubButton
+                          onClick={() => setOpenAIExpanded(!openAIExpanded)}
+                        >
+                          <span>OpenAI</span>
+                          {openAIExpanded ? <ChevronDown className="ml-auto" /> : <ChevronRight className="ml-auto" />}
+                        </SidebarMenuSubButton>
+                        
+                        {openAIExpanded && (
+                          <SidebarMenuSub>
+                            <SidebarMenuSubItem>
+                              <SidebarMenuSubButton
+                                onClick={() => handleReportSubItemClick("openai", "communities")}
+                                isActive={selectedReport === "openai" && screenState === "communities"}
+                              >
+                                <Users className="h-4 w-4" />
+                                <span>Communities</span>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                            <SidebarMenuSubItem>
+                              <SidebarMenuSubButton
+                                onClick={() => handleReportSubItemClick("openai", "entity_explorer")}
+                                isActive={selectedReport === "openai" && screenState === "entity_explorer"}
+                              >
+                                <ScanSearch className="h-4 w-4" />
+                                <span>Entity Explorer</span>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                            <SidebarMenuSubItem>
+                              <SidebarMenuSubButton
+                                onClick={() => handleReportSubItemClick("openai", "relationship_graph_viewer")}
+                                isActive={selectedReport === "openai" && screenState === "relationship_graph_viewer"}
+                              >
+                                <Network className="h-4 w-4" />
+                                <span>Relationship Viewer</span>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                          </SidebarMenuSub>
+                        )}
+                      </SidebarMenuSubItem>
+                    )}
+
+                    {/* Tesla Report */}
+                    <SidebarMenuSubItem>
+                      <SidebarMenuSubButton
+                        onClick={() => setTeslaExpanded(!teslaExpanded)}
+                      >
+                        <span>Tesla</span>
+                        {teslaExpanded ? <ChevronDown className="ml-auto" /> : <ChevronRight className="ml-auto" />}
+                      </SidebarMenuSubButton>
+                      
+                      {teslaExpanded && (
+                        <SidebarMenuSub>
+                          <SidebarMenuSubItem>
+                            <SidebarMenuSubButton
+                              onClick={() => handleReportSubItemClick("tesla", "communities")}
+                              isActive={selectedReport === "tesla" && screenState === "communities"}
+                            >
+                              <Users className="h-4 w-4" />
+                              <span>Communities</span>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                          <SidebarMenuSubItem>
+                            <SidebarMenuSubButton
+                              onClick={() => handleReportSubItemClick("tesla", "entity_explorer")}
+                              isActive={selectedReport === "tesla" && screenState === "entity_explorer"}
+                            >
+                              <ScanSearch className="h-4 w-4" />
+                              <span>Entity Explorer</span>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                          <SidebarMenuSubItem>
+                            <SidebarMenuSubButton
+                              onClick={() => handleReportSubItemClick("tesla", "relationship_graph_viewer")}
+                              isActive={selectedReport === "tesla" && screenState === "relationship_graph_viewer"}
+                            >
+                              <Network className="h-4 w-4" />
+                              <span>Relationship Viewer</span>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                        </SidebarMenuSub>
+                      )}
+                    </SidebarMenuSubItem>
+                  </SidebarMenuSub>
+                )}
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarContent>

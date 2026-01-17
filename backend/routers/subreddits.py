@@ -8,10 +8,11 @@ router = APIRouter(prefix="/subreddits", tags=["subreddits"])
 
 
 @router.get("", response_model=List[Subreddit])
-async def get_subreddits():
+async def get_subreddits(report: str = "tesla"):
     """Fetch all subreddits from the database."""
     try:
-        async with get_db_connection() as db:
+        db_path = "reports/tesla.db" if report == "tesla" else "subreddits.db"
+        async with get_db_connection(db_path) as db:
             cursor = await db.execute("""
                 SELECT subreddit_name, engagement_score, freshness_score, frequency_score, relevance_score 
                 FROM subreddits 
@@ -34,10 +35,11 @@ async def get_subreddits():
 
 
 @router.get("/{subreddit_name}", response_model=Subreddit)
-async def get_subreddit(subreddit_name: str):
+async def get_subreddit(subreddit_name: str, report: str = "tesla"):
     """Fetch a specific subreddit by name."""
     try:
-        async with get_db_connection() as db:
+        db_path = "reports/tesla.db" if report == "tesla" else "subreddits.db"
+        async with get_db_connection(db_path) as db:
             cursor = await db.execute("""
                 SELECT subreddit_name, engagement_score, freshness_score, frequency_score, relevance_score 
                 FROM subreddits 

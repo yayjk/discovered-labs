@@ -1,18 +1,64 @@
+"""Helper utilities for the discovery module."""
+
+import random
 import asyncio
-import json
-from engines.communityFinder import score_and_rank_subreddits
-from engines.db import select_json_responses, create_posts_table, insert_post, drop_json_response_column, migrate_to_disk
-from engines.moreData import fetch_and_insert_more_posts
-from engines.inference import run_parallel_extraction
-import time
-import ast
+
+from .constants import USER_AGENTS, IMPERSONATE_TARGETS
+
+
+async def add_jitter(min_delay: float = 0.5, max_delay: float = 2.5):
+    """
+    Add random jitter (delay) between requests to avoid detection.
+    
+    Args:
+        min_delay: Minimum delay in seconds
+        max_delay: Maximum delay in seconds
+    """
+    jitter = random.uniform(min_delay, max_delay)
+    await asyncio.sleep(jitter)
+
+
+def get_random_user_agent() -> str:
+    """
+    Get a random user agent string from the available options.
+    
+    Returns:
+        A random user agent string
+    """
+    return random.choice(list(USER_AGENTS.values()))
+
+
+def get_random_impersonate_target() -> str:
+    """
+    Get a random impersonate target for curl_cffi browser mimicking.
+    
+    Returns:
+        A random impersonate target string
+    """
+    return random.choice(IMPERSONATE_TARGETS)
+
 
 async def process_json_responses(db, query):
-    print("Starting process_json_responses")
+    """Process JSON responses from database and populate posts table.
+    
+    Args:
+        db: Database connection with subreddits table
+        query: The search query used for discovery
+    """
+    import ast
+    from pathlib import Path
+    
+    # Import from local db module
+    from .db import (
+        select_json_responses,
+        create_posts_table,
+        insert_post,
+        drop_json_response_column,
+        migrate_to_disk
+    )
+    
     json_responses = await select_json_responses(db)
-    print(f"Found {len(json_responses)} json responses")
     await create_posts_table(db)
-    print("Created posts table")
 
     subreddit_after_list = []
     for subreddit, json_resp in json_responses:
@@ -54,27 +100,8 @@ async def process_json_responses(db, query):
             except Exception as e:
                 print(f"Error inserting post for {subreddit}: {e}")
                 continue
-        
-        print(f"Inserted {post_count} initial posts for {subreddit}")
 
-    print(f"Collected {len(subreddit_after_list)} subreddits for more posts")
     await drop_json_response_column(db)
-    print("Dropped json_response column")
     disk_db = await migrate_to_disk(db)
-    print("Migrated to disk database")
-    # await fetch_and_insert_more_posts(disk_db, subreddit_after_list, query)
-    # print("Fetched and inserted more posts")
-    await disk_db.close()
-
-
-def main():
-    query = "tesla"
-    db = score_and_rank_subreddits(query=query, min_frequency=3)
-    asyncio.run(process_json_responses(db, query))
-    time.sleep(2)  # Small delay to ensure DB is closed before extraction
-    asyncio.run(run_parallel_extraction())
-
-if __name__ == "__main__":
-    main()
-
-
+    
+    return disk_db

@@ -1,0 +1,170 @@
+{
+    "kind": "Listing",
+    "data": {
+        "modhash": "b7wpyoh4rod25b9fc7d6c573b0d0c9ee87adfbdc0b379f9f10",
+        "dist": 1,
+        "facets": {},
+        "after": null,
+        "geo_filter": "",
+        "children": [
+            {
+                "kind": "t3",
+                "data": {
+                    "approved_at_utc": null,
+                    "subreddit": "teslainvestorsclub",
+                    "selftext": "",
+                    "author_fullname": "t2_a10jkape",
+                    "saved": false,
+                    "mod_reason_title": null,
+                    "gilded": 0,
+                    "clicked": false,
+                    "title": "Musk vs OpenAi - Personal Journal",
+                    "link_flair_richtext": [],
+                    "subreddit_name_prefixed": "r/teslainvestorsclub",
+                    "hidden": false,
+                    "pwls": 6,
+                    "link_flair_css_class": null,
+                    "downs": 0,
+                    "thumbnail_height": 139,
+                    "top_awarded_type": null,
+                    "hide_score": false,
+                    "name": "t3_1qenglf",
+                    "quarantine": false,
+                    "link_flair_text_color": "dark",
+                    "upvote_ratio": 0.8,
+                    "author_flair_background_color": null,
+                    "subreddit_type": "public",
+                    "ups": 39,
+                    "total_awards_received": 0,
+                    "media_embed": {},
+                    "thumbnail_width": 140,
+                    "author_flair_template_id": null,
+                    "is_original_content": false,
+                    "user_reports": [],
+                    "secure_media": null,
+                    "is_reddit_media_domain": true,
+                    "is_meta": false,
+                    "category": null,
+                    "secure_media_embed": {},
+                    "link_flair_text": null,
+                    "can_mod_post": false,
+                    "score": 39,
+                    "approved_by": null,
+                    "is_created_from_ads_ui": false,
+                    "author_premium": false,
+                    "thumbnail": "https://a.thumbs.redditmedia.com/6ipXUnzYJeCEQNYi6UiGY8cF5JnUlT_xkq8WVBZLMk0.jpg",
+                    "edited": false,
+                    "author_flair_css_class": null,
+                    "author_flair_richtext": [],
+                    "gildings": {},
+                    "post_hint": "image",
+                    "content_categories": null,
+                    "is_self": false,
+                    "mod_note": null,
+                    "created": 1768586926.0,
+                    "link_flair_type": "text",
+                    "wls": 6,
+                    "removed_by_category": null,
+                    "banned_by": null,
+                    "author_flair_type": "text",
+                    "domain": "i.redd.it",
+                    "allow_live_comments": false,
+                    "selftext_html": null,
+                    "likes": null,
+                    "suggested_sort": "confidence",
+                    "banned_at_utc": null,
+                    "url_overridden_by_dest": "https://i.redd.it/0yj1c60y4rdg1.jpeg",
+                    "view_count": null,
+                    "archived": false,
+                    "no_follow": false,
+                    "is_crosspostable": true,
+                    "pinned": false,
+                    "over_18": false,
+                    "preview": {
+                        "images": [
+                            {
+                                "source": {
+                                    "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?auto=webp&amp;s=433cd09e2f11dc80a866ffe76e09d66cde8afa5f",
+                                    "width": 1179,
+                                    "height": 1172
+                                },
+                                "resolutions": [
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=108&amp;crop=smart&amp;auto=webp&amp;s=1540d82ea28afdf41c0519376d4dbc021ca78e69",
+                                        "width": 108,
+                                        "height": 107
+                                    },
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=216&amp;crop=smart&amp;auto=webp&amp;s=ec5ffa25dda1d2ae0608aa016c04586573c199ca",
+                                        "width": 216,
+                                        "height": 214
+                                    },
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=82b2e691e92ba0ffee2fe343f339f20322148e52",
+                                        "width": 320,
+                                        "height": 318
+                                    },
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=381c8bd04d4c2175bc0a35b23a3aa571eb9cd43c",
+                                        "width": 640,
+                                        "height": 636
+                                    },
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=960&amp;crop=smart&amp;auto=webp&amp;s=50a757c50260fa863ff467568789ad0b8cef75b6",
+                                        "width": 960,
+                                        "height": 954
+                                    },
+                                    {
+                                        "url": "https://preview.redd.it/0yj1c60y4rdg1.jpeg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=08da559db4a043a81e12c8c8ad32606363f094d2",
+                                        "width": 1080,
+                                        "height": 1073
+                                    }
+                                ],
+                                "variants": {},
+                                "id": "SjdXaWYTCByn7NB1jK_Wao4JYEjtJ7p0b3jpGkXkZiI"
+                            }
+                        ],
+                        "enabled": true
+                    },
+                    "all_awardings": [],
+                    "awarders": [],
+                    "media_only": false,
+                    "can_gild": false,
+                    "spoiler": false,
+                    "locked": false,
+                    "author_flair_text": null,
+                    "treatment_tags": [],
+                    "visited": false,
+                    "removed_by": null,
+                    "num_reports": null,
+                    "distinguished": null,
+                    "subreddit_id": "t5_n9evv",
+                    "author_is_blocked": false,
+                    "mod_reason_by": null,
+                    "removal_reason": null,
+                    "link_flair_background_color": "",
+                    "id": "1qenglf",
+                    "is_robot_indexable": true,
+                    "report_reasons": null,
+                    "author": "skydiver19",
+                    "discussion_type": null,
+                    "num_comments": 37,
+                    "send_replies": true,
+                    "contest_mode": false,
+                    "mod_reports": [],
+                    "author_patreon_flair": false,
+                    "author_flair_text_color": null,
+                    "permalink": "/r/teslainvestorsclub/comments/1qenglf/musk_vs_openai_personal_journal/",
+                    "stickied": false,
+                    "url": "https://i.redd.it/0yj1c60y4rdg1.jpeg",
+                    "subreddit_subscribers": 90217,
+                    "created_utc": 1768586926.0,
+                    "num_crossposts": 0,
+                    "media": null,
+                    "is_video": false
+                }
+            }
+        ],
+        "before": null
+    }
+}

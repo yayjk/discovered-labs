@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useRelationshipGraph, countRelationships, type Entity, type GroupedRelationship } from "@/hooks/use-relationship-graph";
+import { useAppStore } from "@/store/useAppStore";
 
 function RelationshipGroup({ group }: { group: GroupedRelationship }) {
   return (
@@ -128,7 +129,8 @@ function EntityDetails({ entity, onClose }: { entity: Entity; onClose: () => voi
 }
 
 export function EntityExplorerView() {
-  const { data: entities, isLoading, error } = useRelationshipGraph();
+  const selectedReport = useAppStore((state) => state.selectedReport);
+  const { data: entities, isLoading, error } = useRelationshipGraph(selectedReport || "tesla");
   const [selectedEntity, setSelectedEntity] = useState<Entity | null>(null);
 
   if (isLoading) {

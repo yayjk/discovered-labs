@@ -13,6 +13,7 @@ import "@xyflow/react/dist/style.css";
 import dagre from "dagre";
 import { useForceGraph, type GraphLink } from "@/hooks/use-force-graph";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useAppStore } from "@/store/useAppStore";
 
 // Color palette for node groups
 const GROUP_COLORS = [
@@ -87,9 +88,9 @@ function getLayoutedElements(
 
   dagreGraph.setGraph({
     rankdir: direction,
-    nodesep: 100,
-    ranksep: 150,
-    edgesep: 50,
+    nodesep: 50,
+    ranksep: 80,
+    edgesep: 30,
   });
 
   nodes.forEach((node) => {
@@ -187,7 +188,8 @@ function EdgeDetailsPanel({ edge, onClose }: { edge: SelectedEdge; onClose: () =
 }
 
 export function RelationshipGraphViewerView() {
-  const { data, isLoading, error } = useForceGraph();
+  const selectedReport = useAppStore((state) => state.selectedReport);
+  const { data, isLoading, error } = useForceGraph(selectedReport || "tesla");
   const [selectedEdge, setSelectedEdge] = useState<SelectedEdge | null>(null);
 
   const handleEdgeClick = useCallback((_event: React.MouseEvent, edge: Edge) => {
@@ -300,15 +302,16 @@ export function RelationshipGraphViewerView() {
           edgeTypes={edgeTypes}
           onEdgeClick={handleEdgeClick}
           fitView
-          fitViewOptions={{ padding: 0.2 }}
+          fitViewOptions={{ padding: 0.01, minZoom: 1.5, maxZoom: 3 }}
+          defaultViewport={{ x: 0, y: 0, zoom: 2 }}
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={true}
           panOnDrag={true}
           zoomOnScroll={true}
           zoomOnPinch={true}
-          minZoom={0.1}
-          maxZoom={2}
+          minZoom={0.5}
+          maxZoom={4}
           proOptions={{ hideAttribution: true }}
           style={{ background: "#09090b" }}
         >

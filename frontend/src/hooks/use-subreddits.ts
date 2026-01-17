@@ -10,17 +10,17 @@ export interface Subreddit {
   relevance_score: number | null;
 }
 
-async function fetchSubreddits(): Promise<Subreddit[]> {
-  const response = await fetch(`${API_BASE_URL}/subreddits`);
+async function fetchSubreddits(report: string): Promise<Subreddit[]> {
+  const response = await fetch(`${API_BASE_URL}/subreddits?report=${report}`);
   if (!response.ok) {
     throw new Error("Failed to fetch subreddits");
   }
   return response.json();
 }
 
-export function useSubreddits() {
+export function useSubreddits(report: string = "tesla") {
   return useQuery({
-    queryKey: ["subreddits"],
-    queryFn: fetchSubreddits,
+    queryKey: ["subreddits", report],
+    queryFn: () => fetchSubreddits(report),
   });
 }

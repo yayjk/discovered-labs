@@ -19,18 +19,18 @@ export interface Entity {
   right_relationships: GroupedRelationship[];
 }
 
-async function fetchRelationshipGraph(): Promise<Entity[]> {
-  const response = await fetch(`${API_BASE_URL}/relationships/graph`);
+async function fetchRelationshipGraph(report: string): Promise<Entity[]> {
+  const response = await fetch(`${API_BASE_URL}/relationships/graph?report=${report}`);
   if (!response.ok) {
     throw new Error("Failed to fetch relationship graph");
   }
   return response.json();
 }
 
-export function useRelationshipGraph() {
+export function useRelationshipGraph(report: string = "tesla") {
   return useQuery({
-    queryKey: ["relationship-graph"],
-    queryFn: fetchRelationshipGraph,
+    queryKey: ["relationship-graph", report],
+    queryFn: () => fetchRelationshipGraph(report),
   });
 }
 

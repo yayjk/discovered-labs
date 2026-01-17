@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/table";
 import { useSubreddits } from "@/hooks/use-subreddits";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useAppStore } from "@/store/useAppStore";
 
 function formatScore(score: number | null): string {
   if (score === null || score === undefined) return "N/A";
@@ -15,7 +16,8 @@ function formatScore(score: number | null): string {
 }
 
 export function CommunitiesView() {
-  const { data: subreddits, isLoading, error } = useSubreddits();
+  const selectedReport = useAppStore((state) => state.selectedReport);
+  const { data: subreddits, isLoading, error } = useSubreddits(selectedReport || "tesla");
 
   if (isLoading) {
     return (

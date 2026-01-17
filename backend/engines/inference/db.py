@@ -47,9 +47,9 @@ async def insert_triplets_batch(db, triplets: List[tuple]):
 async def fetch_all_posts(db) -> List[dict]:
     """Retrieves all posts from the DB and returns them as a list of dicts."""
     db.row_factory = aiosqlite.Row
-    async with db.execute("SELECT pid as id, title, selftext, url FROM posts") as cursor:
+    async with db.execute("SELECT pid as id, subreddit_name, title, selftext, url FROM posts") as cursor:
         rows = await cursor.fetchall()
         return [
-            {"id": row["id"], "text": f"{row['title']}\n{row['selftext']}", "url": row["url"]} 
+            {"id": row["id"], "subreddit": row["subreddit_name"], "text": f"{row['title']}\n{row['selftext']}", "url": row["url"]} 
             for row in rows
         ]

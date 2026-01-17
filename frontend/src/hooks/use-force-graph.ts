@@ -28,17 +28,17 @@ export interface GraphData {
   links: GraphLink[];
 }
 
-async function fetchForceGraph(): Promise<GraphData> {
-  const response = await fetch(`${API_BASE_URL}/relationships/graph/force`);
+async function fetchForceGraph(report: string): Promise<GraphData> {
+  const response = await fetch(`${API_BASE_URL}/relationships/graph/force?report=${report}`);
   if (!response.ok) {
     throw new Error("Failed to fetch force graph data");
   }
   return response.json();
 }
 
-export function useForceGraph() {
+export function useForceGraph(report: string = "tesla") {
   return useQuery({
-    queryKey: ["force-graph"],
-    queryFn: fetchForceGraph,
+    queryKey: ["force-graph", report],
+    queryFn: () => fetchForceGraph(report),
   });
 }

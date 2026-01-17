@@ -7,7 +7,7 @@ This module provides:
 - Parallel batch processing
 """
 
-from .extraction import run_parallel_extraction, persist_triplets_to_db
+from .extraction import run_parallel_extraction, parallel_extraction_stream, persist_triplets_to_db
 from .models import (
     Entity,
     Triplet,
@@ -31,6 +31,7 @@ from .text_processing import format_posts_for_llm, minify_text
 __all__ = [
     # Main extraction functions
     "run_parallel_extraction",
+    "parallel_extraction_stream",
     "persist_triplets_to_db",
     # LLM client functions
     "get_llm_triplets",

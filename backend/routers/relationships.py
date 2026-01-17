@@ -31,10 +31,11 @@ def build_grouped_relationships(relationships_data: dict) -> List[GroupedRelatio
 
 
 @router.get("/graph", response_model=List[Entity])
-async def get_relationship_graph():
+async def get_relationship_graph(report: str = "tesla"):
     """Fetch the full relationship graph with all entities and their relationships."""
     try:
-        async with get_db_connection() as db:
+        db_path = "reports/tesla.db" if report == "tesla" else "subreddits.db"
+        async with get_db_connection(db_path) as db:
             cursor = await db.execute("""
                 SELECT subject, relationship, object, evidence, post_url
                 FROM triplets
@@ -77,14 +78,15 @@ async def get_relationship_graph():
 
 
 @router.get("/graph/force", response_model=GraphData)
-async def get_force_graph():
+async def get_force_graph(report: str = "tesla"):
     """Fetch relationship data in a format compatible with react-force-graph.
     
     Returns nodes (entities) and links (relationships) suitable for force-directed graph visualization.
     Links are aggregated by source-target pair with all evidences and URLs.
     """
     try:
-        async with get_db_connection() as db:
+        db_path = "reports/tesla.db" if report == "tesla" else "subreddits.db"
+        async with get_db_connection(db_path) as db:
             cursor = await db.execute("""
                 SELECT subject, relationship, object, evidence, post_url
                 FROM triplets
