@@ -1,7 +1,7 @@
 from .models import ALLOWED_RELATIONS
 
 TRIPLET_EXTRACTION_PROMPT = f"""
-You are a Corporate Intelligence Specialist. Your task is to extract structured business and leadership relationships from Reddit posts.
+You are a Corporate Intelligence Specialist. Your task is to extract structured business and leadership relationships from attached Hacker News stories and comments.
 
 ### ALLOWED RELATIONSHIPS:
 The ONLY permitted relationship types are: {ALLOWED_RELATIONS}

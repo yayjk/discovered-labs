@@ -81,13 +81,13 @@ async def parallel_extraction_stream(db):
         
         # 2. Create batches
         batches = [all_posts[i:i + batch_size] for i in range(0, len(all_posts), batch_size)]
-        # Count unique subreddits
-        unique_subreddits = set(post["subreddit"] for post in all_posts)
+        # Count unique sources
+        unique_sources = set(post.get("source", "unknown") for post in all_posts)
         
         # Step 1: Starting extraction
         yield {
             "stage": "extracting",
-            "message": f"Extracting Entities & Inferring Relationships from {len(all_posts)} posts across {len(unique_subreddits)} subreddits"
+            "message": f"Extracting Entities & Inferring Relationships from {len(all_posts)} items across {len(unique_sources)} sources"
         }
 
         # 3. Execute batches with progress tracking

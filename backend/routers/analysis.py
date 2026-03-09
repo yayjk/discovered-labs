@@ -4,14 +4,13 @@ import asyncio
 import json
 import traceback
 
-from engines.discovery.community_finder import test_score_and_rank_subreddits_streaming
+from engines.hndiscovery import scrape_hn_streaming, init_hn_db, close_hn_db
 from engines.inference import parallel_extraction_stream
-from database import get_db_connection
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
 
 
-async def event_stream():
+async def event_stream(query: str, db_path: str = "hn_discovery.db"):
     """Generate server-sent events for the analysis process."""
     
     def send_event(event_type: str, data: dict):
@@ -19,17 +18,12 @@ async def event_stream():
         return f"event: {event_type}\ndata: {json.dumps(data)}\n\n"
     
     try:
-        db_conn = None
-        
-        # Phase 1: Stream events from subreddit discovery and ranking
-        async for event_data in test_score_and_rank_subreddits_streaming():
+        db_conn = await init_hn_db(db_path)
+
+        # Phase 1: Stream events from HN discovery and persistence
+        async for event_data in scrape_hn_streaming(query=query, db_conn=db_conn, db_path=db_path):
             stage = event_data.get("stage")
-            
-            # Capture db_conn from internal event
-            if stage == "_internal_db_conn":
-                db_conn = event_data.get("db_conn")
-                continue
-            
+
             # Send progress event for all stages
             if stage == "error":
                 yield send_event("error", event_data)
@@ -40,15 +34,11 @@ async def event_stream():
             await asyncio.sleep(0.05)
         
         # Phase 2: Stream events from entity extraction using the same db_conn
-        if db_conn:
-            async for event_data in parallel_extraction_stream(db_conn):
-                stage = event_data.get("stage")
-                
-                # All extraction events are progress events
-                yield send_event("progress", event_data)
-                
-                # Small delay to ensure events are sent
-                await asyncio.sleep(0.05)
+        async for event_data in parallel_extraction_stream(db_conn):
+            yield send_event("progress", event_data)
+
+            # Small delay to ensure events are sent
+            await asyncio.sleep(0.05)
         
         # Final completion
         yield send_event("complete", {
@@ -67,24 +57,24 @@ async def event_stream():
             "traceback": error_traceback,
             "success": False
         })
+    finally:
+        if "db_conn" in locals() and db_conn is not None:
+            await close_hn_db(db_conn)
 
 
 @router.get("/analyze")
-async def analyze_subreddits():
+async def analyze_hackernews(query: str = "openai"):
     """
-    Trigger subreddit analysis and stream progress updates via Server-Sent Events.
+    Trigger Hacker News analysis and stream progress updates via Server-Sent Events.
     
     Returns a stream of events with the following stages:
     
-    Phase 1 - Subreddit Discovery & Ranking:
-    - crawling_reddit: Crawling Reddit search results
-    - searching_google: Searching Google for subreddits
-    - asking_gemini: Asking Gemini for recommendations
-    - aggregating: Aggregating results from all sources
-    - aggregated: Results aggregated with count and list
-    - ranking: Ranking subreddits based on relevance
-    - processing_batch: Processing each batch of subreddits
-    - saving: Processing and saving data to database
+    Phase 1 - Hacker News Discovery:
+    - starting: Starting HN scraping
+    - page_fetched: Pagination progress for stories/comments
+    - stories_complete: Story collection done
+    - comments_complete: Comment collection done
+    - saving: Saving data to database
     
     Phase 2 - Entity Extraction & Relationship Building:
     - extracting: Extracting entities and inferring relationships
@@ -95,8 +85,9 @@ async def analyze_subreddits():
     - complete: Analysis finished successfully
     - error: An error occurred during processing
     """
+    db_path = f"{query.lower().replace(' ', '_')}.db"
     return StreamingResponse(
-        event_stream(),
+        event_stream(query=query, db_path=db_path),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",

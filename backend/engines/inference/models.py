@@ -30,8 +30,8 @@ class PostAnalysis(BaseModel):
     has_business_info: bool = Field(..., description="Set to False if the post is just opinions/rants without hard relationships.")
     justification: Optional[str] = Field(..., description="Briefly explain why this post contains (or lacks) valid business triplets.")
     triplets: List[Triplet] = Field(default_factory=list)
-    post_id: str = Field(..., description="The unique identifier of the Reddit post analyzed.")
-    post_url: str = Field(None, description="The URL of the Reddit post.")
+    post_id: str = Field(..., description="The unique identifier of the analyzed content item.")
+    post_url: str = Field(None, description="The URL of the analyzed content item.")
 
 
 class BatchExtraction(BaseModel):

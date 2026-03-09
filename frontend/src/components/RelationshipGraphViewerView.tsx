@@ -189,7 +189,8 @@ function EdgeDetailsPanel({ edge, onClose }: { edge: SelectedEdge; onClose: () =
 
 export function RelationshipGraphViewerView() {
   const selectedReport = useAppStore((state) => state.selectedReport);
-  const { data, isLoading, error } = useForceGraph(selectedReport || "tesla");
+  const dbPath = selectedReport ? `${selectedReport}.db` : "";
+  const { data, isLoading, error } = useForceGraph(dbPath);
   const [selectedEdge, setSelectedEdge] = useState<SelectedEdge | null>(null);
 
   const handleEdgeClick = useCallback((_event: React.MouseEvent, edge: Edge) => {

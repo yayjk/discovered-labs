@@ -1,5 +1,7 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { useQueryClient } from "@tanstack/react-query"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { useAppStore } from "@/store/useAppStore"
 
 export function InputView() {
@@ -12,6 +14,12 @@ export function InputView() {
   const setLoadingDots = useAppStore((state) => state.setLoadingDots)
   const setScreenState = useAppStore((state) => state.setScreenState)
   const setSelectedReport = useAppStore((state) => state.setSelectedReport)
+  const generatingSlug = useAppStore((state) => state.generatingSlug)
+  const setGeneratingSlug = useAppStore((state) => state.setGeneratingSlug)
+  const setGeneratingQuery = useAppStore((state) => state.setGeneratingQuery)
+
+  const queryClient = useQueryClient()
+  const [query, setQuery] = useState("")
 
   // Animated loading indicator
   useEffect(() => {
@@ -23,12 +31,9 @@ export function InputView() {
     }
   }, [analysisScreenState, setLoadingDots])
 
-  const handleSearchOpenAI = async () => {
-    setAnalysisScreenState("running")
-    clearAnalysisEvents()
-
+  const runAnalysis = async (queryStr: string, slug: string) => {
     try {
-      const response = await fetch("http://localhost:8000/analysis/analyze")
+      const response = await fetch(`http://localhost:8000/analysis/analyze?query=${encodeURIComponent(queryStr)}`)
       
       if (!response.body) {
         throw new Error("No response body")
@@ -55,8 +60,11 @@ export function InputView() {
                 timestamp: Date.now(),
               })
 
-              // Stop if complete or error
-              if (data.stage === "complete" || data.stage === "error") {
+              if (data.stage === "complete") {
+                setSelectedReport(slug)
+                setAnalysisScreenState("finish")
+                queryClient.invalidateQueries({ queryKey: ["reports"] })
+              } else if (data.stage === "error") {
                 setAnalysisScreenState("finish")
               }
             } catch (e) {
@@ -76,29 +84,49 @@ export function InputView() {
     }
   }
 
+  const handleSearch = async () => {
+    if (!query.trim()) return
+    const slug = query.trim().toLowerCase().replace(/\s+/g, "_")
+    setGeneratingSlug(slug)
+    setGeneratingQuery(query.trim())
+    setAnalysisScreenState("running")
+    clearAnalysisEvents()
+    await runAnalysis(query.trim(), slug)
+  }
+
   const handleViewReport = () => {
-    setSelectedReport("openai")
-    setScreenState("communities")
+    if (generatingSlug) setSelectedReport(generatingSlug)
+    setScreenState("entity_explorer")
   }
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-8 p-8">
       <h1 className="text-4xl font-bold text-center text-foreground">
-        Discover communities & build a relationship graph
+        Discover entities &amp; build a relationship graph
       </h1>
-      
+
       {analysisScreenState === "start" && (
-        <Button
-          onClick={handleSearchOpenAI}
-          className="w-full max-w-md text-lg h-12 shadow-lg"
-        >
-          Search OpenAI
-        </Button>
+        <div className="w-full max-w-md flex flex-col gap-3">
+          <Input
+            placeholder="Enter a topic (e.g. openai, nuclear energy)"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            className="h-12 text-base"
+          />
+          <Button
+            onClick={handleSearch}
+            disabled={!query.trim()}
+            className="w-full text-lg h-12 shadow-lg"
+          >
+            Search
+          </Button>
+        </div>
       )}
 
       {analysisScreenState === "running" && (
         <div className="text-lg font-medium text-foreground">
-          Building Report for OpenAI{".".repeat(loadingDots)}
+          Building report for "{query}"{".".repeat(loadingDots)}
         </div>
       )}
 

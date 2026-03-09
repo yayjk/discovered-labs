@@ -1,7 +1,10 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import subreddits_router, relationships_router, analysis_router
+from routers import relationships_router, analysis_router, reports_router
 
 app = FastAPI(title="Discovered Labs API", description="API for Reddit community discovery")
 
@@ -15,9 +18,9 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(subreddits_router)
 app.include_router(relationships_router)
 app.include_router(analysis_router)
+app.include_router(reports_router)
 
 
 @app.get("/")

@@ -45,11 +45,42 @@ async def insert_triplets_batch(db, triplets: List[tuple]):
 
 
 async def fetch_all_posts(db) -> List[dict]:
-    """Retrieves all posts from the DB and returns them as a list of dicts."""
+    """Retrieves HN stories and comments and returns them in extraction input format."""
     db.row_factory = aiosqlite.Row
-    async with db.execute("SELECT pid as id, subreddit_name, title, selftext, url FROM posts") as cursor:
-        rows = await cursor.fetchall()
-        return [
-            {"id": row["id"], "subreddit": row["subreddit_name"], "text": f"{row['title']}\n{row['selftext']}", "url": row["url"]} 
-            for row in rows
-        ]
+
+    stories_query = """
+        SELECT object_id, story_id, title, story_text
+        FROM hn_stories
+    """
+    comments_query = """
+        SELECT object_id, story_id, comment_text
+        FROM hn_comments
+    """
+
+    async with db.execute(stories_query) as cursor:
+        story_rows = await cursor.fetchall()
+
+    async with db.execute(comments_query) as cursor:
+        comment_rows = await cursor.fetchall()
+
+    stories = [
+        {
+            "id": f"story_{row['object_id']}",
+            "source": "hackernews",
+            "text": f"{row['title'] or ''}\n{row['story_text'] or ''}".strip(),
+            "url": f"https://news.ycombinator.com/item?id={row['story_id'] or row['object_id']}",
+        }
+        for row in story_rows
+    ]
+
+    comments = [
+        {
+            "id": f"comment_{row['object_id']}",
+            "source": "hackernews",
+            "text": row["comment_text"] or "",
+            "url": f"https://news.ycombinator.com/item?id={row['object_id']}",
+        }
+        for row in comment_rows
+    ]
+
+    return stories + comments

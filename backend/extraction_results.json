@@ -1,0 +1,1306 @@
+[
+  {
+    "triplets": [
+      {
+        "subject": "Notepad",
+        "relationship": "productOf",
+        "object": "Microsoft Windows",
+        "evidence": "Windows Notepad App Remote Code Execution Vulnerability"
+      }
+    ],
+    "post_id": "comment_47158047",
+    "post_url": "https://news.ycombinator.com/item?id=47158047",
+    "justification": "The post discusses vulnerabilities related to Microsoft's Notepad application and mentions CVE-2026-20841."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Copilot",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "they haven't shoved Copilot into Notepad yet"
+      },
+      {
+        "subject": "Microsoft Copilot",
+        "relationship": "affiliation",
+        "object": "Notepad",
+        "evidence": "they haven't shoved Copilot into Notepad yet"
+      }
+    ],
+    "post_id": "comment_47157357",
+    "post_url": "https://news.ycombinator.com/item?id=47157357",
+    "justification": "The post mentions Copilot being integrated into Notepad, indicating a product relationship."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Edit",
+        "relationship": "creatorOf",
+        "object": "Microsoft",
+        "evidence": "https://github.com/microsoft/edit"
+      }
+    ],
+    "post_id": "comment_47157243",
+    "post_url": "https://news.ycombinator.com/item?id=47157243",
+    "justification": "The post refers to a GitHub repository owned by Microsoft, suggesting an ownership or creator relationship."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Apple Inc.",
+        "relationship": "productOf",
+        "object": "MacBook",
+        "evidence": "the new Apple budget MacBooks will probably be a much better choice"
+      },
+      {
+        "subject": "Microsoft Windows",
+        "relationship": "productOf",
+        "object": "Laptop",
+        "evidence": "There is simply nothing comparable in the Windows laptop world."
+      }
+    ],
+    "post_id": "comment_47236877",
+    "post_url": "https://news.ycombinator.com/item?id=47236877",
+    "justification": "The post discusses Apple MacBooks and Windows laptops, comparing their features and performance in the context of the consumer market."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Google",
+        "evidence": "titles are basically ignored unless the person is coming from a company like Microsoft or Google where their leveling system is publicly known."
+      }
+    ],
+    "post_id": "comment_47235202",
+    "post_url": "https://news.ycombinator.com/item?id=47235202",
+    "justification": "The post discusses hiring practices and the leveling system at Microsoft and Google."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Google",
+        "relationship": "other",
+        "object": "Machine",
+        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
+      },
+      {
+        "subject": "Adobe",
+        "relationship": "other",
+        "object": "Machine",
+        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Machine",
+        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
+      }
+    ],
+    "post_id": "comment_47233260",
+    "post_url": "https://news.ycombinator.com/item?id=47233260",
+    "justification": "The post mentions Google, Adobe, and Microsoft running updaters and telemetry on the machine."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "PowerToys",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "there's always PowerToys https://learn.microsoft.com/en-us/windows/powertoys/"
+      }
+    ],
+    "post_id": "comment_47230943",
+    "post_url": "https://news.ycombinator.com/item?id=47230943",
+    "justification": "The post refers to Microsoft PowerToys with a link to the Microsoft website, indicating a product relationship."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "LibreOffice",
+        "relationship": "competitor",
+        "object": "Microsoft Office",
+        "evidence": "Libreoffices UI is DIFFERENT to Microsoft Office."
+      }
+    ],
+    "post_id": "comment_47226902",
+    "post_url": "https://news.ycombinator.com/item?id=47226902",
+    "justification": "The post compares LibreOffice with Microsoft Office, discussing UI differences and user experience on OSX."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Surface Pro",
+        "evidence": "an ex-microsofter who worked on surface devices"
+      },
+      {
+        "subject": "Chromebook",
+        "relationship": "competitor",
+        "object": "Surface Pro",
+        "evidence": "Leadership (at least below the VP level) knew they were getting killed by Chromebooks"
+      }
+    ],
+    "post_id": "comment_47223563",
+    "post_url": "https://news.ycombinator.com/item?id=47223563",
+    "justification": "The post discusses Microsoft's Surface devices, Windows S, and their competition with Chromebooks, especially in the context of gaming."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Microsoft Azure",
+        "evidence": "revenue growth driven mainly by Azure, AI, and enterprise solutions."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "AI",
+        "evidence": "revenue growth driven mainly by Azure, AI, and enterprise solutions."
+      }
+    ],
+    "post_id": "comment_47223342",
+    "post_url": "https://news.ycombinator.com/item?id=47223342",
+    "justification": "The post discusses Microsoft's executive leadership focus on B2B strategy with emphasis on Azure, AI, and enterprise solutions."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Midjourney",
+        "relationship": "other",
+        "object": "Discord",
+        "evidence": "Midjourney Discord became so popular"
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Microsoft Copilot",
+        "evidence": "some PM at Microsoft heard about that and made it a box to check"
+      }
+    ],
+    "post_id": "comment_47222971",
+    "post_url": "https://news.ycombinator.com/item?id=47222971",
+    "justification": "The post mentions Microsoft Copilot and suggests Microsoft heard about Midjourney's Discord success."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47220992",
+    "post_url": "https://news.ycombinator.com/item?id=47220992",
+    "justification": "The post refers to Microsoft's community guidelines and redirects to learn.microsoft.com."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47220538",
+    "post_url": "https://news.ycombinator.com/item?id=47220538",
+    "justification": "The post is a collection of old slashdot quotes with jabs at Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Felix",
+        "relationship": "employee",
+        "object": "Anthropic",
+        "evidence": "Hi, Felix from Anthropic here. I work on Claude Cowork and Claude Code."
+      },
+      {
+        "subject": "Claude",
+        "relationship": "productOf",
+        "object": "Anthropic",
+        "evidence": "Felix from Anthropic here. I work on Claude Cowork and Claude Code."
+      },
+      {
+        "subject": "Claude",
+        "relationship": "productOf",
+        "object": "Anthropic",
+        "evidence": "Felix from Anthropic here. I work on Claude Cowork and Claude Code."
+      },
+      {
+        "subject": "Apple Inc.",
+        "relationship": "other",
+        "object": "Anthropic",
+        "evidence": "We run that through Apple's virtualization framework or Microsoft's Host Compute System."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Anthropic",
+        "evidence": "We run that through Apple's virtualization framework or Microsoft's Host Compute System."
+      }
+    ],
+    "post_id": "comment_47220118",
+    "post_url": "https://news.ycombinator.com/item?id=47220118",
+    "justification": "Felix identifies himself as working for Anthropic on Claude Cowork and Claude Code and mentions using Apple's virtualization framework or Microsoft's Host Compute System."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47219450",
+    "post_url": "https://news.ycombinator.com/item?id=47219450",
+    "justification": "The post is a rant about possible Windows 12 features."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47218698",
+    "post_url": "https://news.ycombinator.com/item?id=47218698",
+    "justification": "The post is a request to Microsoft for a feature in the start menu."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47218304",
+    "post_url": "https://news.ycombinator.com/item?id=47218304",
+    "justification": "The post discusses the concept of \"Microslop\"."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47218081",
+    "post_url": "https://news.ycombinator.com/item?id=47218081",
+    "justification": "The post speculates about a Microsoft iris scan."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47218033",
+    "post_url": "https://news.ycombinator.com/item?id=47218033",
+    "justification": "The post is a question about inspiration by Microsoft's Windows 8 flat design."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47217923",
+    "post_url": "https://news.ycombinator.com/item?id=47217923",
+    "justification": "The post references Microsoft's design."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47217765",
+    "post_url": "https://news.ycombinator.com/item?id=47217765",
+    "justification": "The post references Microsoft."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47217523",
+    "post_url": "https://news.ycombinator.com/item?id=47217523",
+    "justification": "The post jokes about working for Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Microsoft Copilot",
+        "evidence": "what exactly \"Microsoft Copilot\" entails anymore because of the multiple rebrands"
+      },
+      {
+        "subject": "Claude",
+        "relationship": "productOf",
+        "object": "Claude",
+        "evidence": "communities centered around Claude Code"
+      }
+    ],
+    "post_id": "comment_47217494",
+    "post_url": "https://news.ycombinator.com/item?id=47217494",
+    "justification": "The post discusses Microsoft Copilot."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Microsoft Teams",
+        "evidence": "Why is Microsoft using Discord and not Teams?"
+      }
+    ],
+    "post_id": "comment_47217420",
+    "post_url": "https://news.ycombinator.com/item?id=47217420",
+    "justification": "The post asks why Microsoft is using Discord and not Teams."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Microsoft Copilot",
+        "evidence": "What community is there to house around Microsoft Copilot?"
+      }
+    ],
+    "post_id": "comment_47217165",
+    "post_url": "https://news.ycombinator.com/item?id=47217165",
+    "justification": "The post asks questions about a Microsoft Copilot Discord server."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Java",
+        "relationship": "other",
+        "object": "Oracle",
+        "evidence": "docs.oracle.com"
+      },
+      {
+        "subject": "C#",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "learn.microsoft.com"
+      },
+      {
+        "subject": "Microsoft Windows",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "learn.microsoft.com"
+      }
+    ],
+    "post_id": "comment_47211556",
+    "post_url": "https://news.ycombinator.com/item?id=47211556",
+    "justification": "The post compares memory mapping in Java, C#, and Windows."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "preceptorship proposal",
+        "evidence": "already there are signs with Microsoft's preceptorship proposal:"
+      }
+    ],
+    "post_id": "comment_47211043",
+    "post_url": "https://news.ycombinator.com/item?id=47211043",
+    "justification": "The post refers to apprenticeships and Microsoft's preceptorship proposal."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Walmart",
+        "relationship": "other",
+        "object": "EDI",
+        "evidence": "EDI, still powering Walmart and Amazon logistics"
+      },
+      {
+        "subject": "Amazon",
+        "relationship": "other",
+        "object": "EDI",
+        "evidence": "EDI, still powering Walmart and Amazon logistics"
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "C#",
+        "evidence": "Microsoft was leading the charge. C# was also right around this time."
+      }
+    ],
+    "post_id": "comment_47210151",
+    "post_url": "https://news.ycombinator.com/item?id=47210151",
+    "justification": "The post mentions Walmart and Amazon logistics, as well as Microsoft leading the charge with XML and C#."
+  },
+  {
+    "triplets": [],
+    "post_id": "story_47280567",
+    "post_url": "https://news.ycombinator.com/item?id=47280567",
+    "justification": "The post is just a title about a software release, without any business relationships explicitly mentioned."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Copilot",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "official Microsoft Copilot Discord server"
+      }
+    ],
+    "post_id": "story_47216047",
+    "post_url": "https://news.ycombinator.com/item?id=47216047",
+    "justification": "The post mentions Microsoft Copilot."
+  },
+  {
+    "triplets": [],
+    "post_id": "story_47155548",
+    "post_url": "https://news.ycombinator.com/item?id=47155548",
+    "justification": "The post is about the slow death of the power user, a general trend, and it does not contain specific business relationships."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Danish government agency",
+        "relationship": "opponent",
+        "object": "Microsoft",
+        "evidence": "Danish government agency to ditch Microsoft software"
+      }
+    ],
+    "post_id": "story_47149701",
+    "post_url": "https://news.ycombinator.com/item?id=47149701",
+    "justification": "The post mentions a government agency ditching Microsoft software."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "LibreOffice",
+        "relationship": "opponent",
+        "object": "OnlyOffice",
+        "evidence": "LibreOffice blasts OnlyOffice for working with Microsoft to lock users in"
+      },
+      {
+        "subject": "OnlyOffice",
+        "relationship": "partner",
+        "object": "Microsoft",
+        "evidence": "LibreOffice blasts OnlyOffice for working with Microsoft to lock users in"
+      }
+    ],
+    "post_id": "story_47098828",
+    "post_url": "https://news.ycombinator.com/item?id=47098828",
+    "justification": "The post discusses LibreOffice and OnlyOffice working with Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Phil Spencer",
+        "relationship": "employee",
+        "object": "Microsoft",
+        "evidence": "Phil Spencer is exiting Microsoft as AI executive takes over Xbox"
+      }
+    ],
+    "post_id": "story_47093953",
+    "post_url": "https://news.ycombinator.com/item?id=47093953",
+    "justification": "The post mentions Phil Spencer exiting Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Harry Potter",
+        "evidence": "Microsoft guide to pirating Harry Potter for LLM training"
+      }
+    ],
+    "post_id": "story_47067759",
+    "post_url": "https://news.ycombinator.com/item?id=47067759",
+    "justification": "The post discusses Microsoft using Harry Potter for LLM training."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "creatorOf",
+        "object": "data-storage system",
+        "evidence": "Microsoft team creates data-storage system that lasts for millennia"
+      }
+    ],
+    "post_id": "story_47065729",
+    "post_url": "https://news.ycombinator.com/item?id=47065729",
+    "justification": "The post mentions Microsoft creating a data storage system."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Copilot",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "Microsoft says bug causes Copilot to summarize confidential emails"
+      }
+    ],
+    "post_id": "story_47060202",
+    "post_url": "https://news.ycombinator.com/item?id=47060202",
+    "justification": "The post describes a bug in Microsoft Copilot."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Diagram",
+        "evidence": "Microsoft morged my diagram"
+      }
+    ],
+    "post_id": "story_47057829",
+    "post_url": "https://news.ycombinator.com/item?id=47057829",
+    "justification": "The post mentions Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Office",
+        "relationship": "competitor",
+        "object": "LibreOffice",
+        "evidence": "Use Microsoft Office Shortcuts in Libre Office"
+      }
+    ],
+    "post_id": "story_47021525",
+    "post_url": "https://news.ycombinator.com/item?id=47021525",
+    "justification": "The post discusses using Microsoft Office shortcuts in LibreOffice."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Weezer",
+        "relationship": "other",
+        "object": "Windows 95",
+        "evidence": "How did Windows 95 get permission to put Weezer video 'Buddy Holly' on the CD?"
+      }
+    ],
+    "post_id": "story_46965440",
+    "post_url": "https://news.ycombinator.com/item?id=46965440",
+    "justification": "The post mentions Windows 95 and Weezer video."
+  },
+  {
+    "triplets": [],
+    "post_id": "story_46936105",
+    "post_url": "https://news.ycombinator.com/item?id=46936105",
+    "justification": "This is a technical post, no business relations are present."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Notepad",
+        "evidence": "Microsoft account bugs locked me out of Notepad"
+      }
+    ],
+    "post_id": "story_46927098",
+    "post_url": "https://news.ycombinator.com/item?id=46927098",
+    "justification": "The post references Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "partner",
+        "object": "OpenAI",
+        "evidence": "when ChatGPT came out Microsoft was singing victory songs, and predicted Google's imminent death. 3 years later Google has one of the best models and Microsoft is still borrowing OpenAI's model."
+      },
+      {
+        "subject": "Google",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "predicted Google's imminent death. 3 years later Google has one of the best models and Microsoft is still borrowing OpenAI's model"
+      },
+      {
+        "subject": "ChatGPT",
+        "relationship": "productOf",
+        "object": "OpenAI",
+        "evidence": "When ChatGPT came out"
+      }
+    ],
+    "post_id": "comment_47300147",
+    "post_url": "https://news.ycombinator.com/item?id=47300147",
+    "justification": "Comment compares Microsoft's strategy with Google and OpenAI."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "OpenAI",
+        "relationship": "partner",
+        "object": "Microsoft",
+        "evidence": "as bad as the economic definition of AGI in OpenAI's Microsoft deal is, at least it's measurable."
+      }
+    ],
+    "post_id": "comment_47299479",
+    "post_url": "https://news.ycombinator.com/item?id=47299479",
+    "justification": "Comment mentions OpenAI's deal with Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "LibreOffice",
+        "relationship": "competitor",
+        "object": "Microsoft Office",
+        "evidence": "The LibreOffice project's imprimatur should be to stop existing[] The editing paradigm perpetuated by the legacy of MS Office is a dead end[] A standardized \"Markdown for the Web\" (or AsciiDoc) with native browser support would be a good 80/20 start and would move things out of weird proprietary office formats and towards plain text[]"
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "acquiredBy",
+        "object": "Windows Live Writer app",
+        "evidence": "Even Microsoft beat them to getting halfway to the place they should have been when they bought the company that wrote what became Windows Live Writer app"
+      }
+    ],
+    "post_id": "comment_47299385",
+    "post_url": "https://news.ycombinator.com/item?id=47299385",
+    "justification": "The comment discusses LibreOffice and its relation to Microsoft Office."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Office",
+        "relationship": "other",
+        "object": "Microsoft",
+        "evidence": "until Microsoft adds \"Saves As\" option to office apps"
+      }
+    ],
+    "post_id": "comment_47299282",
+    "post_url": "https://news.ycombinator.com/item?id=47299282",
+    "justification": "The comment mentions MS Office and Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "OpenAI",
+        "relationship": "creatorOf",
+        "object": "ChatGPT",
+        "evidence": "It was OpenAI's ChatGPT that shocked the world and set everything in motion."
+      },
+      {
+        "subject": "Apple Inc.",
+        "relationship": "competitor",
+        "object": "Google",
+        "evidence": "China didn't win the smartphone war. Apple and Google won globally."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "investor",
+        "object": "OpenAI",
+        "evidence": "It was OpenAI's ChatGPT that shocked the world and set everything in motion. Now the US has the top three models in GPT"
+      }
+    ],
+    "post_id": "comment_47298989",
+    "post_url": "https://news.ycombinator.com/item?id=47298989",
+    "justification": "The comment discusses various tech companies like Amazon, Meta, Apple, Nvidia, Microsoft, Google and their impact."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47298364",
+    "post_url": "https://news.ycombinator.com/item?id=47298364",
+    "justification": "This is a personal anecdote about a programming project and interactions with a professor. It doesn't contain any structured business information."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "LibreOffice",
+        "relationship": "competitor",
+        "object": "Microsoft Office",
+        "evidence": "I have no issues at home using Excel files with LibreOffice. Microsoft has not meaningfully changed any Office file format in fifteen years, you can go all the way back to Office 2007 (with the compatibility pack) and open modern documents."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "creatorOf",
+        "object": "Microsoft Office",
+        "evidence": "Office has no issues with ODS formats either."
+      }
+    ],
+    "post_id": "comment_47298315",
+    "post_url": "https://news.ycombinator.com/item?id=47298315",
+    "justification": "The comment discusses Microsoft Office and LibreOffice file compatibility."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "EU policymaking",
+        "evidence": "full participation in EU policymaking requires a Microsoft licence."
+      }
+    ],
+    "post_id": "comment_47297864",
+    "post_url": "https://news.ycombinator.com/item?id=47297864",
+    "justification": "The comment refers to Microsoft licence."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "creatorOf",
+        "object": "XNA",
+        "evidence": "If Microsoft hadn't killed XNA (what MonoGame is based on) a decade ago"
+      },
+      {
+        "subject": "MonoGame",
+        "relationship": "productOf",
+        "object": "XNA",
+        "evidence": "If Microsoft hadn't killed XNA (what MonoGame is based on) a decade ago"
+      },
+      {
+        "subject": "Microsoft Copilot",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "they could be packaging it with Copilot right now"
+      }
+    ],
+    "post_id": "comment_47295439",
+    "post_url": "https://news.ycombinator.com/item?id=47295439",
+    "justification": "Comment mentions Microsoft's XNA."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "competitor",
+        "object": "PyPy",
+        "evidence": "Microsofts Faster CPython team tried to make Python 5x faster but only achieved ~1.5x in four years - meanwhile PyPy has been running at over 5x faster for decades."
+      }
+    ],
+    "post_id": "comment_47295211",
+    "post_url": "https://news.ycombinator.com/item?id=47295211",
+    "justification": "Comment compares PyPy with Microsofts Faster CPython."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Anthropic",
+        "relationship": "partner",
+        "object": "Palintar",
+        "evidence": "Considering the agreement Anthropic has with Palintar, you could say the exact same about employees working at Anthropic."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Israel",
+        "evidence": "Microsoft with its Israel and US Gov ties."
+      }
+    ],
+    "post_id": "comment_47295209",
+    "post_url": "https://news.ycombinator.com/item?id=47295209",
+    "justification": "The comment discusses various companies agreements."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Google",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "stop letting google / microsoft determine whats spam"
+      },
+      {
+        "subject": "Cloudflare",
+        "relationship": "partner",
+        "object": "Protonmail",
+        "evidence": "I use cloudflare + protonmail for my custom domain"
+      }
+    ],
+    "post_id": "comment_47286510",
+    "post_url": "https://news.ycombinator.com/item?id=47286510",
+    "justification": "The post mentions Google, Microsoft, Cloudflare, and Protonmail and their role in determining spam and deliverability of emails."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Java",
+        "evidence": "UCS-2 and then UTF-16 was well established by 2000 in both Microsoft technologies and elsewhere (like Java)."
+      }
+    ],
+    "post_id": "comment_47285034",
+    "post_url": "https://news.ycombinator.com/item?id=47285034",
+    "justification": "The post mentions Microsoft and Java."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Terry Davis",
+        "relationship": "opponent",
+        "object": "Microsoft",
+        "evidence": "The law makes no distinction between Terry Davis and Microsoft."
+      },
+      {
+        "subject": "TempleOS",
+        "relationship": "productOf",
+        "object": "Terry Davis",
+        "evidence": "(In fact, you could say TempleOS is protected religious speech...!)"
+      }
+    ],
+    "post_id": "comment_47275132",
+    "post_url": "https://news.ycombinator.com/item?id=47275132",
+    "justification": "The post mentions Terry Davis and Microsoft along with TempleOS."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Advanced Micro Devices",
+        "relationship": "partner",
+        "object": "Microsoft",
+        "evidence": "This makes them AMDs first desktop chips to qualify for Microsofts Copilot+ PC label"
+      }
+    ],
+    "post_id": "comment_47261559",
+    "post_url": "https://news.ycombinator.com/item?id=47261559",
+    "justification": "The post discusses AMD and Microsoft's Copilot+ PC label."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "OpenAI",
+        "relationship": "partner",
+        "object": "Microsoft",
+        "evidence": "If you're into hardware that is newer, somewhere in the middle of the inference boom, you're using MXM cards. In either situation, the host machine has DDR, but if you're OpenAI, Anthropic, Microsoft, or Google, you're not building (more) inference machines like this."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "partner",
+        "object": "Advanced Micro Devices",
+        "evidence": "Microsoft is doing the same, but with AMD's products"
+      },
+      {
+        "subject": "Nvidia",
+        "relationship": "other",
+        "object": "Advanced Micro Devices",
+        "evidence": "Google has a mix: they offer Nvidia all in one SBCs as part of GCP for legacy inference tasks (so your stack that can't run on AMD yet still can run)"
+      },
+      {
+        "subject": "Intel",
+        "relationship": "competitor",
+        "object": "TSMC",
+        "evidence": "Intel lacks the die stacking technology required to build HBM, and TSMC I think can't do it for that many layers"
+      },
+      {
+        "subject": "Apple Inc.",
+        "relationship": "other",
+        "object": "AMD Strix Halo",
+        "evidence": "what about LPDDR, used by AMD Strix Halo and Apple stuff?"
+      }
+    ],
+    "post_id": "comment_47259557",
+    "post_url": "https://news.ycombinator.com/item?id=47259557",
+    "justification": "The post discusses the hardware and software utilized by OpenAI, Anthropic, Microsoft, and Google for AI inference, detailing their interactions with companies like Nvidia, AMD, and Intel."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "OpenAI",
+        "relationship": "other",
+        "object": "Nvidia",
+        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
+      },
+      {
+        "subject": "OpenAI",
+        "relationship": "other",
+        "object": "Micron Technology",
+        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
+      },
+      {
+        "subject": "OpenAI",
+        "relationship": "other",
+        "object": "Oracle",
+        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
+      },
+      {
+        "subject": "OpenAI",
+        "relationship": "other",
+        "object": "Microsoft",
+        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
+      }
+    ],
+    "post_id": "comment_47256394",
+    "post_url": "https://news.ycombinator.com/item?id=47256394",
+    "justification": "The post discusses OpenAI, Nvidia, Micron, Oracle, and Microsoft in the context of market risks and potential collapse."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Windows",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "One thing you have to give Microsoft (at least back then) is that they did keep trying."
+      }
+    ],
+    "post_id": "comment_47254287",
+    "post_url": "https://news.ycombinator.com/item?id=47254287",
+    "justification": "The post mentions Microsoft and Windows."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "companies",
+        "evidence": "There's like a middle scale where you're not big enough that Microsoft will go out of their way to whitelist you"
+      }
+    ],
+    "post_id": "comment_47253484",
+    "post_url": "https://news.ycombinator.com/item?id=47253484",
+    "justification": "The post discusses Microsoft and its impact on smaller companies."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft Azure",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "signing up for Azure, in the hopes that if I sent from a Microsoft IP it might not get blocked."
+      }
+    ],
+    "post_id": "comment_47252989",
+    "post_url": "https://news.ycombinator.com/item?id=47252989",
+    "justification": "The post discusses issues with Microsoft's server blocking and using Azure for sending transactional emails."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Xbox",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "Microsoft has made it clear they don't care about the consumer market anymore. Xbox is dying or already dead"
+      }
+    ],
+    "post_id": "comment_47251450",
+    "post_url": "https://news.ycombinator.com/item?id=47251450",
+    "justification": "The post discusses Microsoft's focus on enterprise and AI, and the state of their consumer products like Xbox and Windows."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "PC world",
+        "evidence": "microsoft and the pc world have given up on consumer hardware and instead are completely focused on enterprise and ai."
+      }
+    ],
+    "post_id": "comment_47251178",
+    "post_url": "https://news.ycombinator.com/item?id=47251178",
+    "justification": "The post says \"This is a major challenge to Microsoft.\""
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "competitor",
+        "object": "Apple Inc.",
+        "evidence": "Microsoft's build quality is largely equivalent, but the press has already noticed that the value proposition at Microsoft is now lacking."
+      }
+    ],
+    "post_id": "comment_47250632",
+    "post_url": "https://news.ycombinator.com/item?id=47250632",
+    "justification": "The post mentions Microsoft's build quality and value proposition compared to Apple's MacBook."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Google",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "I personally prefer all their productivity software to Googles or Microsofts"
+      },
+      {
+        "subject": "Apple Inc.",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "I personally prefer all their productivity software to Googles or Microsofts, and its not a close race, but you can use those on it too."
+      }
+    ],
+    "post_id": "comment_47249954",
+    "post_url": "https://news.ycombinator.com/item?id=47249954",
+    "justification": "The post compares productivity software from Apple, Google, and Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Safari",
+        "relationship": "other",
+        "object": "Microsoft Azure",
+        "evidence": "If the problem goes away when Safari runs the Azure admin portal, its a Google issue."
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Google",
+        "evidence": "Lets see if the same problem happens under Safari, then its Microsoft fault. If the problem goes away when Safari runs the Azure admin portal, its a Google issue."
+      }
+    ],
+    "post_id": "comment_47249804",
+    "post_url": "https://news.ycombinator.com/item?id=47249804",
+    "justification": "The post involves Microsoft and Azure, discussing server issues and software running on different browsers."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "HP Elitebook",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Or in general any business laptop, like HP Elitebook or Dell Presicion."
+      },
+      {
+        "subject": "Dell Precision",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Or in general any business laptop, like HP Elitebook or Dell Presicion."
+      }
+    ],
+    "post_id": "comment_47249672",
+    "post_url": "https://news.ycombinator.com/item?id=47249672",
+    "justification": "The post discusses various business laptop brands like Thinkpads, HP Elitebook, and Dell Presicion as alternatives to those made by Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "productOf",
+        "object": "Surface Pro",
+        "evidence": "so they're doing better than Microsoft on that front (who inexplicably removed it from the SP line)"
+      }
+    ],
+    "post_id": "comment_47249105",
+    "post_url": "https://news.ycombinator.com/item?id=47249105",
+    "justification": "The post mentions Microsoft and their Surface Pro line of products."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Microsoft",
+        "relationship": "competitor",
+        "object": "Apple Inc.",
+        "evidence": "This is a major challenge to Microsoft. A 13-inch Surface Laptop costs $899 [1], that's 50% more than an equivalent MacBook!"
+      },
+      {
+        "subject": "Lenovo",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Other than Microsoft nobody even makes decent laptops in the Windows world. I am typing this on an Lenovo Yoga"
+      },
+      {
+        "subject": "Samsung",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Samsung makes good laptops but my keyboard gave out after just 2 years."
+      },
+      {
+        "subject": "Dell",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Dell XPS 17 was pretty good, but now they have weird keyboard."
+      }
+    ],
+    "post_id": "comment_47248919",
+    "post_url": "https://news.ycombinator.com/item?id=47248919",
+    "justification": "The post discusses Microsoft's Surface Laptop and their comparison with Apple's MacBook, and also mentions laptops from Lenovo, Samsung, and Dell."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Hotmail",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "I wonder if Microsoft actually likes running their free email service still. They wiped a ton of old Hotmail and Live.com emails some years ago (and then allowed new people to register those deleted names)."
+      },
+      {
+        "subject": "Live.com",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "I wonder if Microsoft actually likes running their free email service still. They wiped a ton of old Hotmail and Live.com emails some years ago (and then allowed new people to register those deleted names)."
+      }
+    ],
+    "post_id": "comment_47246312",
+    "post_url": "https://news.ycombinator.com/item?id=47246312",
+    "justification": "The post discusses Microsoft's free email service, Hotmail, and Live.com."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "F#",
+        "relationship": "affiliation",
+        "object": "Microsoft",
+        "evidence": "If it wasn't associated with Microsoft, it'd be more popular than haskell"
+      }
+    ],
+    "post_id": "comment_47245720",
+    "post_url": "https://news.ycombinator.com/item?id=47245720",
+    "justification": "The post talks about the programming language F# being associated with Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "agentic Coding",
+        "relationship": "productOf",
+        "object": "Microsoft",
+        "evidence": "because they cancelled the position altogether to use Agentic Coding by Microsoft instead."
+      }
+    ],
+    "post_id": "comment_47244268",
+    "post_url": "https://news.ycombinator.com/item?id=47244268",
+    "justification": "The post mentions Agentic Coding by Microsoft."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Author",
+        "relationship": "employee",
+        "object": "Microsoft",
+        "evidence": "When I worked at Microsoft, it cost over $20 to have a human customer support agent pick up the phone when someone called in for help."
+      },
+      {
+        "subject": "Apple Inc.",
+        "relationship": "competitor",
+        "object": "FAANGs",
+        "evidence": "competitors at other FAANGs that are OK burning money to gain market share."
+      }
+    ],
+    "post_id": "comment_47240365",
+    "post_url": "https://news.ycombinator.com/item?id=47240365",
+    "justification": "The post discusses working at Microsoft and the costs associated with customer support."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Apple Inc.",
+        "relationship": "competitor",
+        "object": "Microsoft",
+        "evidence": "Apple devices also nag you about buying AppleCare in the system preferences."
+      }
+    ],
+    "post_id": "comment_47239823",
+    "post_url": "https://news.ycombinator.com/item?id=47239823",
+    "justification": "The post compares Apple's and Microsoft's business practices."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "VMware",
+        "relationship": "competitor",
+        "object": "Amazon Web Services",
+        "evidence": "hypervisor hardware refresh and accompanying VMware licenses would have an ROI of 2.5yrs versus comparable AWS infrastructure"
+      },
+      {
+        "subject": "Microsoft",
+        "relationship": "other",
+        "object": "Hyper-V",
+        "evidence": "assuming we weren't already a Microsoft shop w/ Hyper-V"
+      }
+    ],
+    "post_id": "comment_47237467",
+    "post_url": "https://news.ycombinator.com/item?id=47237467",
+    "justification": "The post discusses Microsoft and VMware, specifically around costs associated to use public clouds."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47202621",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47202175",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47202075",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47201788",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47201499",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47197552",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47195707",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47191147",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47187307",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47187227",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47186739",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47184622",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47184488",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47182832",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47182530",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47181452",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47180831",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47180238",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47174188",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47166177",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47165755",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47162630",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47161080",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47159183",
+    "post_url": null,
+    "justification": "Error"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47158464",
+    "post_url": null,
+    "justification": "Error"
+  }
+]

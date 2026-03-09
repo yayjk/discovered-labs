@@ -130,7 +130,8 @@ function EntityDetails({ entity, onClose }: { entity: Entity; onClose: () => voi
 
 export function EntityExplorerView() {
   const selectedReport = useAppStore((state) => state.selectedReport);
-  const { data: entities, isLoading, error } = useRelationshipGraph(selectedReport || "tesla");
+  const dbPath = selectedReport ? `${selectedReport}.db` : "";
+  const { data: entities, isLoading, error } = useRelationshipGraph(dbPath);
   const [selectedEntity, setSelectedEntity] = useState<Entity | null>(null);
 
   if (isLoading) {

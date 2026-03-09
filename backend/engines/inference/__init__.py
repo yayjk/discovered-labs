@@ -2,7 +2,7 @@
 Inference module for relationship extraction from posts.
 
 This module provides:
-- LLM-based triplet extraction from Reddit posts
+- LLM-based triplet extraction from source content items
 - Entity resolution and canonicalization
 - Parallel batch processing
 """
