@@ -36,7 +36,7 @@ export function InputView() {
       const params = new URLSearchParams({ query: queryStr })
       if (forceSearch) params.set("force_search", "true")
 
-      const response = await fetch(`http://localhost:8000/analysis/analyze?${params}`)
+      const response = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/analysis/analyze?${params}`)
       
       if (!response.body) {
         throw new Error("No response body")
