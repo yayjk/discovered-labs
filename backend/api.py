@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routers import relationships_router, analysis_router, reports_router
 
-app = FastAPI(title="Discovered Labs API", description="API for Reddit community discovery")
+app = FastAPI(title="Signal Graph API", description="API for Company Relationship Graphs and Analysis", version="1.0.0", root_path=os.getenv("ROOT_PATH", ""))
 
 # Add CORS middleware
 app.add_middleware(

@@ -7,4 +7,5 @@ services:
       - .env
     environment:
       - PYTHONUNBUFFERED=1
+      - ROOT_PATH=/sg
     restart: unless-stopped
