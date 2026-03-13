@@ -1,9 +1,7 @@
 from typing import List
-import os
-import instructor
 import asyncio
-import time
 
+from ..llm_utils import call_llm, call_llm_async
 from .models import (
     BatchExtraction,
     PostAnalysis,
@@ -21,26 +19,15 @@ def get_llm_triplets(posts: List[dict]) -> BatchExtraction:
     if not posts:
         return BatchExtraction(results=[])
 
-    api_key = os.getenv("OPENROUTER_API_KEY")
-    model = os.getenv("TRIPLET_EXTRACTOR_MODEL", "openrouter/google/gemini-2.0-flash-001")
-
     formatted_posts = format_posts_for_llm(posts)
 
     try:
-        mode = instructor.Mode.OPENROUTER_STRUCTURED_OUTPUTS
-        client = instructor.from_provider(model, api_key=api_key, mode=mode)
-        
-        batch_results = client.create(
+        return call_llm(
             response_model=BatchExtraction,
-            messages=[
-                {"role": "system", "content": TRIPLET_EXTRACTION_PROMPT},
-                {"role": "user", "content": f"Analyze these posts:\n\n{formatted_posts}"}
-            ],
-            max_retries=2,
-            max_tokens=16000
+            system_prompt=TRIPLET_EXTRACTION_PROMPT,
+            user_prompt=f"Analyze these posts:\n\n{formatted_posts}",
+            max_tokens=16000,
         )
-        return batch_results
-
     except Exception as exc:
         print(f"Failed to extract triplets: {exc}")
         return BatchExtraction(results=[PostAnalysis(post_id=p['id'], has_business_info=False, justification="Error") for p in posts])
@@ -65,23 +52,13 @@ def resolve_entity_names(canonical_names: List[str]) -> dict[str, str]:
     if not canonical_names:
         return {}
 
-    api_key = os.getenv("OPENROUTER_API_KEY")
-    model = os.getenv("TRIPLET_EXTRACTOR_MODEL", "openrouter/google/gemini-2.0-flash-001")
-
     user_prompt = format_entity_names_for_resolution(canonical_names)
 
     try:
-        mode = instructor.Mode.OPENROUTER_STRUCTURED_OUTPUTS
-        client = instructor.from_provider(model, api_key=api_key, mode=mode)
-        
-        resolution_result = client.create(
+        resolution_result = call_llm(
             response_model=EntityResolutionResult,
-            messages=[
-                {"role": "system", "content": ENTITY_RESOLUTION_PROMPT},
-                {"role": "user", "content": user_prompt}
-            ],
-            max_retries=2,
-            max_tokens=8000
+            system_prompt=ENTITY_RESOLUTION_PROMPT,
+            user_prompt=user_prompt,
         )
         
         # Build mapping from variant to master name

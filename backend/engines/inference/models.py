@@ -6,7 +6,7 @@ RelationshipType = Literal[
     "founder", "ceo", "employee", "investor", "competitor", 
     "parentCompany", "subsidiary", "partner", "acquiredBy", 
     "boardMember", "advisor", "alumniOf", "affiliation",
-    "opponent", "productOf", "creatorOf", "other"
+    "opponent", "productOf", "creatorOf"
 ]
 
 ALLOWED_RELATIONS = ", ".join(get_args(RelationshipType))
@@ -22,8 +22,6 @@ class Triplet(BaseModel):
     relationship: RelationshipType
     object: Entity
     evidence: str = Field(..., description="The specific phrase in the post that justifies this relationship.")
-    suggested_relationship_evidence: Optional[str] = Field(..., description="justification for new suggested relationship, if relationship is of the type 'other'.")
-    suggested_relationship: Optional[str] = Field(..., description="A new relationship type suggested by the LLM, if any.")
 
 
 class PostAnalysis(BaseModel):

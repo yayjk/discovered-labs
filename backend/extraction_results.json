@@ -2,1305 +2,1273 @@
   {
     "triplets": [
       {
-        "subject": "Notepad",
-        "relationship": "productOf",
-        "object": "Microsoft Windows",
-        "evidence": "Windows Notepad App Remote Code Execution Vulnerability"
+        "subject": "Elon Musk",
+        "relationship": "ceo",
+        "object": "Tesla, Inc.",
+        "evidence": "when Tesla was in a financial pinch, Musk decided to scrap as much hardware as possible to save on operational cost"
       }
     ],
-    "post_id": "comment_47158047",
-    "post_url": "https://news.ycombinator.com/item?id=47158047",
-    "justification": "The post discusses vulnerabilities related to Microsoft's Notepad application and mentions CVE-2026-20841."
+    "post_id": "comment_46993183",
+    "post_url": "https://news.ycombinator.com/item?id=46993183",
+    "justification": "The post discusses Elon Musk's management of Tesla and its financial decisions."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_46992652",
+    "post_url": "https://news.ycombinator.com/item?id=46992652",
+    "justification": "The post discusses Tesla's technology and strategy in relation to camera and lidar fusion."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_46992339",
+    "post_url": "https://news.ycombinator.com/item?id=46992339",
+    "justification": "The post discusses Tesla's FSD and the potential for lawsuits."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft Copilot",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "they haven't shoved Copilot into Notepad yet"
-      },
+        "subject": "Waymo",
+        "relationship": "competitor",
+        "object": "Tesla, Inc.",
+        "evidence": "Waymo is absolutely delighting in their luck that Elon is so stubborn that he has kept Tesla from being anywhere close to catching up."
+      }
+    ],
+    "post_id": "comment_46991873",
+    "post_url": "https://news.ycombinator.com/item?id=46991873",
+    "justification": "The post suggests that Waymo benefits from Tesla's strategy."
+  },
+  {
+    "triplets": [
       {
-        "subject": "Microsoft Copilot",
+        "subject": "Elon Musk",
+        "relationship": "ceo",
+        "object": "Tesla, Inc.",
+        "evidence": "A microcosm of this was local and federal politicians driving Elon Musk to the Republicans. Labor issues and regulatory roadblocks took precedence over supporting Tesla, forcing Musk to seek Trump as an ally. This immediately poisoned Tesla's reputation with liberals and probably set back adoption of EVs in the West."
+      }
+    ],
+    "post_id": "comment_46982903",
+    "post_url": "https://news.ycombinator.com/item?id=46982903",
+    "justification": "The post discusses Elon Musk's relationship with the Republican party and its impact on Tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "xAI",
         "relationship": "affiliation",
-        "object": "Notepad",
-        "evidence": "they haven't shoved Copilot into Notepad yet"
-      }
-    ],
-    "post_id": "comment_47157357",
-    "post_url": "https://news.ycombinator.com/item?id=47157357",
-    "justification": "The post mentions Copilot being integrated into Notepad, indicating a product relationship."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Edit",
-        "relationship": "creatorOf",
-        "object": "Microsoft",
-        "evidence": "https://github.com/microsoft/edit"
-      }
-    ],
-    "post_id": "comment_47157243",
-    "post_url": "https://news.ycombinator.com/item?id=47157243",
-    "justification": "The post refers to a GitHub repository owned by Microsoft, suggesting an ownership or creator relationship."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Apple Inc.",
-        "relationship": "productOf",
-        "object": "MacBook",
-        "evidence": "the new Apple budget MacBooks will probably be a much better choice"
+        "object": "X",
+        "evidence": "It's already integrated into twitter"
       },
       {
-        "subject": "Microsoft Windows",
-        "relationship": "productOf",
-        "object": "Laptop",
-        "evidence": "There is simply nothing comparable in the Windows laptop world."
+        "subject": "xAI",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "It's already integrated into twitter and my Tesla."
       }
     ],
-    "post_id": "comment_47236877",
-    "post_url": "https://news.ycombinator.com/item?id=47236877",
-    "justification": "The post discusses Apple MacBooks and Windows laptops, comparing their features and performance in the context of the consumer market."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Google",
-        "evidence": "titles are basically ignored unless the person is coming from a company like Microsoft or Google where their leveling system is publicly known."
-      }
-    ],
-    "post_id": "comment_47235202",
-    "post_url": "https://news.ycombinator.com/item?id=47235202",
-    "justification": "The post discusses hiring practices and the leveling system at Microsoft and Google."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Google",
-        "relationship": "other",
-        "object": "Machine",
-        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
-      },
-      {
-        "subject": "Adobe",
-        "relationship": "other",
-        "object": "Machine",
-        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Machine",
-        "evidence": "Google Adobe and Microsoft can run updaters and telemetry on it all day."
-      }
-    ],
-    "post_id": "comment_47233260",
-    "post_url": "https://news.ycombinator.com/item?id=47233260",
-    "justification": "The post mentions Google, Adobe, and Microsoft running updaters and telemetry on the machine."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "PowerToys",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "there's always PowerToys https://learn.microsoft.com/en-us/windows/powertoys/"
-      }
-    ],
-    "post_id": "comment_47230943",
-    "post_url": "https://news.ycombinator.com/item?id=47230943",
-    "justification": "The post refers to Microsoft PowerToys with a link to the Microsoft website, indicating a product relationship."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "LibreOffice",
-        "relationship": "competitor",
-        "object": "Microsoft Office",
-        "evidence": "Libreoffices UI is DIFFERENT to Microsoft Office."
-      }
-    ],
-    "post_id": "comment_47226902",
-    "post_url": "https://news.ycombinator.com/item?id=47226902",
-    "justification": "The post compares LibreOffice with Microsoft Office, discussing UI differences and user experience on OSX."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Surface Pro",
-        "evidence": "an ex-microsofter who worked on surface devices"
-      },
-      {
-        "subject": "Chromebook",
-        "relationship": "competitor",
-        "object": "Surface Pro",
-        "evidence": "Leadership (at least below the VP level) knew they were getting killed by Chromebooks"
-      }
-    ],
-    "post_id": "comment_47223563",
-    "post_url": "https://news.ycombinator.com/item?id=47223563",
-    "justification": "The post discusses Microsoft's Surface devices, Windows S, and their competition with Chromebooks, especially in the context of gaming."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Microsoft Azure",
-        "evidence": "revenue growth driven mainly by Azure, AI, and enterprise solutions."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "AI",
-        "evidence": "revenue growth driven mainly by Azure, AI, and enterprise solutions."
-      }
-    ],
-    "post_id": "comment_47223342",
-    "post_url": "https://news.ycombinator.com/item?id=47223342",
-    "justification": "The post discusses Microsoft's executive leadership focus on B2B strategy with emphasis on Azure, AI, and enterprise solutions."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Midjourney",
-        "relationship": "other",
-        "object": "Discord",
-        "evidence": "Midjourney Discord became so popular"
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Microsoft Copilot",
-        "evidence": "some PM at Microsoft heard about that and made it a box to check"
-      }
-    ],
-    "post_id": "comment_47222971",
-    "post_url": "https://news.ycombinator.com/item?id=47222971",
-    "justification": "The post mentions Microsoft Copilot and suggests Microsoft heard about Midjourney's Discord success."
+    "post_id": "comment_46982374",
+    "post_url": "https://news.ycombinator.com/item?id=46982374",
+    "justification": "The post mentions Xai's integration of Grok into Twitter and Tesla."
   },
   {
     "triplets": [],
-    "post_id": "comment_47220992",
-    "post_url": "https://news.ycombinator.com/item?id=47220992",
-    "justification": "The post refers to Microsoft's community guidelines and redirects to learn.microsoft.com."
+    "post_id": "comment_47058349",
+    "post_url": "https://news.ycombinator.com/item?id=47058349",
+    "justification": "Identifies engineers working at Tesla."
   },
   {
     "triplets": [],
-    "post_id": "comment_47220538",
-    "post_url": "https://news.ycombinator.com/item?id=47220538",
-    "justification": "The post is a collection of old slashdot quotes with jabs at Microsoft."
+    "post_id": "comment_47058218",
+    "post_url": "https://news.ycombinator.com/item?id=47058218",
+    "justification": "Mentions Elon Musk's role and Tesla's business operations."
   },
   {
     "triplets": [
       {
-        "subject": "Felix",
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "They are behind Waymo"
+      }
+    ],
+    "post_id": "comment_47058172",
+    "post_url": "https://news.ycombinator.com/item?id=47058172",
+    "justification": "Discusses Tesla and Waymo as competitors in autonomous driving."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47058150",
+    "post_url": "https://news.ycombinator.com/item?id=47058150",
+    "justification": "Discusses Tesla and Chinese companies."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057930",
+    "post_url": "https://news.ycombinator.com/item?id=47057930",
+    "justification": "Discusses Elon Musk and Tesla 's Sales"
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057845",
+    "post_url": "https://news.ycombinator.com/item?id=47057845",
+    "justification": "Mentions Tesla as a meme stock."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057776",
+    "post_url": "https://news.ycombinator.com/item?id=47057776",
+    "justification": "Discusses Tesla as a product."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057753",
+    "post_url": "https://news.ycombinator.com/item?id=47057753",
+    "justification": "Discusses Tesla's self-driving capabilities."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057743",
+    "post_url": "https://news.ycombinator.com/item?id=47057743",
+    "justification": "Refers to Tesla as a company."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057731",
+    "post_url": "https://news.ycombinator.com/item?id=47057731",
+    "justification": "Mentions Tesla and Musk."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057726",
+    "post_url": "https://news.ycombinator.com/item?id=47057726",
+    "justification": "Discusses business performance of Tesla."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057599",
+    "post_url": "https://news.ycombinator.com/item?id=47057599",
+    "justification": "Discusses Tesla's role as a car manufacturer."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057498",
+    "post_url": "https://news.ycombinator.com/item?id=47057498",
+    "justification": "Mentions maintenance and repair for Tesla car."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "BYD Company",
+        "evidence": "massive propaganda campaign against Tesla to boost the popularity of their own BYD brand."
+      }
+    ],
+    "post_id": "comment_47057413",
+    "post_url": "https://news.ycombinator.com/item?id=47057413",
+    "justification": "Discusses Tesla and BYD as competitors."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057372",
+    "post_url": "https://news.ycombinator.com/item?id=47057372",
+    "justification": "Discusses Tesla cars."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "the CEO basically ruined everything."
+      }
+    ],
+    "post_id": "comment_47057356",
+    "post_url": "https://news.ycombinator.com/item?id=47057356",
+    "justification": "Discusses CEO and his effect on Tesla."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47057167",
+    "post_url": "https://news.ycombinator.com/item?id=47057167",
+    "justification": "Discusses features Tesla car and discontinuation of them."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Optimus",
+        "evidence": "convert that into an Optimus factory"
+      }
+    ],
+    "post_id": "comment_47055708",
+    "post_url": "https://news.ycombinator.com/item?id=47055708",
+    "justification": "Quotes Tesla's latest earning call."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47055588",
+    "post_url": "https://news.ycombinator.com/item?id=47055588",
+    "justification": "Discusses incident about Tesla car."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "BYD Company",
+        "evidence": "January compared to just 501 Teslas"
+      }
+    ],
+    "post_id": "comment_47055339",
+    "post_url": "https://news.ycombinator.com/item?id=47055339",
+    "justification": "Discusses products of BYD and Tesla as competitors."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47055070",
+    "post_url": "https://news.ycombinator.com/item?id=47055070",
+    "justification": "Discusses Tesla, an Energy company."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47054265",
+    "post_url": "https://news.ycombinator.com/item?id=47054265",
+    "justification": "The post is about negative bias toward Elon."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "on Tesla beating Waymo"
+      }
+    ],
+    "post_id": "comment_47053870",
+    "post_url": "https://news.ycombinator.com/item?id=47053870",
+    "justification": "Discusses Tesla beating waymo."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "Get rid of Elon"
+      }
+    ],
+    "post_id": "comment_47053787",
+    "post_url": "https://news.ycombinator.com/item?id=47053787",
+    "justification": "Mentions Elon and insurace rates for Tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "so much praise of Waymo unless Tesla also had aspirations in this domain."
+      }
+    ],
+    "post_id": "comment_47053356",
+    "post_url": "https://news.ycombinator.com/item?id=47053356",
+    "justification": "Discusses Tesla and Waymo as competitors."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47141391",
+    "post_url": "https://news.ycombinator.com/item?id=47141391",
+    "justification": "Mentions Tesla and its stock performance."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "ceo",
+        "object": "Tesla, Inc.",
+        "evidence": "Musk&#x27;s shenanigans"
+      }
+    ],
+    "post_id": "comment_47141159",
+    "post_url": "https://news.ycombinator.com/item?id=47141159",
+    "justification": "Discussion about Tesla and Elon's actions affecting consumer-owned EVs."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Full Self-Driving",
+        "evidence": "Tesla&#x27;s issues with FSD"
+      }
+    ],
+    "post_id": "comment_47129077",
+    "post_url": "https://news.ycombinator.com/item?id=47129077",
+    "justification": "Discussion about Tesla's FSD capabilities."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47127483",
+    "post_url": "https://news.ycombinator.com/item?id=47127483",
+    "justification": "Expresses a desire to no longer support Elon by selling a Tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Comma.ai",
+        "relationship": "competitor",
+        "object": "Tesla, Inc.",
+        "evidence": "Waymo has some of the same limitations with cameras that Comma and Tesla does."
+      }
+    ],
+    "post_id": "comment_47124506",
+    "post_url": "https://news.ycombinator.com/item?id=47124506",
+    "justification": "Compares camera limitations with Waymo and Tesla."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47124448",
+    "post_url": "https://news.ycombinator.com/item?id=47124448",
+    "justification": "Discussion about the purpose and goals of Tesla and its consumers regarding self-driving."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "ceo",
+        "object": "Tesla, Inc.",
+        "evidence": "listen to the big guy musk"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "As proven by Waymo"
+      }
+    ],
+    "post_id": "comment_47124138",
+    "post_url": "https://news.ycombinator.com/item?id=47124138",
+    "justification": "Discussion among Tesla engineers about the best way to use code, with reference to Waymo."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "ML vision",
+        "evidence": "I do have a Tesla and it seems to be able to tell how far away things are just fine."
+      }
+    ],
+    "post_id": "comment_47122249",
+    "post_url": "https://news.ycombinator.com/item?id=47122249",
+    "justification": "References lidar and Tesla's ML vision."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47121858",
+    "post_url": "https://news.ycombinator.com/item?id=47121858",
+    "justification": "Discussion about sensor fusion and self-driving systems and comparing Tesla and Waymo."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47120909",
+    "post_url": "https://news.ycombinator.com/item?id=47120909",
+    "justification": "Experiences with programs approaching L3 capabilities, not focusing on Tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "ceo",
+        "object": "Tesla, Inc.",
+        "evidence": "Ultimately Musk is right, you probably don&#x27;t need lidar to drive safely."
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "Tesla are producing cyber cabs now which are 10th the price of Waymo&#x27;s"
+      }
+    ],
+    "post_id": "comment_47120002",
+    "post_url": "https://news.ycombinator.com/item?id=47120002",
+    "justification": "Comparing Tesla and Waymo regarding autonomous driving."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47119954",
+    "post_url": "https://news.ycombinator.com/item?id=47119954",
+    "justification": "Questioning whether cyber cabs need safety drivers."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47119860",
+    "post_url": "https://news.ycombinator.com/item?id=47119860",
+    "justification": "Comments about negativity towards Tesla and Elon articles."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47119793",
+    "post_url": "https://news.ycombinator.com/item?id=47119793",
+    "justification": "Trusting Teslas and the self-driving feature."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "Tesla are producing cyber cabs now which are 10th the price of Waymo&#x27;s"
+      }
+    ],
+    "post_id": "comment_47119742",
+    "post_url": "https://news.ycombinator.com/item?id=47119742",
+    "justification": "Comparing Tesla's cyber cabs with Waymo and mentioning MicroVision."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47119538",
+    "post_url": "https://news.ycombinator.com/item?id=47119538",
+    "justification": "Question about companies using cameras besides Tesla."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47119378",
+    "post_url": "https://news.ycombinator.com/item?id=47119378",
+    "justification": "Personal experience riding in a self-driving car in San Francisco and distrust of Tesla's."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Andrej Karpathy",
+        "relationship": "alumniOf",
+        "object": "Fei-Fei Li",
+        "evidence": "PHD in neural networks under Fei-Fei Li"
+      },
+      {
+        "subject": "Andrej Karpathy",
         "relationship": "employee",
-        "object": "Anthropic",
-        "evidence": "Hi, Felix from Anthropic here. I work on Claude Cowork and Claude Code."
+        "object": "OpenAI",
+        "evidence": "founder of OpenAI, director of AI at Tesla"
       },
       {
-        "subject": "Claude",
-        "relationship": "productOf",
-        "object": "Anthropic",
-        "evidence": "Felix from Anthropic here. I work on Claude Cowork and Claude Code."
-      },
-      {
-        "subject": "Claude",
-        "relationship": "productOf",
-        "object": "Anthropic",
-        "evidence": "Felix from Anthropic here. I work on Claude Cowork and Claude Code."
-      },
-      {
-        "subject": "Apple Inc.",
-        "relationship": "other",
-        "object": "Anthropic",
-        "evidence": "We run that through Apple's virtualization framework or Microsoft's Host Compute System."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Anthropic",
-        "evidence": "We run that through Apple's virtualization framework or Microsoft's Host Compute System."
-      }
-    ],
-    "post_id": "comment_47220118",
-    "post_url": "https://news.ycombinator.com/item?id=47220118",
-    "justification": "Felix identifies himself as working for Anthropic on Claude Cowork and Claude Code and mentions using Apple's virtualization framework or Microsoft's Host Compute System."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47219450",
-    "post_url": "https://news.ycombinator.com/item?id=47219450",
-    "justification": "The post is a rant about possible Windows 12 features."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47218698",
-    "post_url": "https://news.ycombinator.com/item?id=47218698",
-    "justification": "The post is a request to Microsoft for a feature in the start menu."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47218304",
-    "post_url": "https://news.ycombinator.com/item?id=47218304",
-    "justification": "The post discusses the concept of \"Microslop\"."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47218081",
-    "post_url": "https://news.ycombinator.com/item?id=47218081",
-    "justification": "The post speculates about a Microsoft iris scan."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47218033",
-    "post_url": "https://news.ycombinator.com/item?id=47218033",
-    "justification": "The post is a question about inspiration by Microsoft's Windows 8 flat design."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47217923",
-    "post_url": "https://news.ycombinator.com/item?id=47217923",
-    "justification": "The post references Microsoft's design."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47217765",
-    "post_url": "https://news.ycombinator.com/item?id=47217765",
-    "justification": "The post references Microsoft."
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47217523",
-    "post_url": "https://news.ycombinator.com/item?id=47217523",
-    "justification": "The post jokes about working for Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Microsoft Copilot",
-        "evidence": "what exactly \"Microsoft Copilot\" entails anymore because of the multiple rebrands"
-      },
-      {
-        "subject": "Claude",
-        "relationship": "productOf",
-        "object": "Claude",
-        "evidence": "communities centered around Claude Code"
-      }
-    ],
-    "post_id": "comment_47217494",
-    "post_url": "https://news.ycombinator.com/item?id=47217494",
-    "justification": "The post discusses Microsoft Copilot."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Microsoft Teams",
-        "evidence": "Why is Microsoft using Discord and not Teams?"
-      }
-    ],
-    "post_id": "comment_47217420",
-    "post_url": "https://news.ycombinator.com/item?id=47217420",
-    "justification": "The post asks why Microsoft is using Discord and not Teams."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Microsoft Copilot",
-        "evidence": "What community is there to house around Microsoft Copilot?"
-      }
-    ],
-    "post_id": "comment_47217165",
-    "post_url": "https://news.ycombinator.com/item?id=47217165",
-    "justification": "The post asks questions about a Microsoft Copilot Discord server."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Java",
-        "relationship": "other",
-        "object": "Oracle",
-        "evidence": "docs.oracle.com"
-      },
-      {
-        "subject": "C#",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "learn.microsoft.com"
-      },
-      {
-        "subject": "Microsoft Windows",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "learn.microsoft.com"
-      }
-    ],
-    "post_id": "comment_47211556",
-    "post_url": "https://news.ycombinator.com/item?id=47211556",
-    "justification": "The post compares memory mapping in Java, C#, and Windows."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "preceptorship proposal",
-        "evidence": "already there are signs with Microsoft's preceptorship proposal:"
-      }
-    ],
-    "post_id": "comment_47211043",
-    "post_url": "https://news.ycombinator.com/item?id=47211043",
-    "justification": "The post refers to apprenticeships and Microsoft's preceptorship proposal."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Walmart",
-        "relationship": "other",
-        "object": "EDI",
-        "evidence": "EDI, still powering Walmart and Amazon logistics"
-      },
-      {
-        "subject": "Amazon",
-        "relationship": "other",
-        "object": "EDI",
-        "evidence": "EDI, still powering Walmart and Amazon logistics"
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "C#",
-        "evidence": "Microsoft was leading the charge. C# was also right around this time."
-      }
-    ],
-    "post_id": "comment_47210151",
-    "post_url": "https://news.ycombinator.com/item?id=47210151",
-    "justification": "The post mentions Walmart and Amazon logistics, as well as Microsoft leading the charge with XML and C#."
-  },
-  {
-    "triplets": [],
-    "post_id": "story_47280567",
-    "post_url": "https://news.ycombinator.com/item?id=47280567",
-    "justification": "The post is just a title about a software release, without any business relationships explicitly mentioned."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Copilot",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "official Microsoft Copilot Discord server"
-      }
-    ],
-    "post_id": "story_47216047",
-    "post_url": "https://news.ycombinator.com/item?id=47216047",
-    "justification": "The post mentions Microsoft Copilot."
-  },
-  {
-    "triplets": [],
-    "post_id": "story_47155548",
-    "post_url": "https://news.ycombinator.com/item?id=47155548",
-    "justification": "The post is about the slow death of the power user, a general trend, and it does not contain specific business relationships."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Danish government agency",
-        "relationship": "opponent",
-        "object": "Microsoft",
-        "evidence": "Danish government agency to ditch Microsoft software"
-      }
-    ],
-    "post_id": "story_47149701",
-    "post_url": "https://news.ycombinator.com/item?id=47149701",
-    "justification": "The post mentions a government agency ditching Microsoft software."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "LibreOffice",
-        "relationship": "opponent",
-        "object": "OnlyOffice",
-        "evidence": "LibreOffice blasts OnlyOffice for working with Microsoft to lock users in"
-      },
-      {
-        "subject": "OnlyOffice",
-        "relationship": "partner",
-        "object": "Microsoft",
-        "evidence": "LibreOffice blasts OnlyOffice for working with Microsoft to lock users in"
-      }
-    ],
-    "post_id": "story_47098828",
-    "post_url": "https://news.ycombinator.com/item?id=47098828",
-    "justification": "The post discusses LibreOffice and OnlyOffice working with Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Phil Spencer",
+        "subject": "Andrej Karpathy",
         "relationship": "employee",
-        "object": "Microsoft",
-        "evidence": "Phil Spencer is exiting Microsoft as AI executive takes over Xbox"
+        "object": "Tesla, Inc.",
+        "evidence": "director of AI at Tesla"
       }
     ],
-    "post_id": "story_47093953",
-    "post_url": "https://news.ycombinator.com/item?id=47093953",
-    "justification": "The post mentions Phil Spencer exiting Microsoft."
+    "post_id": "comment_47099322",
+    "post_url": "https://news.ycombinator.com/item?id=47099322",
+    "justification": "Karpathy's background and roles at OpenAI and Tesla."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Harry Potter",
-        "evidence": "Microsoft guide to pirating Harry Potter for LLM training"
-      }
-    ],
-    "post_id": "story_47067759",
-    "post_url": "https://news.ycombinator.com/item?id=47067759",
-    "justification": "The post discusses Microsoft using Harry Potter for LLM training."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "creatorOf",
-        "object": "data-storage system",
-        "evidence": "Microsoft team creates data-storage system that lasts for millennia"
-      }
-    ],
-    "post_id": "story_47065729",
-    "post_url": "https://news.ycombinator.com/item?id=47065729",
-    "justification": "The post mentions Microsoft creating a data storage system."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Copilot",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "Microsoft says bug causes Copilot to summarize confidential emails"
-      }
-    ],
-    "post_id": "story_47060202",
-    "post_url": "https://news.ycombinator.com/item?id=47060202",
-    "justification": "The post describes a bug in Microsoft Copilot."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Diagram",
-        "evidence": "Microsoft morged my diagram"
-      }
-    ],
-    "post_id": "story_47057829",
-    "post_url": "https://news.ycombinator.com/item?id=47057829",
-    "justification": "The post mentions Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Office",
-        "relationship": "competitor",
-        "object": "LibreOffice",
-        "evidence": "Use Microsoft Office Shortcuts in Libre Office"
-      }
-    ],
-    "post_id": "story_47021525",
-    "post_url": "https://news.ycombinator.com/item?id=47021525",
-    "justification": "The post discusses using Microsoft Office shortcuts in LibreOffice."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Weezer",
-        "relationship": "other",
-        "object": "Windows 95",
-        "evidence": "How did Windows 95 get permission to put Weezer video 'Buddy Holly' on the CD?"
-      }
-    ],
-    "post_id": "story_46965440",
-    "post_url": "https://news.ycombinator.com/item?id=46965440",
-    "justification": "The post mentions Windows 95 and Weezer video."
-  },
-  {
-    "triplets": [],
-    "post_id": "story_46936105",
-    "post_url": "https://news.ycombinator.com/item?id=46936105",
-    "justification": "This is a technical post, no business relations are present."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Notepad",
-        "evidence": "Microsoft account bugs locked me out of Notepad"
-      }
-    ],
-    "post_id": "story_46927098",
-    "post_url": "https://news.ycombinator.com/item?id=46927098",
-    "justification": "The post references Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "partner",
-        "object": "OpenAI",
-        "evidence": "when ChatGPT came out Microsoft was singing victory songs, and predicted Google's imminent death. 3 years later Google has one of the best models and Microsoft is still borrowing OpenAI's model."
-      },
-      {
-        "subject": "Google",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "predicted Google's imminent death. 3 years later Google has one of the best models and Microsoft is still borrowing OpenAI's model"
-      },
-      {
-        "subject": "ChatGPT",
-        "relationship": "productOf",
-        "object": "OpenAI",
-        "evidence": "When ChatGPT came out"
-      }
-    ],
-    "post_id": "comment_47300147",
-    "post_url": "https://news.ycombinator.com/item?id=47300147",
-    "justification": "Comment compares Microsoft's strategy with Google and OpenAI."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "OpenAI",
-        "relationship": "partner",
-        "object": "Microsoft",
-        "evidence": "as bad as the economic definition of AGI in OpenAI's Microsoft deal is, at least it's measurable."
-      }
-    ],
-    "post_id": "comment_47299479",
-    "post_url": "https://news.ycombinator.com/item?id=47299479",
-    "justification": "Comment mentions OpenAI's deal with Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "LibreOffice",
-        "relationship": "competitor",
-        "object": "Microsoft Office",
-        "evidence": "The LibreOffice project's imprimatur should be to stop existing[] The editing paradigm perpetuated by the legacy of MS Office is a dead end[] A standardized \"Markdown for the Web\" (or AsciiDoc) with native browser support would be a good 80/20 start and would move things out of weird proprietary office formats and towards plain text[]"
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "acquiredBy",
-        "object": "Windows Live Writer app",
-        "evidence": "Even Microsoft beat them to getting halfway to the place they should have been when they bought the company that wrote what became Windows Live Writer app"
-      }
-    ],
-    "post_id": "comment_47299385",
-    "post_url": "https://news.ycombinator.com/item?id=47299385",
-    "justification": "The comment discusses LibreOffice and its relation to Microsoft Office."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Office",
-        "relationship": "other",
-        "object": "Microsoft",
-        "evidence": "until Microsoft adds \"Saves As\" option to office apps"
-      }
-    ],
-    "post_id": "comment_47299282",
-    "post_url": "https://news.ycombinator.com/item?id=47299282",
-    "justification": "The comment mentions MS Office and Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "OpenAI",
-        "relationship": "creatorOf",
-        "object": "ChatGPT",
-        "evidence": "It was OpenAI's ChatGPT that shocked the world and set everything in motion."
-      },
-      {
-        "subject": "Apple Inc.",
-        "relationship": "competitor",
-        "object": "Google",
-        "evidence": "China didn't win the smartphone war. Apple and Google won globally."
-      },
-      {
-        "subject": "Microsoft",
+        "subject": "User",
         "relationship": "investor",
-        "object": "OpenAI",
-        "evidence": "It was OpenAI's ChatGPT that shocked the world and set everything in motion. Now the US has the top three models in GPT"
+        "object": "Tesla, Inc.",
+        "evidence": "Tesla in 2013"
       }
     ],
-    "post_id": "comment_47298989",
-    "post_url": "https://news.ycombinator.com/item?id=47298989",
-    "justification": "The comment discusses various tech companies like Amazon, Meta, Apple, Nvidia, Microsoft, Google and their impact."
+    "post_id": "comment_47096995",
+    "post_url": "https://news.ycombinator.com/item?id=47096995",
+    "justification": "Mentioning investment in Tesla in 2013."
   },
   {
     "triplets": [],
-    "post_id": "comment_47298364",
-    "post_url": "https://news.ycombinator.com/item?id=47298364",
-    "justification": "This is a personal anecdote about a programming project and interactions with a professor. It doesn't contain any structured business information."
+    "post_id": "comment_47092522",
+    "post_url": "https://news.ycombinator.com/item?id=47092522",
+    "justification": "Comments on autopilot features in cars."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47092424",
+    "post_url": "https://news.ycombinator.com/item?id=47092424",
+    "justification": "Comparison between plane autopilot and Tesla's autopilot."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47092300",
+    "post_url": "https://news.ycombinator.com/item?id=47092300",
+    "justification": "Metrics of Tesla's autonomous driving."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47091784",
+    "post_url": "https://news.ycombinator.com/item?id=47091784",
+    "justification": "Tesla being left in the dust on autonomous driving."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47091084",
+    "post_url": "https://news.ycombinator.com/item?id=47091084",
+    "justification": "Apologists of Tesla and its &quot;Full Self Driving&quot;."
+  },
+  {
+    "triplets": [],
+    "post_id": "comment_47060162",
+    "post_url": "https://news.ycombinator.com/item?id=47060162",
+    "justification": "Comments on FSD resulting in this valuation and its future."
   },
   {
     "triplets": [
       {
-        "subject": "LibreOffice",
+        "subject": "Tesla, Inc.",
         "relationship": "competitor",
-        "object": "Microsoft Office",
-        "evidence": "I have no issues at home using Excel files with LibreOffice. Microsoft has not meaningfully changed any Office file format in fifteen years, you can go all the way back to Office 2007 (with the compatibility pack) and open modern documents."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "creatorOf",
-        "object": "Microsoft Office",
-        "evidence": "Office has no issues with ODS formats either."
+        "object": "Waymo",
+        "evidence": "To be fair to Tesla and other self driving taxis"
       }
     ],
-    "post_id": "comment_47298315",
-    "post_url": "https://news.ycombinator.com/item?id=47298315",
-    "justification": "The comment discusses Microsoft Office and LibreOffice file compatibility."
+    "post_id": "comment_47053195",
+    "post_url": "https://news.ycombinator.com/item?id=47053195",
+    "justification": "The comments discuss the strategies, competition, and technologies of Tesla and Waymo in the context of autonomous driving."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "EU policymaking",
-        "evidence": "full participation in EU policymaking requires a Microsoft licence."
+        "subject": "Waymo",
+        "relationship": "competitor",
+        "object": "Tesla, Inc.",
+        "evidence": "Waymo has very carefully increased its abilities...Tesla appears to continuously make big jumps"
       }
     ],
-    "post_id": "comment_47297864",
-    "post_url": "https://news.ycombinator.com/item?id=47297864",
-    "justification": "The comment refers to Microsoft licence."
+    "post_id": "comment_47052961",
+    "post_url": "https://news.ycombinator.com/item?id=47052961",
+    "justification": "Comment compares Waymo and Tesla's approach to self-driving technology and criticizes Tesla's safety practices."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft",
-        "relationship": "creatorOf",
-        "object": "XNA",
-        "evidence": "If Microsoft hadn't killed XNA (what MonoGame is based on) a decade ago"
-      },
-      {
-        "subject": "MonoGame",
+        "subject": "Tesla, Inc.",
         "relationship": "productOf",
-        "object": "XNA",
-        "evidence": "If Microsoft hadn't killed XNA (what MonoGame is based on) a decade ago"
-      },
-      {
-        "subject": "Microsoft Copilot",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "they could be packaging it with Copilot right now"
+        "object": "Waymo",
+        "evidence": "Professional driver + their most advanced \"Robotaxi\" FSD version"
       }
     ],
-    "post_id": "comment_47295439",
-    "post_url": "https://news.ycombinator.com/item?id=47295439",
-    "justification": "Comment mentions Microsoft's XNA."
+    "post_id": "comment_47052752",
+    "post_url": "https://news.ycombinator.com/item?id=47052752",
+    "justification": "Comment discusses Tesla's FSD and compares its performance with professional drivers."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft",
+        "subject": "Tesla, Inc.",
         "relationship": "competitor",
-        "object": "PyPy",
-        "evidence": "Microsofts Faster CPython team tried to make Python 5x faster but only achieved ~1.5x in four years - meanwhile PyPy has been running at over 5x faster for decades."
+        "object": "gas car companies",
+        "evidence": "Tesla formed its media strategy at a time when gas car companies and shorts bought ENTIRE MEDIA ORGs just to trash them"
       }
     ],
-    "post_id": "comment_47295211",
-    "post_url": "https://news.ycombinator.com/item?id=47295211",
-    "justification": "Comment compares PyPy with Microsofts Faster CPython."
+    "post_id": "comment_47052307",
+    "post_url": "https://news.ycombinator.com/item?id=47052307",
+    "justification": "Comment mentions Tesla's media strategy and compares it to that of gas car companies."
   },
   {
     "triplets": [
       {
-        "subject": "Anthropic",
-        "relationship": "partner",
-        "object": "Palintar",
-        "evidence": "Considering the agreement Anthropic has with Palintar, you could say the exact same about employees working at Anthropic."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Israel",
-        "evidence": "Microsoft with its Israel and US Gov ties."
-      }
-    ],
-    "post_id": "comment_47295209",
-    "post_url": "https://news.ycombinator.com/item?id=47295209",
-    "justification": "The comment discusses various companies agreements."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Google",
+        "subject": "Tesla, Inc.",
         "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "stop letting google / microsoft determine whats spam"
-      },
-      {
-        "subject": "Cloudflare",
-        "relationship": "partner",
-        "object": "Protonmail",
-        "evidence": "I use cloudflare + protonmail for my custom domain"
+        "object": "Waymo",
+        "evidence": "The average consumer isn't going to make a distinction between Tesla vs. Waymo."
       }
     ],
-    "post_id": "comment_47286510",
-    "post_url": "https://news.ycombinator.com/item?id=47286510",
-    "justification": "The post mentions Google, Microsoft, Cloudflare, and Protonmail and their role in determining spam and deliverability of emails."
+    "post_id": "comment_47052274",
+    "post_url": "https://news.ycombinator.com/item?id=47052274",
+    "justification": "Comment discusses the perception of Tesla's Robotaxis and compares them to Waymo."
   },
   {
     "triplets": [
       {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Java",
-        "evidence": "UCS-2 and then UTF-16 was well established by 2000 in both Microsoft technologies and elsewhere (like Java)."
-      }
-    ],
-    "post_id": "comment_47285034",
-    "post_url": "https://news.ycombinator.com/item?id=47285034",
-    "justification": "The post mentions Microsoft and Java."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Terry Davis",
-        "relationship": "opponent",
-        "object": "Microsoft",
-        "evidence": "The law makes no distinction between Terry Davis and Microsoft."
-      },
-      {
-        "subject": "TempleOS",
-        "relationship": "productOf",
-        "object": "Terry Davis",
-        "evidence": "(In fact, you could say TempleOS is protected religious speech...!)"
-      }
-    ],
-    "post_id": "comment_47275132",
-    "post_url": "https://news.ycombinator.com/item?id=47275132",
-    "justification": "The post mentions Terry Davis and Microsoft along with TempleOS."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Advanced Micro Devices",
-        "relationship": "partner",
-        "object": "Microsoft",
-        "evidence": "This makes them AMDs first desktop chips to qualify for Microsofts Copilot+ PC label"
-      }
-    ],
-    "post_id": "comment_47261559",
-    "post_url": "https://news.ycombinator.com/item?id=47261559",
-    "justification": "The post discusses AMD and Microsoft's Copilot+ PC label."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "OpenAI",
-        "relationship": "partner",
-        "object": "Microsoft",
-        "evidence": "If you're into hardware that is newer, somewhere in the middle of the inference boom, you're using MXM cards. In either situation, the host machine has DDR, but if you're OpenAI, Anthropic, Microsoft, or Google, you're not building (more) inference machines like this."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "partner",
-        "object": "Advanced Micro Devices",
-        "evidence": "Microsoft is doing the same, but with AMD's products"
-      },
-      {
-        "subject": "Nvidia",
-        "relationship": "other",
-        "object": "Advanced Micro Devices",
-        "evidence": "Google has a mix: they offer Nvidia all in one SBCs as part of GCP for legacy inference tasks (so your stack that can't run on AMD yet still can run)"
-      },
-      {
-        "subject": "Intel",
+        "subject": "Waymo",
         "relationship": "competitor",
-        "object": "TSMC",
-        "evidence": "Intel lacks the die stacking technology required to build HBM, and TSMC I think can't do it for that many layers"
-      },
-      {
-        "subject": "Apple Inc.",
-        "relationship": "other",
-        "object": "AMD Strix Halo",
-        "evidence": "what about LPDDR, used by AMD Strix Halo and Apple stuff?"
+        "object": "Tesla, Inc.",
+        "evidence": "the ones on a Waymo are very good, and the ones on a Tesla aren't that great, and that makes a huge difference."
       }
     ],
-    "post_id": "comment_47259557",
-    "post_url": "https://news.ycombinator.com/item?id=47259557",
-    "justification": "The post discusses the hardware and software utilized by OpenAI, Anthropic, Microsoft, and Google for AI inference, detailing their interactions with companies like Nvidia, AMD, and Intel."
+    "post_id": "comment_47052266",
+    "post_url": "https://news.ycombinator.com/item?id=47052266",
+    "justification": "Comment compares the cameras used by Waymo and Tesla."
   },
   {
     "triplets": [
       {
-        "subject": "OpenAI",
-        "relationship": "other",
-        "object": "Nvidia",
-        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
-      },
-      {
-        "subject": "OpenAI",
-        "relationship": "other",
-        "object": "Micron Technology",
-        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
-      },
-      {
-        "subject": "OpenAI",
-        "relationship": "other",
-        "object": "Oracle",
-        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
-      },
-      {
-        "subject": "OpenAI",
-        "relationship": "other",
-        "object": "Microsoft",
-        "evidence": "Nvidia, Micron, Oracle, Microsoft are cooked when and if they pop."
-      }
-    ],
-    "post_id": "comment_47256394",
-    "post_url": "https://news.ycombinator.com/item?id=47256394",
-    "justification": "The post discusses OpenAI, Nvidia, Micron, Oracle, and Microsoft in the context of market risks and potential collapse."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Windows",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "One thing you have to give Microsoft (at least back then) is that they did keep trying."
-      }
-    ],
-    "post_id": "comment_47254287",
-    "post_url": "https://news.ycombinator.com/item?id=47254287",
-    "justification": "The post mentions Microsoft and Windows."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "companies",
-        "evidence": "There's like a middle scale where you're not big enough that Microsoft will go out of their way to whitelist you"
-      }
-    ],
-    "post_id": "comment_47253484",
-    "post_url": "https://news.ycombinator.com/item?id=47253484",
-    "justification": "The post discusses Microsoft and its impact on smaller companies."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft Azure",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "signing up for Azure, in the hopes that if I sent from a Microsoft IP it might not get blocked."
-      }
-    ],
-    "post_id": "comment_47252989",
-    "post_url": "https://news.ycombinator.com/item?id=47252989",
-    "justification": "The post discusses issues with Microsoft's server blocking and using Azure for sending transactional emails."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Xbox",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "Microsoft has made it clear they don't care about the consumer market anymore. Xbox is dying or already dead"
-      }
-    ],
-    "post_id": "comment_47251450",
-    "post_url": "https://news.ycombinator.com/item?id=47251450",
-    "justification": "The post discusses Microsoft's focus on enterprise and AI, and the state of their consumer products like Xbox and Windows."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "PC world",
-        "evidence": "microsoft and the pc world have given up on consumer hardware and instead are completely focused on enterprise and ai."
-      }
-    ],
-    "post_id": "comment_47251178",
-    "post_url": "https://news.ycombinator.com/item?id=47251178",
-    "justification": "The post says \"This is a major challenge to Microsoft.\""
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
+        "subject": "Waymo",
         "relationship": "competitor",
-        "object": "Apple Inc.",
-        "evidence": "Microsoft's build quality is largely equivalent, but the press has already noticed that the value proposition at Microsoft is now lacking."
-      }
-    ],
-    "post_id": "comment_47250632",
-    "post_url": "https://news.ycombinator.com/item?id=47250632",
-    "justification": "The post mentions Microsoft's build quality and value proposition compared to Apple's MacBook."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Google",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "I personally prefer all their productivity software to Googles or Microsofts"
+        "object": "Tesla, Inc.",
+        "evidence": "Waymo is in a place where it's better than humans continuously. If Tesla is not, that's on them"
       },
       {
-        "subject": "Apple Inc.",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "I personally prefer all their productivity software to Googles or Microsofts, and its not a close race, but you can use those on it too."
-      }
-    ],
-    "post_id": "comment_47249954",
-    "post_url": "https://news.ycombinator.com/item?id=47249954",
-    "justification": "The post compares productivity software from Apple, Google, and Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Safari",
-        "relationship": "other",
-        "object": "Microsoft Azure",
-        "evidence": "If the problem goes away when Safari runs the Azure admin portal, its a Google issue."
-      },
-      {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Google",
-        "evidence": "Lets see if the same problem happens under Safari, then its Microsoft fault. If the problem goes away when Safari runs the Azure admin portal, its a Google issue."
-      }
-    ],
-    "post_id": "comment_47249804",
-    "post_url": "https://news.ycombinator.com/item?id=47249804",
-    "justification": "The post involves Microsoft and Azure, discussing server issues and software running on different browsers."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "HP Elitebook",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Or in general any business laptop, like HP Elitebook or Dell Presicion."
-      },
-      {
-        "subject": "Dell Precision",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Or in general any business laptop, like HP Elitebook or Dell Presicion."
-      }
-    ],
-    "post_id": "comment_47249672",
-    "post_url": "https://news.ycombinator.com/item?id=47249672",
-    "justification": "The post discusses various business laptop brands like Thinkpads, HP Elitebook, and Dell Presicion as alternatives to those made by Microsoft."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "productOf",
-        "object": "Surface Pro",
-        "evidence": "so they're doing better than Microsoft on that front (who inexplicably removed it from the SP line)"
-      }
-    ],
-    "post_id": "comment_47249105",
-    "post_url": "https://news.ycombinator.com/item?id=47249105",
-    "justification": "The post mentions Microsoft and their Surface Pro line of products."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Microsoft",
-        "relationship": "competitor",
-        "object": "Apple Inc.",
-        "evidence": "This is a major challenge to Microsoft. A 13-inch Surface Laptop costs $899 [1], that's 50% more than an equivalent MacBook!"
-      },
-      {
-        "subject": "Lenovo",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Other than Microsoft nobody even makes decent laptops in the Windows world. I am typing this on an Lenovo Yoga"
-      },
-      {
-        "subject": "Samsung",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Samsung makes good laptops but my keyboard gave out after just 2 years."
-      },
-      {
-        "subject": "Dell",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Dell XPS 17 was pretty good, but now they have weird keyboard."
-      }
-    ],
-    "post_id": "comment_47248919",
-    "post_url": "https://news.ycombinator.com/item?id=47248919",
-    "justification": "The post discusses Microsoft's Surface Laptop and their comparison with Apple's MacBook, and also mentions laptops from Lenovo, Samsung, and Dell."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "Hotmail",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "I wonder if Microsoft actually likes running their free email service still. They wiped a ton of old Hotmail and Live.com emails some years ago (and then allowed new people to register those deleted names)."
-      },
-      {
-        "subject": "Live.com",
-        "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "I wonder if Microsoft actually likes running their free email service still. They wiped a ton of old Hotmail and Live.com emails some years ago (and then allowed new people to register those deleted names)."
-      }
-    ],
-    "post_id": "comment_47246312",
-    "post_url": "https://news.ycombinator.com/item?id=47246312",
-    "justification": "The post discusses Microsoft's free email service, Hotmail, and Live.com."
-  },
-  {
-    "triplets": [
-      {
-        "subject": "F#",
+        "subject": "Elon Musk",
         "relationship": "affiliation",
-        "object": "Microsoft",
-        "evidence": "If it wasn't associated with Microsoft, it'd be more popular than haskell"
+        "object": "Tesla, Inc.",
+        "evidence": "they're forced to follow Elon's camera-only mandate."
       }
     ],
-    "post_id": "comment_47245720",
-    "post_url": "https://news.ycombinator.com/item?id=47245720",
-    "justification": "The post talks about the programming language F# being associated with Microsoft."
+    "post_id": "comment_47052031",
+    "post_url": "https://news.ycombinator.com/item?id=47052031",
+    "justification": "Points out the difference between Tesla's and Waymo's capabilities."
   },
   {
     "triplets": [
       {
-        "subject": "agentic Coding",
+        "subject": "Tesla, Inc.",
         "relationship": "productOf",
-        "object": "Microsoft",
-        "evidence": "because they cancelled the position altogether to use Agentic Coding by Microsoft instead."
+        "object": "Waymo",
+        "evidence": "texas may be pushing tesla forward (maybe partially for ideological reasons), but it will be an extremely hard sell to get any of the major US cities to get on board with this."
       }
     ],
-    "post_id": "comment_47244268",
-    "post_url": "https://news.ycombinator.com/item?id=47244268",
-    "justification": "The post mentions Agentic Coding by Microsoft."
+    "post_id": "comment_47051986",
+    "post_url": "https://news.ycombinator.com/item?id=47051986",
+    "justification": "Texas may be pushing tesla robotaxi forward"
   },
   {
     "triplets": [
       {
-        "subject": "Author",
-        "relationship": "employee",
-        "object": "Microsoft",
-        "evidence": "When I worked at Microsoft, it cost over $20 to have a human customer support agent pick up the phone when someone called in for help."
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "Musk's shift to far-right politics is responsible for some of this decline"
+      }
+    ],
+    "post_id": "comment_47049632",
+    "post_url": "https://news.ycombinator.com/item?id=47049632",
+    "justification": "Comment analyzes Tesla's decline and attributes it to Musk's political shift."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Toyota",
+        "evidence": "Even Toyota is coming out with compelling EV products this year."
       },
       {
-        "subject": "Apple Inc.",
-        "relationship": "competitor",
-        "object": "FAANGs",
-        "evidence": "competitors at other FAANGs that are OK burning money to gain market share."
+        "subject": "Tesla, Inc.",
+        "relationship": "ceo",
+        "object": "Elon Musk",
+        "evidence": "Tesla came from nowhere, developed essentially one world-dominating product (lumping the 3 and Y together), then the CEO basically ruined everything."
       }
     ],
-    "post_id": "comment_47240365",
-    "post_url": "https://news.ycombinator.com/item?id=47240365",
-    "justification": "The post discusses working at Microsoft and the costs associated with customer support."
+    "post_id": "comment_47048381",
+    "post_url": "https://news.ycombinator.com/item?id=47048381",
+    "justification": "Discusses Tesla's decline and a normal CEO could have done better."
   },
   {
     "triplets": [
       {
-        "subject": "Apple Inc.",
-        "relationship": "competitor",
-        "object": "Microsoft",
-        "evidence": "Apple devices also nag you about buying AppleCare in the system preferences."
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "Tesla know (also for 7 years), Musk doesn't care 'since license plates can also be tracked'."
       }
     ],
-    "post_id": "comment_47239823",
-    "post_url": "https://news.ycombinator.com/item?id=47239823",
-    "justification": "The post compares Apple's and Microsoft's business practices."
+    "post_id": "comment_47037859",
+    "post_url": "https://news.ycombinator.com/item?id=47037859",
+    "justification": "The comment refers to Tesla being tracked and mentions Elon Musk."
   },
   {
     "triplets": [
       {
-        "subject": "VMware",
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Full Self-Driving",
+        "evidence": "Tesla fsd was the same thing. You needed to have people to try it. Some paid for it with their lives."
+      }
+    ],
+    "post_id": "comment_47017397",
+    "post_url": "https://news.ycombinator.com/item?id=47017397",
+    "justification": "The comment is about Tesla fsd and compares to similar situations in healthcare"
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
         "relationship": "competitor",
-        "object": "Amazon Web Services",
-        "evidence": "hypervisor hardware refresh and accompanying VMware licenses would have an ROI of 2.5yrs versus comparable AWS infrastructure"
+        "object": "Waymo",
+        "evidence": "This is why Waymo will lose - either to Tesla or more likely a Chinese car manufacturer."
       },
       {
-        "subject": "Microsoft",
-        "relationship": "other",
-        "object": "Hyper-V",
-        "evidence": "assuming we weren't already a Microsoft shop w/ Hyper-V"
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "I do not like Elon because I do not think nazi salutes or racism are cool, but I do think Tesla are correct here. Waymo wins for a while, then it dies."
       }
     ],
-    "post_id": "comment_47237467",
-    "post_url": "https://news.ycombinator.com/item?id=47237467",
-    "justification": "The post discusses Microsoft and VMware, specifically around costs associated to use public clouds."
+    "post_id": "comment_46999984",
+    "post_url": "https://news.ycombinator.com/item?id=46999984",
+    "justification": "Discusses differences between Waymo and Teslas approach and suggests Tesla may win."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "Teslas approach is smarter than Waymo. Maybe Tesla wont win, perhaps a Chinese firm, but the winner will follow a vision based system and not a micro-mapping LIDAR system."
+      }
+    ],
+    "post_id": "comment_46999933",
+    "post_url": "https://news.ycombinator.com/item?id=46999933",
+    "justification": "Suggest Tesla or a Chinese firm will win over Waymo."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Alphabet Inc.",
+        "relationship": "parentCompany",
+        "object": "Waymo",
+        "evidence": "&gt; And they didn't have sugar daddy (Google) willing to burn several billions a year for many years."
+      }
+    ],
+    "post_id": "comment_46997118",
+    "post_url": "https://news.ycombinator.com/item?id=46997118",
+    "justification": "Comment compares Tesla to Google and Waymo and discusses FSD."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "I love my Teslas but if Waymos approach is shown to be truly better then Id happily switch to a car that used their tech."
+      }
+    ],
+    "post_id": "comment_46996935",
+    "post_url": "https://news.ycombinator.com/item?id=46996935",
+    "justification": "Suggests switching to Waymo it their self-driving tech is better than Tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Waymo",
+        "relationship": "parentCompany",
+        "object": "Alphabet Inc.",
+        "evidence": "And they didn't have sugar daddy (Google) willing to burn several billions a year for many years."
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "And given that in Austin they just reached parity with Waymo (i.e. completely unsupervised robotaxi service), they are not doing badly."
+      }
+    ],
+    "post_id": "comment_46996689",
+    "post_url": "https://news.ycombinator.com/item?id=46996689",
+    "justification": "Comment highlights the differences in approaches and resources between Tesla and Waymo."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Waymo",
+        "relationship": "creatorOf",
+        "object": "driverless car's environment",
+        "evidence": "lead that Waymo has acquired in perceiving its driverless car's environment will be almost impossible to kill"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "opponent",
+        "object": "Waymo",
+        "evidence": "Tesla's choice to abandon lidar will be one of the biggest oof in business history."
+      }
+    ],
+    "post_id": "comment_46996318",
+    "post_url": "https://news.ycombinator.com/item?id=46996318",
+    "justification": "Tesla's choice to abandon Lidar will be one of the biggest oof in business history."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "but I don't think they're that far behind Waymo where it really matters, which is the thing actually working."
+      },
+      {
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "shit on Tesla and Elon on any opportunity, and it's a shame they basically have the software out there doing things when it probably shouldn't, but I don't think they're that far behind Waymo where it really matters, which is the thing actually working."
+      }
+    ],
+    "post_id": "comment_46995406",
+    "post_url": "https://news.ycombinator.com/item?id=46995406",
+    "justification": "Comparison of tesla versus waymo regarding self driving software."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Elon Musk",
+        "relationship": "affiliation",
+        "object": "Tesla, Inc.",
+        "evidence": "What Musk has done is bring money to develop technologies"
+      },
+      {
+        "subject": "Gwynne Shotwell",
+        "relationship": "affiliation",
+        "object": "SpaceX",
+        "evidence": "SpaceX was for a long time considered to be further from his influence with Shotwell running the company well and Musk acting more as a spokesperson."
+      }
+    ],
+    "post_id": "comment_46994303",
+    "post_url": "https://news.ycombinator.com/item?id=46994303",
+    "justification": "Claims musk manages companies and tesla."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Cruise",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "Cruise was unlikely to leapfrog Waymo."
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Waymo",
+        "evidence": "Tesla, on the other hand, is taking a very different path than Waymo, they have a chance at beating Waymo at their own game"
+      }
+    ],
+    "post_id": "comment_46994080",
+    "post_url": "https://news.ycombinator.com/item?id=46994080",
+    "justification": "Comparing Cruise, Waymo, and Tesla's approach to automated driving."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Rohan",
+        "relationship": "founder",
+        "object": "OctaPulse",
+        "evidence": "My name is Rohan and, together with Paul, Im the co-founder of OctaPulse"
+      },
+      {
+        "subject": "Paul",
+        "relationship": "founder",
+        "object": "OctaPulse",
+        "evidence": "together with Paul, Im the co-founder of OctaPulse"
+      },
+      {
+        "subject": "OctaPulse",
+        "relationship": "affiliation",
+        "object": "Y Combinator",
+        "evidence": "OctaPulse (YC W26)"
+      },
+      {
+        "subject": "OctaPulse",
+        "relationship": "partner",
+        "object": "largest trout producer in North America",
+        "evidence": "We are currently deployed at our first production site with the largest trout producer in North America."
+      },
+      {
+        "subject": "Luxonis",
+        "relationship": "productOf",
+        "object": "Intel",
+        "evidence": "The onboard Myriad X VPU lets us run lightweight inference directly on the camera"
+      },
+      {
+        "subject": "Rohan",
+        "relationship": "alumniOf",
+        "object": "ASML",
+        "evidence": "I previously worked at ASML, Nvidia, Tesla, and Toyota."
+      },
+      {
+        "subject": "Rohan",
+        "relationship": "alumniOf",
+        "object": "Nvidia",
+        "evidence": "I previously worked at ASML, Nvidia, Tesla, and Toyota."
+      },
+      {
+        "subject": "Rohan",
+        "relationship": "alumniOf",
+        "object": "Tesla, Inc.",
+        "evidence": "I previously worked at ASML, Nvidia, Tesla, and Toyota."
+      },
+      {
+        "subject": "Rohan",
+        "relationship": "alumniOf",
+        "object": "Toyota",
+        "evidence": "I previously worked at ASML, Nvidia, Tesla, and Toyota."
+      },
+      {
+        "subject": "Paul",
+        "relationship": "alumniOf",
+        "object": "Bloomberg L.P.",
+        "evidence": "Paul worked at Bloomberg."
+      },
+      {
+        "subject": "Paul",
+        "relationship": "alumniOf",
+        "object": "Carnegie Mellon University",
+        "evidence": "Paul and I met at an entrepreneurship happy hour at CMU."
+      },
+      {
+        "subject": "Rohan",
+        "relationship": "alumniOf",
+        "object": "Carnegie Mellon University",
+        "evidence": "Paul and I met at an entrepreneurship happy hour at CMU."
+      }
+    ],
+    "post_id": "story_47220320",
+    "post_url": "https://news.ycombinator.com/item?id=47220320",
+    "justification": "This post is a launch announcement for OctaPulse, a robotics company for fish farming, and includes information about the founders, the company's activities, and its relationship with customers and technology providers."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Europe",
+        "evidence": "Tesla registrations crash 17% in Europe"
+      }
+    ],
+    "post_id": "story_47140932",
+    "post_url": "https://news.ycombinator.com/item?id=47140932",
+    "justification": "Mentions Tesla's vehicle registrations in Europe."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Cruise",
+        "evidence": "Tesla has to pay historic $243M judgement over Autopilot crash, judge says"
+      }
+    ],
+    "post_id": "story_47090584",
+    "post_url": "https://news.ycombinator.com/item?id=47090584",
+    "justification": "Reports on Tesla's legal troubles related to its Autopilot system."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Waymo",
+        "evidence": "Tesla's 45 Austin Robotaxis now have 14 crashes on the books since June 2025"
+      }
+    ],
+    "post_id": "story_47051559",
+    "post_url": "https://news.ycombinator.com/item?id=47051559",
+    "justification": "Reports on Tesla's 'Robotaxi' crashes in Austin."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Waymo",
+        "evidence": "Tesla 'Robotaxi' adds 5 more crashes in Austin in a month 4x worse than humans"
+      }
+    ],
+    "post_id": "story_47051546",
+    "post_url": "https://news.ycombinator.com/item?id=47051546",
+    "justification": "Reports on Tesla's 'Robotaxi' crashes in Austin."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "United Kingdom",
+        "evidence": "Tesla Sales Down 55% UK"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Spain",
+        "evidence": "Tesla Sales Down 58% Spain"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Germany",
+        "evidence": "Tesla Sales Down 59% Germany"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Netherlands",
+        "evidence": "Tesla Sales Down 81% Netherlands"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Norway",
+        "evidence": "Tesla Sales Down 93% Norway"
+      }
+    ],
+    "post_id": "story_47048052",
+    "post_url": "https://news.ycombinator.com/item?id=47048052",
+    "justification": "Reports on Tesla's declining sales in various European countries."
   },
   {
     "triplets": [],
-    "post_id": "comment_47202621",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47354105",
+    "post_url": "https://news.ycombinator.com/item?id=47354105",
+    "justification": "The post references GOOG (Alphabet Inc.), TSLA (Tesla), and AAPL (Apple Inc.) in the context of retail investors."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Elon Musk",
+        "evidence": "IPOs like Tesla and Facebook were on terms that gave outside investors little control on operations and that's why Musk and even Zuckerberg to a certain extent can choose to reorient to a new boondoggle with little-to-no investor pushback."
+      },
+      {
+        "subject": "Facebook, Inc.",
+        "relationship": "affiliation",
+        "object": "Mark Zuckerberg",
+        "evidence": "IPOs like Tesla and Facebook were on terms that gave outside investors little control on operations and that's why Musk and even Zuckerberg to a certain extent can choose to reorient to a new boondoggle with little-to-no investor pushback."
+      },
+      {
+        "subject": "Stripe",
+        "relationship": "affiliation",
+        "object": "United States of America",
+        "evidence": "This is why Stripe, Databricks, and others have remained private for so long despite having hit IPO-level metrics years ago."
+      },
+      {
+        "subject": "Databricks",
+        "relationship": "affiliation",
+        "object": "United States of America",
+        "evidence": "This is why Stripe, Databricks, and others have remained private for so long despite having hit IPO-level metrics years ago."
+      },
+      {
+        "subject": "YL Ventures",
+        "relationship": "affiliation",
+        "object": "Israel",
+        "evidence": "\"Big\" funds like YL Ventures, Cyberstarts, and JVP only have an AUM of $800M, $1.4B, and $1.9B respectively."
+      },
+      {
+        "subject": "Cyberstarts",
+        "relationship": "affiliation",
+        "object": "Israel",
+        "evidence": "\"Big\" funds like YL Ventures, Cyberstarts, and JVP only have an AUM of $800M, $1.4B, and $1.9B respectively."
+      },
+      {
+        "subject": "Jerusalem Venture Partners",
+        "relationship": "affiliation",
+        "object": "Israel",
+        "evidence": "\"Big\" funds like YL Ventures, Cyberstarts, and JVP only have an AUM of $800M, $1.4B, and $1.9B respectively."
+      },
+      {
+        "subject": "SentinelOne",
+        "relationship": "affiliation",
+        "object": "Israel",
+        "evidence": "And the handful of Israeli IPOs that happened like SentinelOne or CyberArk weren't that successful."
+      },
+      {
+        "subject": "CyberArk",
+        "relationship": "affiliation",
+        "object": "Israel",
+        "evidence": "And the handful of Israeli IPOs that happened like SentinelOne or CyberArk weren't that successful."
+      }
+    ],
+    "post_id": "comment_47338271",
+    "post_url": "https://news.ycombinator.com/item?id=47338271",
+    "justification": "Comment mentions Tesla and Facebook as examples of companies with founders who maintained operational control after IPOs, and discusses the IPO strategies of Stripe, Databricks, and Israeli VCs like YL Ventures, Cyberstarts, and JVP."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "BYD Company",
+        "evidence": "Germans are free to buy Teslas, BYDs or domestiv EVs."
+      }
+    ],
+    "post_id": "comment_47312480",
+    "post_url": "https://news.ycombinator.com/item?id=47312480",
+    "justification": "The comment discusses Tesla, BYD, and domestic EV manufacturers in Germany."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "legacy auto manufacturers",
+        "evidence": "Had Tesla not been a company they would still be dragging their heels with compliance cars to this day."
+      }
+    ],
+    "post_id": "comment_47311140",
+    "post_url": "https://news.ycombinator.com/item?id=47311140",
+    "justification": "The comment discusses Tesla and legacy auto manufacturers fighting EV adoption."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "polygon.io",
+        "relationship": "acquiredBy",
+        "object": "Massive",
+        "evidence": "I'm using TimescaleDB to manage 450GB of stocks and options data from Massive (what used to be polygon.io)"
+      }
+    ],
+    "post_id": "comment_47303653",
+    "post_url": "https://news.ycombinator.com/item?id=47303653",
+    "justification": "The comment discusses using TimescaleDB to manage data, specifically mentioning Massive (formerly polygon.io) and TSLA options trades."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Elon Musk",
+        "evidence": "He built his companies around a \"vision\", used it to attract high quality talent and push that talent to give their best. For Tesla it was \"electrify transport to end dependence on fossil fuels and save the planet\""
+      },
+      {
+        "subject": "SpaceX",
+        "relationship": "affiliation",
+        "object": "Elon Musk",
+        "evidence": "He built his companies around a \"vision\", used it to attract high quality talent and push that talent to give their best.  for SpaceX it was \"save humanity by becoming a multi-planetary species\"."
+      }
+    ],
+    "post_id": "comment_47275578",
+    "post_url": "https://news.ycombinator.com/item?id=47275578",
+    "justification": "The comment discusses Elon Musk's marketing strategy and the vision behind Tesla and SpaceX."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Hyundai Motor Company",
+        "relationship": "competitor",
+        "object": "Bayerische Motoren Werke AG",
+        "evidence": "Hyundai vs BMW, where is Tesla?"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Hyundai Motor Company",
+        "evidence": "Hyundai vs BMW, where is Tesla?"
+      },
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "competitor",
+        "object": "Bayerische Motoren Werke AG",
+        "evidence": "Hyundai vs BMW, where is Tesla?"
+      }
+    ],
+    "post_id": "comment_47254757",
+    "post_url": "https://news.ycombinator.com/item?id=47254757",
+    "justification": "The comment asks about Tesla's position in comparison to Hyundai and BMW, implying a competitive relationship among these automakers."
   },
   {
     "triplets": [],
-    "post_id": "comment_47202175",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47240819",
+    "post_url": "https://news.ycombinator.com/item?id=47240819",
+    "justification": "The comment mentions X, xAI, Tesla, and Meta as places where interesting problems are found."
   },
   {
     "triplets": [],
-    "post_id": "comment_47202075",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47240445",
+    "post_url": "https://news.ycombinator.com/item?id=47240445",
+    "justification": "The comment negatively assesses working for X, xAI, and Tesla, affecting an engineer's reputation."
   },
   {
     "triplets": [],
-    "post_id": "comment_47201788",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47218311",
+    "post_url": "https://news.ycombinator.com/item?id=47218311",
+    "justification": "The commenter mentions 'Tesla robot demo' in comparison to current research capabilities in the USA."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Waymo",
+        "relationship": "competitor",
+        "object": "Tesla, Inc.",
+        "evidence": "Another example of Waymo betting wrong, lots of expensive sensors vs Tesla with cameras and NN trained on billions of real miles (i.e. human like autonomy)."
+      }
+    ],
+    "post_id": "comment_47212018",
+    "post_url": "https://news.ycombinator.com/item?id=47212018",
+    "justification": "The comment compares Tesla to Waymo in terms of self-driving car technology."
   },
   {
     "triplets": [],
-    "post_id": "comment_47201499",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47211669",
+    "post_url": "https://news.ycombinator.com/item?id=47211669",
+    "justification": "The comment asks a question about a previous comment mentioning Tesla."
   },
   {
     "triplets": [],
-    "post_id": "comment_47197552",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47174219",
+    "post_url": "https://news.ycombinator.com/item?id=47174219",
+    "justification": "Commenter making critical statements about Elon Musk and his companies, including Tesla, SpaceX, and xAI."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "United States of America",
+        "evidence": "But Telsa still makes batteries in California in Fremont."
+      }
+    ],
+    "post_id": "comment_47167169",
+    "post_url": "https://news.ycombinator.com/item?id=47167169",
+    "justification": "The comment discusses Telsa's battery manufacturing in California and Texas."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Waymo",
+        "relationship": "competitor",
+        "object": "Tesla, Inc.",
+        "evidence": "Self driving cars for hire (Waymo, Tesla, others) can be that point-to-point system that is affordable."
+      },
+      {
+        "subject": "The Boring Company",
+        "relationship": "affiliation",
+        "object": "Elon Musk",
+        "evidence": "Hopefully the Boring Company or someone else can get tunneling costs way down."
+      }
+    ],
+    "post_id": "comment_47157219",
+    "post_url": "https://news.ycombinator.com/item?id=47157219",
+    "justification": "The comment discusses Waymo and Tesla in the context of self-driving cars for hire."
+  },
+  {
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "batteries",
+        "evidence": "maybe Tesla, maybe something else"
+      }
+    ],
+    "post_id": "comment_47156045",
+    "post_url": "https://news.ycombinator.com/item?id=47156045",
+    "justification": "The comment discusses storing electricity with Tesla or other batteries."
   },
   {
     "triplets": [],
-    "post_id": "comment_47195707",
-    "post_url": null,
-    "justification": "Error"
+    "post_id": "comment_47142982",
+    "post_url": "https://news.ycombinator.com/item?id=47142982",
+    "justification": "The comment compares Tesla with Chinese car manufacturers and their features, but this is a qualitative assessment and doesn't entail any relationships."
   },
   {
-    "triplets": [],
-    "post_id": "comment_47191147",
-    "post_url": null,
-    "justification": "Error"
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "affiliation",
+        "object": "Elon Musk",
+        "evidence": "Optimus is a longer horizon promise that allows Elon to keep kicking the \"can of untold profits\" down the road. Tesla car hype has fizzled, robotaxi is currently fizzling, so the new promise is optimus. Elon sells dreams and visions, not really products."
+      }
+    ],
+    "post_id": "comment_47142554",
+    "post_url": "https://news.ycombinator.com/item?id=47142554",
+    "justification": "The comment mentions Elon Musk and Tesla."
   },
   {
-    "triplets": [],
-    "post_id": "comment_47187307",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47187227",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47186739",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47184622",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47184488",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47182832",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47182530",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47181452",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47180831",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47180238",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47174188",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47166177",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47165755",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47162630",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47161080",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47159183",
-    "post_url": null,
-    "justification": "Error"
-  },
-  {
-    "triplets": [],
-    "post_id": "comment_47158464",
-    "post_url": null,
-    "justification": "Error"
+    "triplets": [
+      {
+        "subject": "Tesla, Inc.",
+        "relationship": "productOf",
+        "object": "Optimus",
+        "evidence": "We'll obviously continue to support the Model S and X programs for as long as people have the vehicles, but we're gonna take the Model S and X production space in our Fremont factory and convert that into an Optimus factory, which will... with the long-term goal of having 1 million units a year of Optimus robots in the current S/X space in Fremont.\""
+      }
+    ],
+    "post_id": "comment_47141577",
+    "post_url": "https://news.ycombinator.com/item?id=47141577",
+    "justification": "The comment refers to Tesla's earnings call and plans to convert the Fremont factory into an Optimus factory."
   }
 ]

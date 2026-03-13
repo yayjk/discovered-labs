@@ -8,12 +8,12 @@ The ONLY permitted relationship types are: {ALLOWED_RELATIONS}
 
 ### EXTRACTION RULES:
 1. **Focus on Structure**: 
-   - Only extract known relationships. 
-   - If there is a business or leadership relationship present in the post, but not available in the allowed list, specify relationship as 'other' and provide a new suggested relationship in 'suggested_relationship'.
-   - If suggesting a new relationship, provide clear evidence from the post in 'suggested_relationship_evidence'. 
+   - Only extract relationships from the ALLOWED list above. Do NOT invent or use any relationship type outside this list.
+   - If a relationship does not cleanly fit one of the allowed types, skip it entirely.
 2. **Strict Filtering**: 
    - If a post is a personal anecdote, a product review, or an emotional rant (e.g., 'I love GPT-4o'), mark `has_business_info` as False and return an empty triplet list.
    - DO NOT extract 'User — uses — Product' or 'Person — hates — Company'.
+   - **NO SELF-REFERENCES**: Never create a triplet where the subject and object refer to the same entity or are variants/misspellings of each other (e.g., 'Anthropi - productOf - Anthropic' is INVALID because both refer to Anthropic). If subject and object would resolve to the same real-world entity, skip the triplet entirely.
 3. **Canonicalization**: Normalize all entities. 
    - 'OpenAI's boss' -> Sam Altman.
    - 'The fruit company' -> Apple Inc.

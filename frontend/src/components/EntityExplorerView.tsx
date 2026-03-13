@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Table,
   TableBody,
@@ -7,8 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useRelationshipGraph, countRelationships, type Entity, type GroupedRelationship } from "@/hooks/use-relationship-graph";
+import { RelationshipGraphViewerView } from "@/components/RelationshipGraphViewerView";
 import { useAppStore } from "@/store/useAppStore";
 
 function RelationshipGroup({ group }: { group: GroupedRelationship }) {
@@ -133,6 +135,39 @@ export function EntityExplorerView() {
   const dbPath = selectedReport ? `${selectedReport}.db` : "";
   const { data: entities, isLoading, error } = useRelationshipGraph(dbPath);
   const [selectedEntity, setSelectedEntity] = useState<Entity | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showGraph, setShowGraph] = useState(false);
+  const PAGE_SIZE = 15;
+
+  const sortedEntities = useMemo(() => {
+    return [...(entities || [])].sort((a, b) => {
+      const totalA = countRelationships(a.left_relationships) + countRelationships(a.right_relationships);
+      const totalB = countRelationships(b.left_relationships) + countRelationships(b.right_relationships);
+      return totalB - totalA;
+    });
+  }, [entities]);
+
+  const totalPages = Math.max(1, Math.ceil(sortedEntities.length / PAGE_SIZE));
+  const paginatedEntities = sortedEntities.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
+  if (showGraph) {
+    return (
+      <div className="flex flex-1 flex-col min-h-0 overflow-hidden relative">
+        <RelationshipGraphViewerView />
+        <div className="sticky bottom-0 w-full py-3 px-4 bg-background border-t border-border flex justify-center z-10">
+          <Button
+            onClick={() => setShowGraph(false)}
+            className="bg-blue-600 hover:bg-blue-700 text-white text-lg h-12 px-8 shadow-lg"
+          >
+            Show Entity Table
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (
@@ -156,64 +191,102 @@ export function EntityExplorerView() {
     );
   }
 
-  const sortedEntities = [...(entities || [])].sort((a, b) => {
-    const totalA = countRelationships(a.left_relationships) + countRelationships(a.right_relationships);
-    const totalB = countRelationships(b.left_relationships) + countRelationships(b.right_relationships);
-    return totalB - totalA;
-  });
-
   return (
-    <div className="flex flex-1 gap-4 p-4 h-full">
-      {/* Left Section - Entity Table */}
-      <div className={`flex flex-col ${selectedEntity ? 'w-1/2' : 'w-full'} transition-all duration-300`}>
-        <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Entity Explorer</h2>
-        <div className="flex-1 overflow-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Entity</TableHead>
-                <TableHead className="text-right">Incoming</TableHead>
-                <TableHead className="text-right">Outgoing</TableHead>
-                <TableHead className="text-right">Total</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {sortedEntities.map((entity) => {
-                const leftCount = countRelationships(entity.left_relationships);
-                const rightCount = countRelationships(entity.right_relationships);
-                return (
-                  <TableRow
-                    key={entity.entity_name}
-                    className={`cursor-pointer hover:bg-muted/50 ${
-                      selectedEntity?.entity_name === entity.entity_name ? 'bg-muted' : ''
-                    }`}
-                    onClick={() => setSelectedEntity(entity)}
-                  >
-                    <TableCell className="font-medium">{entity.entity_name}</TableCell>
-                    <TableCell className="text-right">{leftCount}</TableCell>
-                    <TableCell className="text-right">{rightCount}</TableCell>
-                    <TableCell className="text-right">{leftCount + rightCount}</TableCell>
+    <div className="flex flex-1 flex-col min-h-0 overflow-hidden relative">
+      <div className="flex flex-1 gap-4 p-4 min-h-0 overflow-hidden">
+        {/* Left Section - Entity Table */}
+        <div className={`flex flex-col ${selectedEntity ? 'w-1/2' : 'w-full'} transition-all duration-300 min-h-0 overflow-y-auto justify-center`}>
+          <h2 className="text-3xl font-bold text-foreground mb-4 text-center shrink-0">Entity Explorer</h2>
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-3xl">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Entity</TableHead>
+                    <TableHead className="text-right">Incoming</TableHead>
+                    <TableHead className="text-right">Outgoing</TableHead>
+                    <TableHead className="text-right">Total</TableHead>
                   </TableRow>
-                );
-              })}
-              {sortedEntities.length === 0 && (
-                <TableRow>
-                  <TableCell colSpan={4} className="text-center text-muted-foreground">
-                    No entities found.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
+                </TableHeader>
+                <TableBody>
+                  {paginatedEntities.map((entity) => {
+                    const leftCount = countRelationships(entity.left_relationships);
+                    const rightCount = countRelationships(entity.right_relationships);
+                    const isSelected = selectedEntity?.entity_name === entity.entity_name;
+                    return (
+                      <TableRow
+                        key={entity.entity_name}
+                        className={`cursor-pointer transition-colors ${
+                          isSelected
+                            ? 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-300'
+                            : 'hover:bg-muted/50'
+                        }`}
+                        onClick={() => setSelectedEntity(entity)}
+                      >
+                        <TableCell className={`font-medium ${isSelected ? 'text-blue-300' : ''}`}>{entity.entity_name}</TableCell>
+                        <TableCell className="text-right">{leftCount}</TableCell>
+                        <TableCell className="text-right">{rightCount}</TableCell>
+                        <TableCell className="text-right">{leftCount + rightCount}</TableCell>
+                      </TableRow>
+                    );
+                  })}
+                  {sortedEntities.length === 0 && (
+                    <TableRow>
+                      <TableCell colSpan={4} className="text-center text-muted-foreground">
+                        No entities found.
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </div>
+
+            {/* Pagination controls */}
+            {totalPages > 1 && (
+              <div className="flex items-center gap-2 mt-4 py-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className="text-foreground hover:!text-blue-400 hover:!border-blue-400"
+                >
+                  Previous
+                </Button>
+                <span className="text-sm text-muted-foreground">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className="text-foreground hover:!text-blue-400 hover:!border-blue-400"
+                >
+                  Next
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
+
+        {/* Right Section - Entity Details */}
+        {selectedEntity && (
+          <div className="w-1/2 border-l border-border pl-4 min-h-0 overflow-y-auto">
+            <EntityDetails entity={selectedEntity} onClose={() => setSelectedEntity(null)} />
+          </div>
+        )}
       </div>
 
-      {/* Right Section - Entity Details (collapsed by default) */}
-      {selectedEntity && (
-        <div className="w-1/2 border-l border-border pl-4 overflow-hidden">
-          <EntityDetails entity={selectedEntity} onClose={() => setSelectedEntity(null)} />
-        </div>
-      )}
+      {/* Sticky bottom button */}
+      <div className="sticky bottom-0 w-full py-3 px-4 bg-background border-t border-border flex justify-center z-10">
+        <Button
+          onClick={() => setShowGraph(true)}
+          className="bg-blue-600 hover:bg-blue-700 text-white text-lg h-12 px-8 shadow-lg"
+        >
+          Show Relationship Graph
+        </Button>
+      </div>
     </div>
   );
 }

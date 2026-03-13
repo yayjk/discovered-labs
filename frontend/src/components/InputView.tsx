@@ -31,9 +31,12 @@ export function InputView() {
     }
   }, [analysisScreenState, setLoadingDots])
 
-  const runAnalysis = async (queryStr: string, slug: string) => {
+  const runAnalysis = async (queryStr: string, slug: string, forceSearch = false) => {
     try {
-      const response = await fetch(`http://localhost:8000/analysis/analyze?query=${encodeURIComponent(queryStr)}`)
+      const params = new URLSearchParams({ query: queryStr })
+      if (forceSearch) params.set("force_search", "true")
+
+      const response = await fetch(`http://localhost:8000/analysis/analyze?${params}`)
       
       if (!response.body) {
         throw new Error("No response body")
@@ -41,6 +44,8 @@ export function InputView() {
 
       const reader = response.body.getReader()
       const decoder = new TextDecoder()
+
+      let currentEventType = "message"
 
       while (true) {
         const { done, value } = await reader.read()
@@ -51,7 +56,9 @@ export function InputView() {
         const lines = chunk.split("\n")
 
         for (const line of lines) {
-          if (line.startsWith("data: ")) {
+          if (line.startsWith("event: ")) {
+            currentEventType = line.substring(7).trim()
+          } else if (line.startsWith("data: ")) {
             try {
               const data = JSON.parse(line.substring(6))
               addAnalysisEvent({
@@ -60,13 +67,19 @@ export function InputView() {
                 timestamp: Date.now(),
               })
 
-              if (data.stage === "complete") {
+              if (currentEventType === "low_confidence" || data.stage === "low_confidence") {
+                setAnalysisScreenState("low_confidence")
+              } else if (currentEventType === "insufficient_results" || data.stage === "insufficient_results") {
+                setAnalysisScreenState("insufficient_results")
+              } else if (data.stage === "complete") {
                 setSelectedReport(slug)
                 setAnalysisScreenState("finish")
                 queryClient.invalidateQueries({ queryKey: ["reports"] })
               } else if (data.stage === "error") {
                 setAnalysisScreenState("finish")
               }
+
+              currentEventType = "message"
             } catch (e) {
               console.error("Failed to parse SSE data:", e)
             }
@@ -84,19 +97,23 @@ export function InputView() {
     }
   }
 
-  const handleSearch = async () => {
+  const handleSearch = async (forceSearch = false) => {
     if (!query.trim()) return
     const slug = query.trim().toLowerCase().replace(/\s+/g, "_")
     setGeneratingSlug(slug)
     setGeneratingQuery(query.trim())
     setAnalysisScreenState("running")
     clearAnalysisEvents()
-    await runAnalysis(query.trim(), slug)
+    await runAnalysis(query.trim(), slug, forceSearch)
   }
 
   const handleViewReport = () => {
     if (generatingSlug) setSelectedReport(generatingSlug)
-    setScreenState("entity_explorer")
+    setScreenState("report")
+    // Reset input view so user is encouraged to try a new query next time
+    setAnalysisScreenState("start")
+    clearAnalysisEvents()
+    setQuery("")
   }
 
   return (
@@ -108,14 +125,14 @@ export function InputView() {
       {analysisScreenState === "start" && (
         <div className="w-full max-w-md flex flex-col gap-3">
           <Input
-            placeholder="Enter a topic (e.g. openai, nuclear energy)"
+            placeholder="Enter a company (e.g. openai)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             className="h-12 text-base"
           />
           <Button
-            onClick={handleSearch}
+            onClick={() => handleSearch()}
             disabled={!query.trim()}
             className="w-full text-lg h-12 shadow-lg"
           >
@@ -125,8 +142,45 @@ export function InputView() {
       )}
 
       {analysisScreenState === "running" && (
-        <div className="text-lg font-medium text-foreground">
-          Building report for "{query}"{".".repeat(loadingDots)}
+        <div className="flex flex-col items-center gap-4">
+          <div className="text-lg font-medium text-foreground">
+            Building report for "{query}"{".".repeat(loadingDots)}
+          </div>
+          <div className="w-full max-w-lg rounded-lg border border-yellow-500/30 bg-yellow-500/5 px-4 py-3">
+            <p className="text-sm text-yellow-400/90 leading-relaxed">
+              <span className="font-semibold">Note:</span> Please do not reload the page while the report is generating. Reloading will terminate the streaming connection — the report may still complete in the background, but progress tracking will be lost.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {analysisScreenState === "low_confidence" && (
+        <div className="w-full max-w-md flex flex-col gap-3 items-center">
+          <Button
+            onClick={() => handleSearch(true)}
+            className="w-full text-lg h-12 shadow-lg"
+          >
+            Search Anyway
+          </Button>
+          <Button
+            variant="outline"
+            onClick={() => { setAnalysisScreenState("start"); clearAnalysisEvents() }}
+            className="w-full text-lg h-12 text-foreground"
+          >
+            Change Query
+          </Button>
+        </div>
+      )}
+
+      {analysisScreenState === "insufficient_results" && (
+        <div className="w-full max-w-md flex flex-col gap-3 items-center">
+          <Button
+            variant="outline"
+            onClick={() => { setAnalysisScreenState("start"); clearAnalysisEvents() }}
+            className="w-full text-lg h-12 text-foreground"
+          >
+            Try a Different Query
+          </Button>
         </div>
       )}
 

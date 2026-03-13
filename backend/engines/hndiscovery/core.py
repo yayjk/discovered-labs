@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 import httpx
 
 from .db import init_hn_db, insert_hn_story, insert_hn_comment, close_hn_db
+from .confidence import evaluate_query_confidence
 
 HN_SEARCH_BY_DATE_URL = "https://hn.algolia.com/api/v1/search_by_date"
 
@@ -251,6 +252,7 @@ async def scrape_hn_streaming(
     max_comments: int = 300,
     hits_per_page: int = 50,
     timeout: int = 20,
+    force_search: bool = False,
 ):
     """Streaming variant of HN scraping and persistence with progress events."""
     created_after_ts = _last_month_epoch()
@@ -260,6 +262,19 @@ async def scrape_hn_streaming(
         should_close_db = True
 
     try:
+        # ── Confidence check (skipped when force_search=True) ──
+        if not force_search:
+            confidence = await evaluate_query_confidence(query)
+            if confidence.score < 60:
+                yield {
+                    "stage": "low_confidence",
+                    "message": "Query unlikely to generate any results. Would you still like to proceed?",
+                    "confidence_score": confidence.score,
+                    "confidence_reasoning": confidence.reasoning,
+                    "success": False,
+                }
+                return
+
         yield {
             "stage": "starting",
             "message": "Starting Hacker News scraping",
@@ -364,6 +379,20 @@ async def scrape_hn_streaming(
 
         await db_conn.commit()
 
+        total_collected = len(stories) + len(comments)
+
+        # ── Insufficient-results guard ──
+        if total_collected < 20:
+            yield {
+                "stage": "insufficient_results",
+                "message": f"Only {total_collected} items found (minimum 20 required). Not enough data to run meaningful analysis.",
+                "stories_collected": len(stories),
+                "comments_collected": len(comments),
+                "total_collected": total_collected,
+                "success": False,
+            }
+            return
+
         yield {
             "stage": "scraping_complete",
             "message": "Hacker News scraping complete",
@@ -371,7 +400,7 @@ async def scrape_hn_streaming(
             "db_path": db_path,
             "stories_collected": len(stories),
             "comments_collected": len(comments),
-            "total_collected": len(stories) + len(comments),
+            "total_collected": total_collected,
             "success": True,
         }
     except Exception as exc:

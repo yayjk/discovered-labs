@@ -1,6 +1,7 @@
 """Hacker News discovery module."""
 
 from .core import scrape_hn_non_streaming, scrape_hn_streaming
+from .confidence import evaluate_query_confidence
 from .db import (
     init_hn_db,
     create_hn_stories_table,
@@ -13,6 +14,7 @@ from .db import (
 __all__ = [
     "scrape_hn_non_streaming",
     "scrape_hn_streaming",
+    "evaluate_query_confidence",
     "init_hn_db",
     "create_hn_stories_table",
     "create_hn_comments_table",

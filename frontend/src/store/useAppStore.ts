@@ -1,8 +1,8 @@
 import { create } from 'zustand'
 
-export type ScreenState = "input" | "entity_explorer" | "relationship_graph_viewer"
+export type ScreenState = "input" | "report"
 
-export type AnalysisScreenState = "start" | "running" | "finish"
+export type AnalysisScreenState = "start" | "running" | "finish" | "low_confidence" | "insufficient_results"
 
 export type ReportType = string | null
 

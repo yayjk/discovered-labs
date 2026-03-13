@@ -172,10 +172,17 @@ def format_resolved_extractions(
     for extraction in all_extractions:
         resolved_triplets: List[ResolvedTriplet] = []
         for triplet in extraction.triplets:
+            resolved_subject = name_mapping.get(triplet.subject.canonical_name, triplet.subject.canonical_name)
+            resolved_object = name_mapping.get(triplet.object.canonical_name, triplet.object.canonical_name)
+
+            # Skip self-referential triplets (same entity on both sides)
+            if resolved_subject.strip().lower() == resolved_object.strip().lower():
+                continue
+
             resolved_triplet = ResolvedTriplet(
-                subject=name_mapping.get(triplet.subject.canonical_name, triplet.subject.canonical_name),
+                subject=resolved_subject,
                 relationship=triplet.relationship,
-                object=name_mapping.get(triplet.object.canonical_name, triplet.object.canonical_name),
+                object=resolved_object,
                 evidence=triplet.evidence
             )
             resolved_triplets.append(resolved_triplet)
